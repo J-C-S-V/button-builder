@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <h1>Hello</h1>
-      <Button backgroundColor="blue">Primary</Button>
+      <Button newBgColor="red">Primary</Button>
     </>
   );
 }

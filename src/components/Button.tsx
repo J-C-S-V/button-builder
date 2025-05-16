@@ -1,7 +1,7 @@
-export const Button = (backgroundColor: string) => {
+export const Button = ({ newBgColor }: { newBgColor: string }) => {
   return (
     <>
-      <button style={{ backgroundColor }}>Button</button>
+      <button style={{ backgroundColor: newBgColor }}>Button</button>
     </>
   );
 };
