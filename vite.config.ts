@@ -1,8 +1,9 @@
+import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
 
 // https://vite.dev/config/
+// npm install @types/node --save-dev
 export default defineConfig({
   plugins: [react()],
   resolve: {
