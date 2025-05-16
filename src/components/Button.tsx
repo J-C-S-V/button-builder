@@ -1,7 +1,19 @@
-export const Button = ({ newBgColor }: { newBgColor: string }) => {
+export const Button = ({
+  color,
+  fontWeight,
+  width = 100,
+}: {
+  color: string;
+  fontWeight: string;
+  width?: number;
+}) => {
   return (
     <>
-      <button style={{ backgroundColor: newBgColor }}>Button</button>
+      <button
+        style={{ backgroundColor: color, fontWeight: fontWeight, width: width }}
+      >
+        Button
+      </button>
     </>
   );
 };
