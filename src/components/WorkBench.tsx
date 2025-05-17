@@ -7,7 +7,7 @@ import { CodeAreaHTML } from "./CodeAreaHTML";
 
 export const WorkBench = () => {
   const [color, setColor] = useState("#3498db");
-  const [innerText, setInnerText] = useState("CTA Button");
+  const [innerText, setInnerText] = useState("Click me!");
 
   const handleChangeColor = ({
     target: { value },
@@ -22,12 +22,16 @@ export const WorkBench = () => {
   };
 
   return (
-    <aside className="workbench">
-      <Button color={color} innerText={innerText}></Button>
-      <ChangeColor onColorChange={handleChangeColor} />
-      <CodeArea color={color} />
-      <CodeAreaHTML innerText={innerText} />
-      <ChangeInnerText onTextChange={handleInnerText} />
-    </aside>
+    <section className="workbench">
+      <div className="workbench__controls">
+        <ChangeInnerText onTextChange={handleInnerText} innerText={innerText} />
+        <ChangeColor onColorChange={handleChangeColor} />
+      </div>
+      <aside className="workbench__preview">
+        <Button color={color} innerText={innerText}></Button>
+        <CodeArea color={color} />
+        <CodeAreaHTML innerText={innerText} />
+      </aside>
+    </section>
   );
 };

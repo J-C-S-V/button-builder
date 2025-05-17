@@ -7,8 +7,8 @@ export const ChangeColor = ({
 }) => {
   return (
     <>
-      <h4>Change color</h4>
-      <input type="color" onChange={onColorChange} />
+      <label htmlFor="background">Background Color:</label>
+      <input type="color" id="background" onChange={onColorChange} />
     </>
   );
 };

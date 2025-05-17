@@ -1,13 +1,23 @@
 export const ChangeInnerText = ({
   onTextChange,
+  innerText,
 }: {
   onTextChange: ({
     target: { value },
   }: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  innerText: string;
 }) => {
   return (
-    <textarea onChange={onTextChange} placeholder="Change text...">
-      CTA Button
-    </textarea>
+    <>
+      <label htmlFor="innerText">Button Text:</label>
+      <textarea
+        className="workbench__textarea"
+        id="innerText"
+        onChange={onTextChange}
+        placeholder="Change text..."
+      >
+        {innerText}
+      </textarea>
+    </>
   );
 };

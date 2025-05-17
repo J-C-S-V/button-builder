@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <main className="app">
-      <h1>Button Builder</h1>
+      <h1 className="app__title">Button Builder</h1>
       <WorkBench />
     </main>
   );
