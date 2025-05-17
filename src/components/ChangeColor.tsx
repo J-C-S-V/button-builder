@@ -1,14 +1,14 @@
 export const ChangeColor = ({
   onColorChange,
-  valueColor,
 }: {
-  onColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  valueColor: string;
+  onColorChange: ({
+    target: { value },
+  }: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
     <>
       <h4>Change color</h4>
-      <input type="color" value={valueColor} onChange={onColorChange} />
+      <input type="color" onChange={onColorChange} />
     </>
   );
 };

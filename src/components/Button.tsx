@@ -1,7 +1,13 @@
-export const Button = ({ color }: { color: string }) => {
+export const Button = ({
+  color,
+  innerText,
+}: {
+  color: string;
+  innerText: string;
+}) => {
   return (
     <>
-      <button style={{ backgroundColor: color }}>Button</button>
+      <a style={{ backgroundColor: color }}>{innerText}</a>
     </>
   );
 };
