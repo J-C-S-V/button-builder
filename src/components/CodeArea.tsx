@@ -3,12 +3,13 @@ export const CodeArea = ({ color }: { color: string }) => {
     <>
       <h2>CSS code</h2>
       <textarea
-        rows={20}
+        rows={10}
         cols={50}
         disabled
         value={`.button {
-
+            cursor: pointer;
             background-color: ${color};
+
         }`}
       />
     </>
