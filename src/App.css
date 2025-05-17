@@ -68,6 +68,30 @@ main {
   cursor: pointer;
 }
 
+.workbench__code-area-wrapper {
+  position: relative;
+}
+
+.workbench__copy-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background: none;
+  color: #ccc;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.workbench__icon-copy {
+  fill: #727d8c;
+  transition: fill 0.1s ease-in-out;
+}
+
+.workbench__icon-copy:hover {
+  fill: #464646;
+}
+
 /* .workbench__input-radius::after {
   content: "px";
   font-size: 0.8rem;

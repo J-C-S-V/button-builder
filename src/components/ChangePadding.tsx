@@ -1,7 +1,9 @@
-export const Padding = ({
+export const ChangePadding = ({
   onPaddingChange,
+  padding,
 }: {
   onPaddingChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  padding: number;
 }) => {
   return (
     <>
@@ -12,9 +14,9 @@ export const Padding = ({
         type="number"
         className="workbench__input-padding"
         id="padding"
-        placeholder="10"
+        placeholder={padding.toString()}
         min={0}
-        // value={10}
+        value={padding}
         onChange={onPaddingChange}
       />
     </>

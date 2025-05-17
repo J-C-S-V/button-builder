@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { ChangeColor } from "./ChangeColor";
-import { CodeArea } from "./CodeArea";
+import { CodeAreaCSS } from "./CodeAreaCSS";
 import { ChangeInnerText } from "./ChangeInnerText";
 import { CodeAreaHTML } from "./CodeAreaHTML";
-import { BorderRadius } from "./BorderRadius";
-import { Padding } from "./Padding";
+import { ChangeBorderRadius } from "./ChangeBorderRadius";
+import { ChangePadding } from "./ChangePadding";
 
 export const WorkBench = () => {
   const [color, setColor] = useState("#3498db");
@@ -46,11 +46,15 @@ export const WorkBench = () => {
       <div className="workbench__controls">
         <ChangeInnerText onTextChange={handleInnerText} innerText={innerText} />
         <ChangeColor onColorChange={handleChangeColor} />
-        <BorderRadius
+        <ChangeBorderRadius
           onBorderRadiusChange={handleBorderRadiusChange}
+          borderRadius={borderRadius}
           // isBorderActive={isBorderActive}
         />
-        <Padding onPaddingChange={handlePaddingChange} />
+        <ChangePadding
+          padding={padding}
+          onPaddingChange={handlePaddingChange}
+        />
       </div>
       <aside className="workbench__preview">
         <Button
@@ -59,7 +63,11 @@ export const WorkBench = () => {
           borderRadius={borderRadius}
           padding={padding}
         ></Button>
-        <CodeArea color={color} />
+        <CodeAreaCSS
+          borderRadius={borderRadius}
+          color={color}
+          padding={padding}
+        />
         <CodeAreaHTML innerText={innerText} />
       </aside>
     </section>

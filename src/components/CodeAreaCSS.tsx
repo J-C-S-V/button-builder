@@ -1,7 +1,15 @@
 import { IconCopy } from "./Icons";
 import { useRef, useState } from "react";
 
-export const CodeAreaHTML = ({ innerText }: { innerText: string }) => {
+export const CodeAreaCSS = ({
+  color,
+  borderRadius,
+  padding,
+}: {
+  color: string;
+  borderRadius: number;
+  padding: number;
+}) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [copied, setCopied] = useState(false);
 
@@ -18,16 +26,25 @@ export const CodeAreaHTML = ({ innerText }: { innerText: string }) => {
         });
     }
   };
+
   return (
     <>
-      <h2>HTML code</h2>
-      <div className="workbench__code-area-wrapper">
+      <h2>CSS code</h2>
+      <div
+        className="workbench__code-area-wrapper"
+        style={{ position: "relative" }}
+      >
         <textarea
           ref={textareaRef}
-          rows={5}
+          rows={10}
           cols={50}
           disabled
-          value={`<a class="button">${innerText}</a>`}
+          value={`.button {
+  cursor: pointer;
+  background-color: ${color};
+  border-radius: ${borderRadius}px;
+  padding: ${padding}px;
+}`}
         />
         <button onClick={handleCopy} className="workbench__copy-button">
           <IconCopy />
@@ -44,6 +61,7 @@ export const CodeAreaHTML = ({ innerText }: { innerText: string }) => {
               padding: "0.25rem 0.5rem",
               borderRadius: "0.25rem",
               fontSize: "0.8rem",
+              pointerEvents: "none",
             }}
           >
             Copied!
