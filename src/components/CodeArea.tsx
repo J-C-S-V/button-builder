@@ -1,7 +1,7 @@
 export const CodeArea = ({ color }: { color: string }) => {
   return (
     <>
-      <h2>Code Area</h2>
+      <h2>CSS code</h2>
       <textarea
         rows={20}
         cols={50}

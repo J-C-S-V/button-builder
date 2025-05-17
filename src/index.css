@@ -18,6 +18,10 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+textarea {
+  resize: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
