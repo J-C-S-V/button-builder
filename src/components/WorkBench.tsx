@@ -7,6 +7,8 @@ import { CodeAreaHTML } from "./CodeAreaHTML";
 import { ChangeBorderRadius } from "./ChangeBorderRadius";
 import { ChangePadding } from "./ChangePadding";
 import { ChangeFontWeight } from "./ChangeFontWeight";
+import { ChangeFontSize } from "./ChangeFontSize";
+// import { ChangeShadow } from "./ChangeShadow";
 
 export const WorkBench = () => {
   const [color, setColor] = useState("#3498db");
@@ -15,6 +17,9 @@ export const WorkBench = () => {
   // const [isBorderActive, setIsBorderActive] = useState(false);
   const [padding, setPadding] = useState(10);
   const [fontWeight, setFontWeight] = useState(400);
+  const [fontSize, setFontSize] = useState(16);
+  // const [shadow, setShadow] = useState('0 4px 6px rgba(0, 0, 0, 0.1)');
+
 
   const handleChangeColor = ({
     target: { value },
@@ -49,6 +54,18 @@ export const WorkBench = () => {
     setFontWeight(Number(target.value));
   };
 
+  // const handleShadowChange = ({
+  //   target,
+  // }: React.ChangeEvent<HTMLInputElement>) => {
+  //   setShadow(target.value);
+  // };
+
+  const handleFontSizeChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setFontSize(Number(target.value));
+  };
+
   return (
     <section className="workbench">
       <div className="workbench__controls">
@@ -67,6 +84,14 @@ export const WorkBench = () => {
           fontWeight={fontWeight}
           onFontWeightChange={handleFontWeightChange}
         />
+        <ChangeFontSize
+          fontSize={fontSize}
+          onFontSizeChange={handleFontSizeChange}
+        />
+        {/* <ChangeShadow
+          shadow={shadow}
+          onShadowChange={handleShadowChange}
+        /> */}
       </div>
       <aside className="workbench__preview">
         <Button
@@ -75,12 +100,16 @@ export const WorkBench = () => {
           borderRadius={borderRadius}
           padding={padding}
           fontWeight={fontWeight}
+          fontSize={fontSize}
+          // shadow={shadow}
         ></Button>
         <CodeAreaCSS
           borderRadius={borderRadius}
           color={color}
           padding={padding}
           fontWeight={fontWeight}
+          fontSize={fontSize}
+          // shadow={shadow}
         />
         <CodeAreaHTML innerText={innerText} />
       </aside>

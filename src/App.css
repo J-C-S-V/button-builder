@@ -48,7 +48,8 @@ main {
 }
 .workbench__input-radius,
 .workbench__input-padding,
-.workbench__input-font-weight {
+.workbench__input-font-weight,
+.workbench__input-font-size {
   width: 5rem;
   height: 3rem;
   padding: 5px;

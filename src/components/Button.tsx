@@ -4,12 +4,16 @@ export const Button = ({
   borderRadius,
   padding,
   fontWeight,
+  fontSize,
+  // shadow,
 }: {
   color: string;
   innerText: string;
   borderRadius?: number;
   padding?: number;
   fontWeight?: number;
+  fontSize?: number;
+  // shadow?: string;
 }) => {
   return (
     <div className="workbench__button-wrapper">
@@ -20,6 +24,8 @@ export const Button = ({
           borderRadius: `${borderRadius}px`,
           padding: `${padding}px`,
           fontWeight: fontWeight,
+          fontSize: fontSize,
+          // boxShadow: shadow,
         }}
       >
         {innerText}
