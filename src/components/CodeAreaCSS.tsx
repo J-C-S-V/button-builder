@@ -5,10 +5,12 @@ export const CodeAreaCSS = ({
   color,
   borderRadius,
   padding,
+  fontWeight,
 }: {
   color: string;
   borderRadius: number;
   padding: number;
+  fontWeight: number;
 }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [copied, setCopied] = useState(false);
@@ -44,6 +46,7 @@ export const CodeAreaCSS = ({
   background-color: ${color};
   border-radius: ${borderRadius}px;
   padding: ${padding}px;
+  font-weight: ${fontWeight};
 }`}
         />
         <button onClick={handleCopy} className="workbench__copy-button">

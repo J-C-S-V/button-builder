@@ -47,8 +47,9 @@ main {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 .workbench__input-radius,
-.workbench__input-padding {
-  width: 4rem;
+.workbench__input-padding,
+.workbench__input-font-weight {
+  width: 5rem;
   height: 3rem;
   padding: 5px;
   border-radius: 5px;

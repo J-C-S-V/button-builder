@@ -6,6 +6,7 @@ import { ChangeInnerText } from "./ChangeInnerText";
 import { CodeAreaHTML } from "./CodeAreaHTML";
 import { ChangeBorderRadius } from "./ChangeBorderRadius";
 import { ChangePadding } from "./ChangePadding";
+import { ChangeFontWeight } from "./ChangeFontWeight";
 
 export const WorkBench = () => {
   const [color, setColor] = useState("#3498db");
@@ -13,6 +14,7 @@ export const WorkBench = () => {
   const [borderRadius, setBorderRadius] = useState(10);
   // const [isBorderActive, setIsBorderActive] = useState(false);
   const [padding, setPadding] = useState(10);
+  const [fontWeight, setFontWeight] = useState(400);
 
   const handleChangeColor = ({
     target: { value },
@@ -41,6 +43,12 @@ export const WorkBench = () => {
     setPadding(Number(target.value));
   };
 
+  const handleFontWeightChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setFontWeight(Number(target.value));
+  };
+
   return (
     <section className="workbench">
       <div className="workbench__controls">
@@ -55,6 +63,10 @@ export const WorkBench = () => {
           padding={padding}
           onPaddingChange={handlePaddingChange}
         />
+        <ChangeFontWeight
+          fontWeight={fontWeight}
+          onFontWeightChange={handleFontWeightChange}
+        />
       </div>
       <aside className="workbench__preview">
         <Button
@@ -62,11 +74,13 @@ export const WorkBench = () => {
           innerText={innerText}
           borderRadius={borderRadius}
           padding={padding}
+          fontWeight={fontWeight}
         ></Button>
         <CodeAreaCSS
           borderRadius={borderRadius}
           color={color}
           padding={padding}
+          fontWeight={fontWeight}
         />
         <CodeAreaHTML innerText={innerText} />
       </aside>
