@@ -5,6 +5,7 @@ export const Button = ({
   padding,
   fontWeight,
   fontSize,
+  fontColor,
   // shadow,
 }: {
   color: string;
@@ -13,6 +14,7 @@ export const Button = ({
   padding?: number;
   fontWeight?: number;
   fontSize?: number;
+  fontColor?: string;
   // shadow?: string;
 }) => {
   return (
@@ -25,6 +27,7 @@ export const Button = ({
           padding: `${padding}px`,
           fontWeight: fontWeight,
           fontSize: fontSize,
+          color: fontColor,
           // boxShadow: shadow,
         }}
       >

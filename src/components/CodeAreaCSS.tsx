@@ -7,6 +7,7 @@ export const CodeAreaCSS = ({
   padding,
   fontWeight,
   fontSize,
+  fontColor,
   // shadow,
 }: {
   color: string;
@@ -14,9 +15,10 @@ export const CodeAreaCSS = ({
   padding: number;
   fontWeight: number;
   fontSize: number;
+  fontColor: string;
   // shadow: string;
 }) => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);  
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -52,6 +54,7 @@ export const CodeAreaCSS = ({
   padding: ${padding}px;
   font-weight: ${fontWeight};
   font-size: ${fontSize}px;
+  color: ${fontColor};
 }`}
         />
         <button onClick={handleCopy} className="workbench__copy-button">

@@ -8,6 +8,7 @@ import { ChangeBorderRadius } from "./ChangeBorderRadius";
 import { ChangePadding } from "./ChangePadding";
 import { ChangeFontWeight } from "./ChangeFontWeight";
 import { ChangeFontSize } from "./ChangeFontSize";
+import { ChangeFontColor } from "./ChangeFontColor";  
 // import { ChangeShadow } from "./ChangeShadow";
 
 export const WorkBench = () => {
@@ -18,6 +19,7 @@ export const WorkBench = () => {
   const [padding, setPadding] = useState(10);
   const [fontWeight, setFontWeight] = useState(400);
   const [fontSize, setFontSize] = useState(16);
+  const [fontColor, setFontColor] = useState("#fff");
   // const [shadow, setShadow] = useState('0 4px 6px rgba(0, 0, 0, 0.1)');
 
 
@@ -66,11 +68,21 @@ export const WorkBench = () => {
     setFontSize(Number(target.value));
   };
 
+  const handleFontColorChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setFontColor(target.value);
+  };
+
   return (
     <section className="workbench">
       <div className="workbench__controls">
         <ChangeInnerText onTextChange={handleInnerText} innerText={innerText} />
-        <ChangeColor onColorChange={handleChangeColor} />
+        <ChangeFontColor
+          fontColor={fontColor}
+          onFontColorChange={handleFontColorChange}
+        />
+        <ChangeColor color={color} onColorChange={handleChangeColor} />
         <ChangeBorderRadius
           onBorderRadiusChange={handleBorderRadiusChange}
           borderRadius={borderRadius}
@@ -101,6 +113,7 @@ export const WorkBench = () => {
           padding={padding}
           fontWeight={fontWeight}
           fontSize={fontSize}
+          fontColor={fontColor}
           // shadow={shadow}
         ></Button>
         <CodeAreaCSS
@@ -109,6 +122,7 @@ export const WorkBench = () => {
           padding={padding}
           fontWeight={fontWeight}
           fontSize={fontSize}
+          fontColor={fontColor}
           // shadow={shadow}
         />
         <CodeAreaHTML innerText={innerText} />
