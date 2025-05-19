@@ -49,7 +49,9 @@ main {
 .workbench__input-radius,
 .workbench__input-padding,
 .workbench__input-font-weight,
-.workbench__input-font-size {
+.workbench__input-font-size,
+.workbench__input-padding-y,
+.workbench__input-padding-x {
   width: 5rem;
   height: 3rem;
   padding: 5px;
@@ -114,6 +116,13 @@ input[type="color"] {
   width: 3rem;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.workbench__text-padding-y, .workbench__text-padding-x {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* .workbench__input-radius::after {

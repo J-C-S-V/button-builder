@@ -12,7 +12,7 @@ export const ChangeColor = ({
       <label htmlFor="background">Background Color:</label>
       <div className="workbench__input-color">
         <input type="color" id="background" onChange={onColorChange} />
-        <span className="workbench__background-color-preview" >{color}</span>
+        <input type="text" className="workbench__background-color-preview" value={color} onChange={onColorChange} />
       </div>
     </>
   );

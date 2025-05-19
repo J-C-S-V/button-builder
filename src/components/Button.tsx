@@ -2,7 +2,8 @@ export const Button = ({
   color,
   innerText,
   borderRadius,
-  padding,
+  paddingY,
+  paddingX,
   fontWeight,
   fontSize,
   fontColor,
@@ -11,7 +12,8 @@ export const Button = ({
   color: string;
   innerText: string;
   borderRadius?: number;
-  padding?: number;
+  paddingY?: number;
+  paddingX?: number;
   fontWeight?: number;
   fontSize?: number;
   fontColor?: string;
@@ -24,7 +26,7 @@ export const Button = ({
         style={{
           backgroundColor: color,
           borderRadius: `${borderRadius}px`,
-          padding: `${padding}px`,
+          padding: `${paddingY}px ${paddingX}px`,
           fontWeight: fontWeight,
           fontSize: fontSize,
           color: fontColor,

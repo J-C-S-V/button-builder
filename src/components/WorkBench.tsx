@@ -12,14 +12,15 @@ import { ChangeFontColor } from "./ChangeFontColor";
 // import { ChangeShadow } from "./ChangeShadow";
 
 export const WorkBench = () => {
-  const [color, setColor] = useState("#3498db");
-  const [innerText, setInnerText] = useState("Click me!");
-  const [borderRadius, setBorderRadius] = useState(10);
-  // const [isBorderActive, setIsBorderActive] = useState(false);
-  const [padding, setPadding] = useState(10);
-  const [fontWeight, setFontWeight] = useState(400);
-  const [fontSize, setFontSize] = useState(16);
   const [fontColor, setFontColor] = useState("#fff");
+  const [color, setColor] = useState("#978aff");
+  const [innerText, setInnerText] = useState("Click me!");
+  const [borderRadius, setBorderRadius] = useState(5);
+  // const [isBorderActive, setIsBorderActive] = useState(false);
+  const [paddingY, setPaddingY] = useState(4);
+  const [paddingX, setPaddingX] = useState(25);
+  const [fontWeight, setFontWeight] = useState(600);
+  const [fontSize, setFontSize] = useState(25);
   // const [shadow, setShadow] = useState('0 4px 6px rgba(0, 0, 0, 0.1)');
 
 
@@ -44,10 +45,16 @@ export const WorkBench = () => {
     setBorderRadius(Number(target.value));
   };
 
-  const handlePaddingChange = ({
+  const handlePaddingYChange = ({
     target,
   }: React.ChangeEvent<HTMLInputElement>) => {
-    setPadding(Number(target.value));
+    setPaddingY(Number(target.value));
+  };
+
+  const handlePaddingXChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setPaddingX(Number(target.value));
   };
 
   const handleFontWeightChange = ({
@@ -89,8 +96,10 @@ export const WorkBench = () => {
           // isBorderActive={isBorderActive}
         />
         <ChangePadding
-          padding={padding}
-          onPaddingChange={handlePaddingChange}
+          paddingY={paddingY}
+          paddingX={paddingX}
+          onPaddingYChange={handlePaddingYChange}
+          onPaddingXChange={handlePaddingXChange}
         />
         <ChangeFontWeight
           fontWeight={fontWeight}
@@ -110,7 +119,8 @@ export const WorkBench = () => {
           color={color}
           innerText={innerText}
           borderRadius={borderRadius}
-          padding={padding}
+          paddingY={paddingY}
+          paddingX={paddingX}
           fontWeight={fontWeight}
           fontSize={fontSize}
           fontColor={fontColor}
@@ -119,7 +129,8 @@ export const WorkBench = () => {
         <CodeAreaCSS
           borderRadius={borderRadius}
           color={color}
-          padding={padding}
+          paddingY={paddingY}
+          paddingX={paddingX}
           fontWeight={fontWeight}
           fontSize={fontSize}
           fontColor={fontColor}

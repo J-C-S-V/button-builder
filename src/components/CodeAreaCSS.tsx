@@ -4,7 +4,8 @@ import { useRef, useState } from "react";
 export const CodeAreaCSS = ({
   color,
   borderRadius,
-  padding,
+  paddingY,
+  paddingX,
   fontWeight,
   fontSize,
   fontColor,
@@ -12,7 +13,8 @@ export const CodeAreaCSS = ({
 }: {
   color: string;
   borderRadius: number;
-  padding: number;
+  paddingY: number;
+  paddingX: number;
   fontWeight: number;
   fontSize: number;
   fontColor: string;
@@ -51,7 +53,7 @@ export const CodeAreaCSS = ({
   cursor: pointer;
   background-color: ${color};
   border-radius: ${borderRadius}px;
-  padding: ${padding}px;
+  padding: ${paddingY}px ${paddingX}px;
   font-weight: ${fontWeight};
   font-size: ${fontSize}px;
   color: ${fontColor};

@@ -1,24 +1,42 @@
 export const ChangePadding = ({
-  onPaddingChange,
-  padding,
+  onPaddingYChange,
+  onPaddingXChange,
+  paddingY,
+  paddingX,
 }: {
-  onPaddingChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  padding: number;
+  onPaddingYChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onPaddingXChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  paddingY: number;
+  paddingX: number;
 }) => {
   return (
     <>
       <label title="Enter padding" htmlFor="padding">
         Padding:
       </label>
-      <input
-        type="number"
-        className="workbench__input-padding"
-        id="padding"
-        placeholder={padding.toString()}
-        min={0}
-        value={padding}
-        onChange={onPaddingChange}
-      />
+      <div className="workbench__text-padding-y">
+        <input
+          type="number"
+          className="workbench__input-padding-y"
+          id="padding"
+          placeholder={paddingY.toString()}
+          min={0}
+          value={paddingY}
+          onChange={onPaddingYChange}
+        /> <span className="workbench__padding-y">Y</span>
+      </div>
+      <div className="workbench__text-padding-x">
+        <input
+          type="number"
+          className="workbench__input-padding-x"
+          id="padding"
+          placeholder={paddingX.toString()}
+          min={0}
+          value={paddingX}
+          onChange={onPaddingXChange}
+        />
+        <span className="workbench__padding-x">X</span>
+      </div>
     </>
   );
 };
