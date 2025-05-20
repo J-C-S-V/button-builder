@@ -1,31 +1,17 @@
 import { useState } from "react";
-import { Button } from "./Button";
-import { ChangeColor } from "./ChangeColor";
-import { CodeAreaCSS } from "./CodeAreaCSS";
-import { ChangeInnerText } from "./ChangeInnerText";
-import { CodeAreaHTML } from "./CodeAreaHTML";
-import { ChangeBorderRadius } from "./ChangeBorderRadius";
-import { ChangePadding } from "./ChangePadding";
-import { ChangeFontWeight } from "./ChangeFontWeight";
-import { ChangeFontSize } from "./ChangeFontSize";
-import { ChangeFontColor } from "./ChangeFontColor";  
+import { Controls } from "./Controls";
+import { CodeArea } from "./CodeArea";
 
 export const WorkBench = () => {
-  const [fontColor, setFontColor] = useState("#fff");
-  const [backgroundColor, setBackgroundColor] = useState("#a5158c");
   const [innerText, setInnerText] = useState("Click me!");
-  const [borderRadius, setBorderRadius] = useState(5);
-  const [paddingY, setPaddingY] = useState(4);
-  const [paddingX, setPaddingX] = useState(25);
-  const [fontWeight, setFontWeight] = useState(600);
-  const [fontSize, setFontSize] = useState(25);
+  const [backgroundColor, setbackgroundColor] = useState("#ff0000");
+  const [borderRadius, setBorderRadius] = useState(0);
+  const [paddingY, setPaddingY] = useState(0);
+  const [paddingX, setPaddingX] = useState(0);
+  const [fontWeight, setFontWeight] = useState(400);
+  const [fontSize, setFontSize] = useState(16);
+  const [fontColor, setFontColor] = useState("#fff");
 
-
-  const handleChangeColor = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    setBackgroundColor(value);
-  };
 
   const handleInnerText = ({
     target: { value },
@@ -33,15 +19,14 @@ export const WorkBench = () => {
     setInnerText(value);
   };
 
-  const handleBorderRadiusChange = ({
-    target,
+  
+  const handleChangebackgroundColor = ({
+    target: { value },
   }: React.ChangeEvent<HTMLInputElement>) => {
-    // setIsBorderActive(checked);
-    // setBorderRadius(checked ? 20 : 0);
-    console.log(typeof target.value);
-    setBorderRadius(Number(target.value));
+    setbackgroundColor(value);
   };
 
+    
   const handlePaddingYChange = ({
     target,
   }: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,60 +57,42 @@ export const WorkBench = () => {
     setFontColor(target.value);
   };
 
+  const handleBorderRadiusChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setBorderRadius(Number(target.value));
+  };
+
   return (
     <section className="workbench">
-      <div className="workbench__controls">
-        <ChangeInnerText onTextChange={handleInnerText} innerText={innerText} />
-        <ChangeFontColor
-          fontColor={fontColor}
-          onFontColorChange={handleFontColorChange}
-        />
-        <ChangeColor
-          color={backgroundColor}
-          onColorChange={handleChangeColor}
-        />
-        <ChangeBorderRadius
-          onBorderRadiusChange={handleBorderRadiusChange}
-          borderRadius={borderRadius}
-        />
-        <ChangePadding
-          paddingY={paddingY}
-          paddingX={paddingX}
-          onPaddingYChange={handlePaddingYChange}
-          onPaddingXChange={handlePaddingXChange}
-        />
-        <ChangeFontWeight
-          fontWeight={fontWeight}
-          onFontWeightChange={handleFontWeightChange}
-        />
-        <ChangeFontSize
-          fontSize={fontSize}
-          onFontSizeChange={handleFontSizeChange}
-        />
-      </div>
-      
-      <aside className="workbench__preview">
-        <Button
-          backgroundColor={backgroundColor}
-          innerText={innerText}
-          borderRadius={borderRadius}
-          paddingY={paddingY}
-          paddingX={paddingX}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          fontColor={fontColor}
-        ></Button>
-        <CodeAreaCSS
-          borderRadius={borderRadius}
-          backgroundColor={backgroundColor}
-          paddingY={paddingY}
-          paddingX={paddingX}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          fontColor={fontColor}
-        />
-        <CodeAreaHTML innerText={innerText} />
-      </aside>
+      <Controls
+        onTextChange={handleInnerText}
+        innerText={innerText}
+        onBackgroundColorChange={handleChangebackgroundColor}
+        backgroundColor={backgroundColor}
+        onFontColorChange={handleFontColorChange}
+        fontColor={fontColor}
+        onBorderRadiusChange={handleBorderRadiusChange}
+        borderRadius={borderRadius}
+        onPaddingYChange={handlePaddingYChange}
+        paddingY={paddingY}
+        onPaddingXChange={handlePaddingXChange}
+        paddingX={paddingX}
+        onFontWeightChange={handleFontWeightChange}
+        fontWeight={fontWeight}
+        onFontSizeChange={handleFontSizeChange}
+        fontSize={fontSize}
+      />
+      <CodeArea
+      innerText={innerText}
+      backgroundColor={backgroundColor}
+      borderRadius={borderRadius}
+      paddingY={paddingY}
+      paddingX={paddingX}
+      fontWeight={fontWeight}
+      fontSize={fontSize}
+      fontColor={fontColor}
+      />
     </section>
   );
 };
