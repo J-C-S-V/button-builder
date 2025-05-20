@@ -1,0 +1,134 @@
+.app {
+  text-align: center;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.app__title {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.workbench {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.workbench__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.workbench__preview {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.workbench__textarea {
+  width: 100%;
+  height: 3rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.workbench__input-radius,
+.workbench__input-padding,
+.workbench__input-font-weight,
+.workbench__input-font-size,
+.workbench__input-padding-y,
+.workbench__input-padding-x {
+  width: 5rem;
+  height: 3rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.workbench__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.workbench__button {
+  cursor: pointer;
+}
+
+.workbench__code-area-wrapper {
+  position: relative;
+}
+
+.workbench__copy-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background: none;
+  color: #ccc;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.workbench__icon-copy {
+  fill: #727d8c;
+  transition: fill 0.1s ease-in-out;
+}
+
+.workbench__icon-copy:hover {
+  fill: #464646;
+}
+
+.workbench__input-color {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.workbench__font-color-preview, .workbench__background-color-preview {
+  font-size: 1rem;
+  width: 9rem;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input[type="color"] {
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.workbench__text-padding-y, .workbench__text-padding-x {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .workbench__input-radius::after {
+  content: "px";
+  font-size: 0.8rem;
+  color: #999;
+  margin-left: 0.5rem;
+} */
