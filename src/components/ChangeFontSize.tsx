@@ -9,7 +9,7 @@ export const ChangeFontSize = ({
 }) => {
     return (
         <>
-            <label htmlFor="fontSize">Font Size:</label>
+            <label htmlFor="fontSize" className="label">Font Size:</label>
             <input className="workbench__input-font-size" type="number" id="fontSize" min={6} max={100} step={1} value={fontSize} onChange={onFontSizeChange} />
         </>
     );

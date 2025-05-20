@@ -9,7 +9,7 @@ export const ChangeInnerText = ({
 }) => {
   return (
     <>
-      <label htmlFor="innerText">Button Text:</label>
+      <label htmlFor="innerText" className="label">Button Text:</label>
       <input
         type="text"
         className="workbench__textarea"

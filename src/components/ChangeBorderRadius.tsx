@@ -9,7 +9,7 @@ export const ChangeBorderRadius = ({
 }) => {
   return (
     <>
-      <label title="Enter border radius" htmlFor="borderRadius">
+      <label title="Enter border radius" htmlFor="borderRadius" className="label">
         Border Radius:
       </label>
       <input

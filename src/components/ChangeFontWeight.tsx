@@ -9,7 +9,7 @@ export const ChangeFontWeight = ({
 }) => {
     return (
         <>
-            <label htmlFor="fontWeight">Font Weight:</label>
+            <label htmlFor="fontWeight" className="label">Font Weight:</label>
             <input className="workbench__input-font-weight" type="number" id="fontWeight" min={100} max={900} step={100} value={fontWeight} onChange={onFontWeightChange} />
         </>
     );

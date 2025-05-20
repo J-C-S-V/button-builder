@@ -9,7 +9,7 @@ export const ChangeFontColor = ({
 }) => {
     return (
         <>
-            <label htmlFor="fontColor">Font Color:</label>
+            <label htmlFor="fontColor" className="label">Font Color:</label>
             <div className="workbench__input-color">
                 <input className="workbench__input-font-color" type="color" id="fontColor" value={fontColor} onChange={onFontColorChange} />
                 <input type="text" className="workbench__font-color-preview" value={fontColor} onChange={onFontColorChange} />
