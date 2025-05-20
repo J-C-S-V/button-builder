@@ -171,3 +171,50 @@ input[type="color"] {
   align-items: center;
   gap: 1rem;
 }
+
+.footer {
+  margin-top: 2rem;
+}
+
+.footer__link {
+  color: var(--color-text-black);
+  text-decoration: none;
+}
+
+.footer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__icon {
+  position: relative;
+  display: inline-block;
+  fill: var(--color-text-black);
+}
+
+.footer__icon:hover {
+  transform: scale(1.1);
+}
+
+.footer__icon::after {
+  content: "GitHub";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+.footer__icon:hover::after {
+  opacity: 1;
+  color: var(--color-text-white);
+  pointer-events: none;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  transform: translate(-50%, 100%);
+  background-color: var(--color-text-black);
+}

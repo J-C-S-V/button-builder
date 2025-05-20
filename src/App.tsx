@@ -1,4 +1,5 @@
 import { WorkBench } from "./components/WorkBench";
+import { Footer } from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <span className="app__title-span-3">Builder</span>
       </h1>
       <WorkBench />
+      <Footer />
     </main>
   );
 }

@@ -83,6 +83,24 @@ export const WorkBench = () => {
         onFontSizeChange={handleFontSizeChange}
         fontSize={fontSize}
       />
+      <Controls
+        onTextChange={handleInnerText}
+        innerText={innerText}
+        onBackgroundColorChange={handleChangebackgroundColor}
+        backgroundColor={backgroundColor}
+        onFontColorChange={handleFontColorChange}
+        fontColor={fontColor}
+        onBorderRadiusChange={handleBorderRadiusChange}
+        borderRadius={borderRadius}
+        onPaddingYChange={handlePaddingYChange}
+        paddingY={paddingY}
+        onPaddingXChange={handlePaddingXChange}
+        paddingX={paddingX}
+        onFontWeightChange={handleFontWeightChange}
+        fontWeight={fontWeight}
+        onFontSizeChange={handleFontSizeChange}
+        fontSize={fontSize}
+      />
       <CodeArea
       innerText={innerText}
       backgroundColor={backgroundColor}
