@@ -176,11 +176,6 @@ input[type="color"] {
   margin-top: 2rem;
 }
 
-.footer__link {
-  color: var(--color-text-black);
-  text-decoration: none;
-}
-
 .footer__text {
   display: flex;
   justify-content: center;
@@ -190,7 +185,6 @@ input[type="color"] {
 
 .footer__icon {
   position: relative;
-  display: inline-block;
   fill: var(--color-text-black);
 }
 
@@ -203,18 +197,18 @@ input[type="color"] {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 10%);
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  color: var(--color-text-white);
+  background-color: var(--color-text-black);
   pointer-events: none;
+  transition: all 0.1s ease-in-out;
 }
 
 .footer__icon:hover::after {
   opacity: 1;
-  color: var(--color-text-white);
   pointer-events: none;
   border-radius: 5px;
   padding: 0 0.5rem;
   transform: translate(-50%, 100%);
-  background-color: var(--color-text-black);
 }
