@@ -9,11 +9,12 @@ import { ChangePadding } from "./ChangePadding";
 import { ChangeFontWeight } from "./ChangeFontWeight";
 import { ChangeFontSize } from "./ChangeFontSize";
 import { ChangeFontColor } from "./ChangeFontColor";  
+// import { color } from "motion";
 // import { ChangeShadow } from "./ChangeShadow";
 
 export const WorkBench = () => {
   const [fontColor, setFontColor] = useState("#fff");
-  const [color, setColor] = useState("#978aff");
+  const [backgroundColor, setBackgroundColor] = useState("#a5158c");
   const [innerText, setInnerText] = useState("Click me!");
   const [borderRadius, setBorderRadius] = useState(5);
   // const [isBorderActive, setIsBorderActive] = useState(false);
@@ -27,7 +28,7 @@ export const WorkBench = () => {
   const handleChangeColor = ({
     target: { value },
   }: React.ChangeEvent<HTMLInputElement>) => {
-    setColor(value);
+    setBackgroundColor(value);
   };
 
   const handleInnerText = ({
@@ -89,7 +90,10 @@ export const WorkBench = () => {
           fontColor={fontColor}
           onFontColorChange={handleFontColorChange}
         />
-        <ChangeColor color={color} onColorChange={handleChangeColor} />
+        <ChangeColor
+          color={backgroundColor}
+          onColorChange={handleChangeColor}
+        />
         <ChangeBorderRadius
           onBorderRadiusChange={handleBorderRadiusChange}
           borderRadius={borderRadius}
@@ -114,9 +118,10 @@ export const WorkBench = () => {
           onShadowChange={handleShadowChange}
         /> */}
       </div>
+      
       <aside className="workbench__preview">
         <Button
-          color={color}
+          backgroundColor={backgroundColor}
           innerText={innerText}
           borderRadius={borderRadius}
           paddingY={paddingY}
@@ -128,7 +133,7 @@ export const WorkBench = () => {
         ></Button>
         <CodeAreaCSS
           borderRadius={borderRadius}
-          color={color}
+          backgroundColor={backgroundColor}
           paddingY={paddingY}
           paddingX={paddingX}
           fontWeight={fontWeight}

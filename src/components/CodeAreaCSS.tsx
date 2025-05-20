@@ -2,7 +2,7 @@ import { IconCopy } from "./Icons";
 import { useRef, useState } from "react";
 
 export const CodeAreaCSS = ({
-  color,
+  backgroundColor,
   borderRadius,
   paddingY,
   paddingX,
@@ -11,7 +11,7 @@ export const CodeAreaCSS = ({
   fontColor,
   // shadow,
 }: {
-  color: string;
+  backgroundColor: string;
   borderRadius: number;
   paddingY: number;
   paddingX: number;
@@ -51,7 +51,7 @@ export const CodeAreaCSS = ({
           disabled
           value={`.button {
   cursor: pointer;
-  background-color: ${color};
+  background-color: ${backgroundColor};
   border-radius: ${borderRadius}px;
   padding: ${paddingY}px ${paddingX}px;
   font-weight: ${fontWeight};

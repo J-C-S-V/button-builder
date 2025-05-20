@@ -1,5 +1,5 @@
 export const Button = ({
-  color,
+  backgroundColor,
   innerText,
   borderRadius,
   paddingY,
@@ -9,7 +9,7 @@ export const Button = ({
   fontColor,
   // shadow,
 }: {
-  color: string;
+  backgroundColor: string;
   innerText: string;
   borderRadius?: number;
   paddingY?: number;
@@ -24,7 +24,7 @@ export const Button = ({
       <a
         className="workbench__button"
         style={{
-          backgroundColor: color,
+          backgroundColor: backgroundColor,
           borderRadius: `${borderRadius}px`,
           padding: `${paddingY}px ${paddingX}px`,
           fontWeight: fontWeight,

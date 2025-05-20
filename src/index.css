@@ -7,16 +7,23 @@
 }
 
 html {
-  font-size: 72.5%;
+  font-size: 62.5%;
 }
 
 :root {
-  --black: #242424;
+  --color-background: #ff0000;
+  --color-violet: #410445;
+  --color-purple: #a5158c;
+  --color-pink: #ff2df1;
+  --color-yellow: #f6dc43;
+  --color-text-black: #242424;
+  --color-text-white: #fff;
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body {
-  min-height: 100dvh;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 100dvh;
+  font-family: var(--font-family);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,15 +33,4 @@ textarea {
   resize: none;
   border-radius: 5px;
   padding: 4px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #fff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
 }
