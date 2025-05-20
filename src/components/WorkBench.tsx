@@ -9,20 +9,16 @@ import { ChangePadding } from "./ChangePadding";
 import { ChangeFontWeight } from "./ChangeFontWeight";
 import { ChangeFontSize } from "./ChangeFontSize";
 import { ChangeFontColor } from "./ChangeFontColor";  
-// import { color } from "motion";
-// import { ChangeShadow } from "./ChangeShadow";
 
 export const WorkBench = () => {
   const [fontColor, setFontColor] = useState("#fff");
   const [backgroundColor, setBackgroundColor] = useState("#a5158c");
   const [innerText, setInnerText] = useState("Click me!");
   const [borderRadius, setBorderRadius] = useState(5);
-  // const [isBorderActive, setIsBorderActive] = useState(false);
   const [paddingY, setPaddingY] = useState(4);
   const [paddingX, setPaddingX] = useState(25);
   const [fontWeight, setFontWeight] = useState(600);
   const [fontSize, setFontSize] = useState(25);
-  // const [shadow, setShadow] = useState('0 4px 6px rgba(0, 0, 0, 0.1)');
 
 
   const handleChangeColor = ({
@@ -64,12 +60,6 @@ export const WorkBench = () => {
     setFontWeight(Number(target.value));
   };
 
-  // const handleShadowChange = ({
-  //   target,
-  // }: React.ChangeEvent<HTMLInputElement>) => {
-  //   setShadow(target.value);
-  // };
-
   const handleFontSizeChange = ({
     target,
   }: React.ChangeEvent<HTMLInputElement>) => {
@@ -97,7 +87,6 @@ export const WorkBench = () => {
         <ChangeBorderRadius
           onBorderRadiusChange={handleBorderRadiusChange}
           borderRadius={borderRadius}
-          // isBorderActive={isBorderActive}
         />
         <ChangePadding
           paddingY={paddingY}
@@ -113,10 +102,6 @@ export const WorkBench = () => {
           fontSize={fontSize}
           onFontSizeChange={handleFontSizeChange}
         />
-        {/* <ChangeShadow
-          shadow={shadow}
-          onShadowChange={handleShadowChange}
-        /> */}
       </div>
       
       <aside className="workbench__preview">
@@ -129,7 +114,6 @@ export const WorkBench = () => {
           fontWeight={fontWeight}
           fontSize={fontSize}
           fontColor={fontColor}
-          // shadow={shadow}
         ></Button>
         <CodeAreaCSS
           borderRadius={borderRadius}
@@ -139,7 +123,6 @@ export const WorkBench = () => {
           fontWeight={fontWeight}
           fontSize={fontSize}
           fontColor={fontColor}
-          // shadow={shadow}
         />
         <CodeAreaHTML innerText={innerText} />
       </aside>

@@ -48,7 +48,7 @@
 
 .app__title-span-2 {
   padding: 0 2rem;
-  background-color: var(--color-background);
+  background-color: var(--color-background-red);
   color: var(--color-text-white);
   border-radius: 19px;
 }
@@ -171,10 +171,3 @@ input[type="color"] {
   align-items: center;
   gap: 1rem;
 }
-
-/* .workbench__input-radius::after {
-  content: "px";
-  font-size: 0.8rem;
-  color: #999;
-  margin-left: 0.5rem;
-} */

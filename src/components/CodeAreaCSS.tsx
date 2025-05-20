@@ -9,7 +9,6 @@ export const CodeAreaCSS = ({
   fontWeight,
   fontSize,
   fontColor,
-  // shadow,
 }: {
   backgroundColor: string;
   borderRadius: number;
@@ -18,7 +17,6 @@ export const CodeAreaCSS = ({
   fontWeight: number;
   fontSize: number;
   fontColor: string;
-  // shadow: string;
 }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);  
   const [copied, setCopied] = useState(false);

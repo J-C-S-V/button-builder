@@ -7,7 +7,6 @@ export const Button = ({
   fontWeight,
   fontSize,
   fontColor,
-  // shadow,
 }: {
   backgroundColor: string;
   innerText: string;
@@ -17,7 +16,6 @@ export const Button = ({
   fontWeight?: number;
   fontSize?: number;
   fontColor?: string;
-  // shadow?: string;
 }) => {
   return (
     <div className="workbench__button-wrapper">
@@ -30,7 +28,6 @@ export const Button = ({
           fontWeight: fontWeight,
           fontSize: fontSize,
           color: fontColor,
-          // boxShadow: shadow,
         }}
       >
         {innerText}
