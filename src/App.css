@@ -100,7 +100,11 @@ main {
 .workbench__input-font-size,
 .workbench__input-padding-y,
 .workbench__input-padding-x,
-.workbench__input-border {
+.workbench__input-border,
+.workbench__input-box-shadow-x,
+.workbench__input-box-shadow-y,
+.workbench__input-box-shadow-blur,
+.workbench__input-box-shadow-spread {
   width: 5rem;
   height: 3rem;
   padding: 0.5rem;
@@ -228,7 +232,9 @@ input[type="color"] {
   margin: 0.5rem 0;
 }
 
-.workbench__padding-wrapper {
+.workbench__padding-wrapper,
+.workbench__box-shadow-wrapper-coordinates,
+.workbench__box-shadow-wrapper-blur-spread {
   display: flex;
   justify-content: space-between;
 }

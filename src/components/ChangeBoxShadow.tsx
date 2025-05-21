@@ -27,7 +27,8 @@ export const ChangeBoxShadow = ({
           Box Shadow:
         </label>
         <div className="workbench__box-shadow-wrapper">
-        <div className="workbench__box-shadow-x">
+          <div className="workbench__box-shadow-wrapper-coordinates">
+          <div className="workbench__box-shadow-x">
             <input
               type="number"
               className="workbench__input-box-shadow-x"
@@ -46,6 +47,9 @@ export const ChangeBoxShadow = ({
               onChange={onBoxShadowYChange}
             /> <span className="workbench__box-shadow-y">Y</span>
           </div>
+          </div>
+
+          <div className="workbench__box-shadow-wrapper-blur-spread">
           <div className="workbench__box-shadow-blur">
             <input
               type="number"
@@ -68,6 +72,8 @@ export const ChangeBoxShadow = ({
             />
             <span className="workbench__box-shadow-spread">Spread</span>
           </div>
+          </div>
+
           <div className="workbench__box-shadow-color">
             <input
               type="color"
