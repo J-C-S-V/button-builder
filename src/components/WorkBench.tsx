@@ -14,6 +14,12 @@ export const WorkBench = () => {
   const [fontColor, setFontColor] = useState("#fff");
   const [border, setBorder] = useState(0);
   const [borderColor, setBorderColor] = useState("#000");
+  const [boxShadowX, setBoxShadowX] = useState(0);
+  const [boxShadowY, setBoxShadowY] = useState(0);
+  const [boxShadowBlur, setBoxShadowBlur] = useState(6);
+  const [boxShadowSpread, setBoxShadowSpread] = useState(6);
+  const [boxShadowColor, setBoxShadowColor] = useState("#bdbdbd");
+
 
   const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
@@ -57,6 +63,26 @@ export const WorkBench = () => {
     setBorderColor(e.target.value);
   };
 
+  const handleBoxShadowYChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBoxShadowY(Number(e.target.value));
+  };
+
+  const handleBoxShadowXChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBoxShadowX(Number(e.target.value));
+  };
+
+  const handleBoxShadowBlurChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBoxShadowBlur(Number(e.target.value));
+  };
+
+  const handleBoxShadowColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBoxShadowColor(e.target.value);
+  };
+
+  const handleBoxShadowSpreadChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBoxShadowSpread(Number(e.target.value));
+  };
+
   return (
     <section className="workbench">
       <Controls
@@ -82,6 +108,16 @@ export const WorkBench = () => {
         onBorderChange={handleBorderChange}
         borderColor={borderColor}
         onBorderColorChange={handleBorderColorChange}
+        boxShadowY={boxShadowY}
+        onBoxShadowYChange={handleBoxShadowYChange}
+        boxShadowX={boxShadowX}
+        onBoxShadowXChange={handleBoxShadowXChange}
+        boxShadowBlur={boxShadowBlur}
+        onBoxShadowBlurChange={handleBoxShadowBlurChange}
+        boxShadowColor={boxShadowColor}
+        onBoxShadowColorChange={handleBoxShadowColorChange}
+        boxShadowSpread={boxShadowSpread}
+        onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
       />
       <CodeArea
       innerText={innerText}
@@ -94,6 +130,11 @@ export const WorkBench = () => {
       fontColor={fontColor}
       border={border}
       borderColor={borderColor}
+      boxShadowY={boxShadowY}
+      boxShadowX={boxShadowX}
+      boxShadowBlur={boxShadowBlur}
+      boxShadowColor={boxShadowColor}
+      boxShadowSpread={boxShadowSpread}
       />
     </section>
   );

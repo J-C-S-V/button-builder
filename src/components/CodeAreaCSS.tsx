@@ -10,7 +10,12 @@ export const CodeAreaCSS = ({
   fontSize,
   fontColor,
   border,
-  borderColor
+  borderColor,
+  boxShadowY,
+  boxShadowX,
+  boxShadowBlur,
+  boxShadowColor,
+  boxShadowSpread
 }: {
   backgroundColor: string;
   borderRadius: number;
@@ -21,6 +26,11 @@ export const CodeAreaCSS = ({
   fontColor: string;
   border: number;
   borderColor: string;
+  boxShadowY: number;
+  boxShadowX: number;
+  boxShadowBlur: number;
+  boxShadowColor: string;
+  boxShadowSpread: number;
 }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);  
   const [copied, setCopied] = useState(false);
@@ -60,6 +70,7 @@ export const CodeAreaCSS = ({
   font-size: ${fontSize}px;
   color: ${fontColor};
   border: ${border}px solid ${borderColor};
+  box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};
 }`}
         />
         <button onClick={handleCopy} className="workbench__copy-button">
