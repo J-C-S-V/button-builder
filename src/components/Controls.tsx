@@ -1,7 +1,6 @@
 import { ChangeColor } from "./ChangeColor";
 import { ChangeBorderRadius } from "./ChangeBorderRadius";
 import { ChangeFontColor } from "./ChangeFontColor";
-import { ChangeFontWeight } from "./ChangeFontWeight";
 import { ChangeInnerText } from "./ChangeInnerText";
 import { ChangePadding } from "./ChangePadding";
 import { ChangeFontSize } from "./ChangeFontSize";
@@ -19,48 +18,27 @@ export const Controls = ({
     paddingY,
     onPaddingXChange,
     paddingX,
-    onFontWeightChange,
-    fontWeight,
     onFontSizeChange,
     fontSize,
-
 }: {
-    onTextChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onTextChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     innerText: string;
-    onBackgroundColorChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     backgroundColor: string;
-    onFontColorChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onFontColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     fontColor: string;
-    onBorderRadiusChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onBorderRadiusChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     borderRadius: number;
-    onPaddingYChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onPaddingYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     paddingY: number;
-    onPaddingXChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onPaddingXChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     paddingX: number;
-    onFontWeightChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
-    fontWeight: number;
-    onFontSizeChange: ({
-      target: { value },
-    }: React.ChangeEvent<HTMLInputElement>) => void;
+    onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     fontSize: number;
 }) => {
 
     return (
-<div className="workbench__controls">
+      <div className="workbench__controls">
         <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
         <ChangeFontColor
           fontColor={fontColor}
@@ -79,10 +57,6 @@ export const Controls = ({
           paddingX={paddingX}
           onPaddingYChange={onPaddingYChange}
           onPaddingXChange={onPaddingXChange}
-        />
-        <ChangeFontWeight
-          fontWeight={fontWeight}
-          onFontWeightChange={onFontWeightChange}
         />
         <ChangeFontSize
           fontSize={fontSize}

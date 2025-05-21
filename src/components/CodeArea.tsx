@@ -11,6 +11,7 @@ export const CodeArea = ({
     fontSize,
     fontColor,
     innerText,
+    border,
 }: {
     backgroundColor: string;
     borderRadius: number;
@@ -20,6 +21,7 @@ export const CodeArea = ({
     fontSize: number;
     fontColor: string;
     innerText: string;
+    border: number;
 }) => {
     return (
       <aside className="workbench__preview">
@@ -32,6 +34,7 @@ export const CodeArea = ({
         fontWeight={fontWeight}
         fontSize={fontSize}
         fontColor={fontColor}
+        border={border}
       ></Button>
       <CodeAreaCSS
         borderRadius={borderRadius}
@@ -41,6 +44,7 @@ export const CodeArea = ({
         fontWeight={fontWeight}
         fontSize={fontSize}
         fontColor={fontColor}
+        border={border}
       />
       <CodeAreaHTML innerText={innerText} />
     </aside>
