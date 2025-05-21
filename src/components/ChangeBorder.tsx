@@ -11,7 +11,7 @@ export const ChangeBorder = ({ onBorderChange, border }:{onBorderChange: (e: Rea
         onChange={onBorderChange}
         value={border}
         min={0}
-        max={10}
+        max={50}
       />
     </>
   )

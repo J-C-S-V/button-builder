@@ -8,6 +8,7 @@ export const Button = ({
   fontSize,
   fontColor,
   border,
+  borderColor,
 }: {
   backgroundColor: string;
   innerText: string;
@@ -18,6 +19,7 @@ export const Button = ({
   fontSize?: number;
   fontColor?: string;
   border?: number;
+  borderColor?: string;
 }) => {
   return (
     <div className="workbench__button-wrapper">
@@ -30,7 +32,7 @@ export const Button = ({
           fontWeight: fontWeight,
           fontSize: fontSize,
           color: fontColor,
-        border: `${border}px solid #000`,
+        border: `${border}px solid ${borderColor}`,
         }}
       >
         {innerText}

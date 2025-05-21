@@ -13,6 +13,7 @@ export const WorkBench = () => {
   const [fontSize, setFontSize] = useState(16);
   const [fontColor, setFontColor] = useState("#fff");
   const [border, setBorder] = useState(0);
+  const [borderColor, setBorderColor] = useState("#000");
 
   const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
@@ -52,6 +53,10 @@ export const WorkBench = () => {
     setBorder(Number(e.target.value));
   };
 
+  const handleBorderColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBorderColor(e.target.value);
+  };
+
   return (
     <section className="workbench">
       <Controls
@@ -75,6 +80,8 @@ export const WorkBench = () => {
         onFontWeightChange={handleFontWeightChange}
         border={border}
         onBorderChange={handleBorderChange}
+        borderColor={borderColor}
+        onBorderColorChange={handleBorderColorChange}
       />
       <CodeArea
       innerText={innerText}
@@ -86,6 +93,7 @@ export const WorkBench = () => {
       fontSize={fontSize}
       fontColor={fontColor}
       border={border}
+      borderColor={borderColor}
       />
     </section>
   );

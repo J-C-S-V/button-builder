@@ -3,39 +3,42 @@ import { CodeAreaCSS } from "./CodeAreaCSS";
 import { CodeAreaHTML } from "./CodeAreaHTML";
 
 export const CodeArea = ({
-    backgroundColor,
+    border,
+    borderColor,
     borderRadius,
+    backgroundColor,
     paddingY,
     paddingX,
     fontWeight,
     fontSize,
     fontColor,
     innerText,
-    border,
 }: {
-    backgroundColor: string;
+    border: number;
+    borderColor: string;
     borderRadius: number;
+    backgroundColor: string;
     paddingY: number;
     paddingX: number;
     fontWeight: number;
     fontSize: number;
     fontColor: string;
     innerText: string;
-    border: number;
 }) => {
     return (
       <aside className="workbench__preview">
       <Button
-        backgroundColor={backgroundColor}
-        innerText={innerText}
+        border={border}
+        borderColor={borderColor}
         borderRadius={borderRadius}
+        backgroundColor={backgroundColor}
         paddingY={paddingY}
         paddingX={paddingX}
         fontWeight={fontWeight}
         fontSize={fontSize}
         fontColor={fontColor}
-        border={border}
-      ></Button>
+        innerText={innerText}
+      />
       <CodeAreaCSS
         borderRadius={borderRadius}
         backgroundColor={backgroundColor}
@@ -45,6 +48,7 @@ export const CodeArea = ({
         fontSize={fontSize}
         fontColor={fontColor}
         border={border}
+        borderColor={borderColor}
       />
       <CodeAreaHTML innerText={innerText} />
     </aside>
