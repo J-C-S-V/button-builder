@@ -221,8 +221,8 @@ input[type="color"] {
   padding: 0 0.5rem;
   border-radius: 5px;
   width: fit-content;
-  background-color: var(--color-violet);
-  color: var(--color-text-white);
+  background-color: var(--color-cyan-light);
+  color: var(--color-text-black);
   margin: 0.5rem 0;
 }
 
