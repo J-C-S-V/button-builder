@@ -60,7 +60,7 @@ main {
 .workbench {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
   width: 100%;
 }
 
@@ -69,7 +69,7 @@ main {
   flex-direction: column;
   gap: 0.5rem;
   text-align: left;
-  width: 20rem;
+  width: 25rem;
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 5px;
@@ -97,8 +97,6 @@ main {
 .workbench__input-padding,
 .workbench__input-font-weight,
 .workbench__input-font-size,
-.workbench__input-padding-y,
-.workbench__input-padding-x,
 .workbench__input-border,
 .workbench__input-box-shadow-x,
 .workbench__input-box-shadow-y,
@@ -177,7 +175,6 @@ input[type="color"] {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
 }
 
 .footer {
@@ -235,13 +232,27 @@ input[type="color"] {
 .workbench__box-shadow-wrapper-coordinates,
 .workbench__box-shadow-wrapper-blur-spread {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: left;
 }
 
-.workbench__input-radius-wrapper {
+.workbench__input-radius-wrapper,
+.workbench__text-padding-y,
+.workbench__text-padding-x {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
+}
+
+.workbench__input-padding-x,
+.workbench__input-padding-y {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.workbench__padding-y,
+.workbench__padding-x {
+  width: 60px;
 }
 
 .workbench__input-radius {
