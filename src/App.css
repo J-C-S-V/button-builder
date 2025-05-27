@@ -93,7 +93,7 @@ main {
   border: 1px solid #ccc;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-.workbench__input-radius,
+
 .workbench__input-padding,
 .workbench__input-font-weight,
 .workbench__input-font-size,
@@ -236,4 +236,19 @@ input[type="color"] {
 .workbench__box-shadow-wrapper-blur-spread {
   display: flex;
   justify-content: space-between;
+}
+
+.workbench__input-radius-wrapper {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.workbench__input-radius {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.workbench__input-radius-span {
+  width: 35px;
 }

@@ -10,15 +10,20 @@ export const ChangeBorderRadius = ({
       <label title="Enter border radius" htmlFor="borderRadius" className="label">
         Border Radius:
       </label>
-      <input
-        className="workbench__input-radius"
-        type="number"
-        id="borderRadius"
-        onChange={onBorderRadiusChange}
-        placeholder={borderRadius.toString()}
-        min={0}
-        value={borderRadius}
-      />
+      <div className="workbench__input-radius-wrapper">
+        <input
+          className="workbench__input-radius"
+          type="range"
+          id="borderRadius"
+          onChange={onBorderRadiusChange}
+          placeholder={borderRadius.toString()}
+          min={0}
+          max={50}
+          step={1}
+          value={borderRadius}
+        />
+        <span className="workbench__input-radius-span">{borderRadius}%</span>
+      </div>
     </>
   );
 };

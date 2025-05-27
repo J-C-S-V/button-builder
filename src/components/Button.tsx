@@ -37,7 +37,7 @@ export const Button = ({
         className="workbench__button"
         style={{
           backgroundColor: backgroundColor,
-          borderRadius: `${borderRadius}px`,
+          borderRadius: `${borderRadius}%`,
           padding: `${paddingY}px ${paddingX}px`,
           fontWeight: fontWeight,
           fontSize: fontSize,
