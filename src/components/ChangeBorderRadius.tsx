@@ -22,7 +22,7 @@ export const ChangeBorderRadius = ({
           step={1}
           value={borderRadius}
         />
-        <span className="workbench__input-radius-span">{borderRadius}%</span>
+        <span className="workbench__input-radius-span">{borderRadius}px</span>
       </div>
     </>
   );

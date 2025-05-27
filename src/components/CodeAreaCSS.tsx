@@ -61,7 +61,7 @@ export const CodeAreaCSS = ({
           value={`.button {
   cursor: pointer;
   background-color: ${backgroundColor};
-  border-radius: ${borderRadius}%;
+  border-radius: ${borderRadius}px;
   padding: ${paddingY}px ${paddingX}px;
   font-weight: ${fontWeight};
   font-size: ${fontSize}px;
