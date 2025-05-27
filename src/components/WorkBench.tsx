@@ -6,19 +6,19 @@ import { CodeArea } from "./CodeArea";
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
   const [backgroundColor, setbackgroundColor] = useState("#ff0000");
-  const [borderRadius, setBorderRadius] = useState(0);
-  const [paddingY, setPaddingY] = useState(0);
-  const [paddingX, setPaddingX] = useState(0);
-  const [fontWeight, setFontWeight] = useState(400);
-  const [fontSize, setFontSize] = useState(16);
-  const [fontColor, setFontColor] = useState("#fff");
-  const [border, setBorder] = useState(0);
-  const [borderColor, setBorderColor] = useState("#000");
-  const [boxShadowX, setBoxShadowX] = useState(0);
-  const [boxShadowY, setBoxShadowY] = useState(0);
-  const [boxShadowBlur, setBoxShadowBlur] = useState(6);
-  const [boxShadowSpread, setBoxShadowSpread] = useState(6);
-  const [boxShadowColor, setBoxShadowColor] = useState("#bdbdbd");
+  const [borderRadius, setBorderRadius] = useState(12);
+  const [paddingY, setPaddingY] = useState(12);
+  const [paddingX, setPaddingX] = useState(40);
+  const [fontWeight, setFontWeight] = useState(600);
+  const [fontSize, setFontSize] = useState(28);
+  const [fontColor, setFontColor] = useState("#ffffff");
+  const [border, setBorder] = useState(2);
+  const [borderColor, setBorderColor] = useState("#ffffff");
+  const [boxShadowX, setBoxShadowX] = useState(-7);
+  const [boxShadowY, setBoxShadowY] = useState(7);
+  const [boxShadowBlur, setBoxShadowBlur] = useState(0);
+  const [boxShadowSpread, setBoxShadowSpread] = useState(0);
+  const [boxShadowColor, setBoxShadowColor] = useState("#c2c2c2");
 
   const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
