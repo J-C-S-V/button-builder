@@ -20,17 +20,14 @@ export const WorkBench = () => {
   const [boxShadowSpread, setBoxShadowSpread] = useState(6);
   const [boxShadowColor, setBoxShadowColor] = useState("#bdbdbd");
 
-
   const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
   };
 
-  
   const handleChangebackgroundColor = (e: React.ChangeEvent<HTMLInputElement>) => {
     setbackgroundColor(e.target.value);
   };
 
-    
   const handlePaddingYChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPaddingY(Number(e.target.value));
   };
@@ -120,21 +117,21 @@ export const WorkBench = () => {
         onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
       />
       <CodeArea
-      innerText={innerText}
-      backgroundColor={backgroundColor}
-      borderRadius={borderRadius}
-      paddingY={paddingY}
-      paddingX={paddingX}
-      fontWeight={fontWeight}
-      fontSize={fontSize}
-      fontColor={fontColor}
-      border={border}
-      borderColor={borderColor}
-      boxShadowY={boxShadowY}
-      boxShadowX={boxShadowX}
-      boxShadowBlur={boxShadowBlur}
-      boxShadowColor={boxShadowColor}
-      boxShadowSpread={boxShadowSpread}
+        innerText={innerText}
+        backgroundColor={backgroundColor}
+        borderRadius={borderRadius}
+        paddingY={paddingY}
+        paddingX={paddingX}
+        fontWeight={fontWeight}
+        fontSize={fontSize}
+        fontColor={fontColor}
+        border={border}
+        borderColor={borderColor}
+        boxShadowY={boxShadowY}
+        boxShadowX={boxShadowX}
+        boxShadowBlur={boxShadowBlur}
+        boxShadowColor={boxShadowColor}
+        boxShadowSpread={boxShadowSpread}
       />
     </section>
   );

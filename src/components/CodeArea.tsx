@@ -3,40 +3,40 @@ import { CodeAreaCSS } from "./CodeAreaCSS";
 import { CodeAreaHTML } from "./CodeAreaHTML";
 
 export const CodeArea = ({
-    border,
-    borderColor,
-    borderRadius,
-    backgroundColor,
-    paddingY,
-    paddingX,
-    fontWeight,
-    fontSize,
-    fontColor,
-    innerText,
-    boxShadowY,
-    boxShadowX,
-    boxShadowBlur,
-    boxShadowColor,
-    boxShadowSpread,
+  border,
+  borderColor,
+  borderRadius,
+  backgroundColor,
+  paddingY,
+  paddingX,
+  fontWeight,
+  fontSize,
+  fontColor,
+  innerText,
+  boxShadowY,
+  boxShadowX,
+  boxShadowBlur,
+  boxShadowColor,
+  boxShadowSpread,
 }: {
-    border: number;
-    borderColor: string;
-    borderRadius: number;
-    backgroundColor: string;
-    paddingY: number;
-    paddingX: number;
-    fontWeight: number;
-    fontSize: number;
-    fontColor: string;
-    innerText: string;
-    boxShadowY: number;
-    boxShadowX: number;
-    boxShadowBlur: number;
-    boxShadowColor: string;
-    boxShadowSpread: number;
+  border: number;
+  borderColor: string;
+  borderRadius: number;
+  backgroundColor: string;
+  paddingY: number;
+  paddingX: number;
+  fontWeight: number;
+  fontSize: number;
+  fontColor: string;
+  innerText: string;
+  boxShadowY: number;
+  boxShadowX: number;
+  boxShadowBlur: number;
+  boxShadowColor: string;
+  boxShadowSpread: number;
 }) => {
-    return (
-      <aside className="workbench__preview">
+  return (
+    <aside className="workbench__preview">
       <Button
         border={border}
         borderColor={borderColor}
@@ -72,5 +72,5 @@ export const CodeArea = ({
       />
       <CodeAreaHTML innerText={innerText} />
     </aside>
-    )
-}
+  );
+};

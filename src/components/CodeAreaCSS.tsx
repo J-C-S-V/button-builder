@@ -15,7 +15,7 @@ export const CodeAreaCSS = ({
   boxShadowX,
   boxShadowBlur,
   boxShadowColor,
-  boxShadowSpread
+  boxShadowSpread,
 }: {
   backgroundColor: string;
   borderRadius: number;
@@ -32,7 +32,7 @@ export const CodeAreaCSS = ({
   boxShadowColor: string;
   boxShadowSpread: number;
 }) => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);  
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -52,10 +52,7 @@ export const CodeAreaCSS = ({
   return (
     <>
       <h2>CSS code</h2>
-      <div
-        className="workbench__code-area-wrapper"
-        style={{ position: "relative" }}
-      >
+      <div className="workbench__code-area-wrapper" style={{ position: "relative" }}>
         <textarea
           ref={textareaRef}
           rows={10}

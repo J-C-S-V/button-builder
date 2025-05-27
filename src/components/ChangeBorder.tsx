@@ -1,4 +1,10 @@
-export const ChangeBorder = ({ onBorderChange, border }:{onBorderChange: (e: React.ChangeEvent<HTMLInputElement>) => void; border: number}) => {
+export const ChangeBorder = ({
+  onBorderChange,
+  border,
+}: {
+  onBorderChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  border: number;
+}) => {
   return (
     <>
       <label className="label" title="Enter border" htmlFor="border">
@@ -14,5 +20,5 @@ export const ChangeBorder = ({ onBorderChange, border }:{onBorderChange: (e: Rea
         max={50}
       />
     </>
-  )
-}
+  );
+};

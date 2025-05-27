@@ -22,13 +22,7 @@ export const CodeAreaHTML = ({ innerText }: { innerText: string }) => {
     <>
       <h2>HTML code</h2>
       <div className="workbench__code-area-wrapper">
-        <textarea
-          ref={textareaRef}
-          rows={5}
-          cols={50}
-          disabled
-          value={`<a class="button">${innerText}</a>`}
-        />
+        <textarea ref={textareaRef} rows={5} cols={50} disabled value={`<a class="button">${innerText}</a>`} />
         <button onClick={handleCopy} className="workbench__copy-button">
           <IconCopy />
         </button>

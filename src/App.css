@@ -18,8 +18,7 @@
   position: relative;
   padding: 0 2rem;
   color: var(--color-purple);
-  text-shadow: 0 0 2px var(--color-text-white), 0 0 5px var(--color-purple),
-    0 0 4px var(--color-purple);
+  text-shadow: 0 0 2px var(--color-text-white), 0 0 5px var(--color-purple), 0 0 4px var(--color-purple);
 }
 
 .app__title-span-1::before,

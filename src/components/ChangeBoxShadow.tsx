@@ -1,33 +1,33 @@
 export const ChangeBoxShadow = ({
-    onBoxShadowYChange,
-    onBoxShadowXChange,
-    onBoxShadowBlurChange,
-    onBoxShadowColorChange,
-    onBoxShadowSpreadChange,
-    boxShadowY,
-    boxShadowX,
-    boxShadowBlur,
-    boxShadowColor,
-    boxShadowSpread,
-  }: {
-    onBoxShadowYChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-    onBoxShadowXChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-    onBoxShadowBlurChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-    onBoxShadowColorChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-    onBoxShadowSpreadChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-    boxShadowY: number;
-    boxShadowX: number;
-    boxShadowBlur: number;
-    boxShadowColor: string;
-    boxShadowSpread: number;
-  }) => {
-    return (
-      <>
-        <label title="Enter Y position" htmlFor="box-shadow-y" className="label">
-          Box Shadow:
-        </label>
-        <div className="workbench__box-shadow-wrapper">
-          <div className="workbench__box-shadow-wrapper-coordinates">
+  onBoxShadowYChange,
+  onBoxShadowXChange,
+  onBoxShadowBlurChange,
+  onBoxShadowColorChange,
+  onBoxShadowSpreadChange,
+  boxShadowY,
+  boxShadowX,
+  boxShadowBlur,
+  boxShadowColor,
+  boxShadowSpread,
+}: {
+  onBoxShadowYChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowXChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowBlurChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowColorChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowSpreadChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  boxShadowY: number;
+  boxShadowX: number;
+  boxShadowBlur: number;
+  boxShadowColor: string;
+  boxShadowSpread: number;
+}) => {
+  return (
+    <>
+      <label title="Enter Y position" htmlFor="box-shadow-y" className="label">
+        Box Shadow:
+      </label>
+      <div className="workbench__box-shadow-wrapper">
+        <div className="workbench__box-shadow-wrapper-coordinates">
           <div className="workbench__box-shadow-x">
             <input
               type="number"
@@ -45,11 +45,12 @@ export const ChangeBoxShadow = ({
               id="box-shadow-y"
               value={boxShadowY}
               onChange={onBoxShadowYChange}
-            /> <span className="workbench__box-shadow-y">Y</span>
+            />{" "}
+            <span className="workbench__box-shadow-y">Y</span>
           </div>
-          </div>
+        </div>
 
-          <div className="workbench__box-shadow-wrapper-blur-spread">
+        <div className="workbench__box-shadow-wrapper-blur-spread">
           <div className="workbench__box-shadow-blur">
             <input
               type="number"
@@ -72,20 +73,19 @@ export const ChangeBoxShadow = ({
             />
             <span className="workbench__box-shadow-spread">Spread</span>
           </div>
-          </div>
-
-          <div className="workbench__box-shadow-color">
-            <input
-              type="color"
-              className="workbench__input-box-shadow-color"
-              id="box-shadow-color"
-              value={boxShadowColor}
-              onChange={onBoxShadowColorChange}
-            />
-            <span className="workbench__box-shadow-color">Color</span>
-          </div>
         </div>
-      </>
-    );
-  };
-  
+
+        <div className="workbench__box-shadow-color">
+          <input
+            type="color"
+            className="workbench__input-box-shadow-color"
+            id="box-shadow-color"
+            value={boxShadowColor}
+            onChange={onBoxShadowColorChange}
+          />
+          <span className="workbench__box-shadow-color">Color</span>
+        </div>
+      </div>
+    </>
+  );
+};

@@ -24,7 +24,8 @@ export const ChangePadding = ({
             min={0}
             value={paddingY}
             onChange={onPaddingYChange}
-          /> <span className="workbench__padding-y">Y</span>
+          />{" "}
+          <span className="workbench__padding-y">Y</span>
         </div>
         <div className="workbench__text-padding-x">
           <input

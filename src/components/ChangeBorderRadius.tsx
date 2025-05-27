@@ -2,9 +2,7 @@ export const ChangeBorderRadius = ({
   onBorderRadiusChange,
   borderRadius,
 }: {
-  onBorderRadiusChange: ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBorderRadiusChange: ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => void;
   borderRadius: number;
 }) => {
   return (
