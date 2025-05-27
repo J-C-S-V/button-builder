@@ -1,25 +1,60 @@
 .app {
   text-align: center;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-system-ui);
   font-weight: 600;
-  font-size: 1.4rem;
-  color: var(--black);
+  font-size: 1.6rem;
+  color: var(--color-text-black);
 }
 
 .app__title {
-  margin-bottom: 3rem;
-  font-size: 5rem;
+  font-size: 6rem;
+  line-height: 1;
+  margin-bottom: 5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-main {
-  margin: 0 auto;
-  max-width: 700px;
+.app__title-span-1,
+.app__title-span-3 {
+  position: relative;
+  padding: 0 2rem;
+  color: var(--color-purple);
+  text-shadow: 0 0 2px var(--color-text-white), 0 0 5px var(--color-purple), 0 0 4px var(--color-purple);
+}
+
+.app__title-span-1::before,
+.app__title-span-1::after,
+.app__title-span-3::before,
+.app__title-span-3::after {
+  color: var(--color-purple);
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(40% - 5px);
+  border: 4px solid var(--color-purple);
+}
+
+.app__title-span-1::before,
+.app__title-span-3::before {
+  border-bottom-width: 0;
+}
+
+.app__title-span-1::after,
+.app__title-span-3::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.app__title-span-2 {
+  padding: 0 2rem;
+  background-color: var(--color-background-red);
+  color: var(--color-text-white);
+  border-radius: 19px;
 }
 
 .workbench {
   display: flex;
-  justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
   width: 100%;
 }
 
@@ -27,38 +62,34 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  text-align: left;
-  border: 1px solid #ccc;
-  padding: 5px;
-  border-radius: 5px;
+  text-align: right;
+  width: 25rem;
 }
 
-.workbench__preview {
+.workbench__preview,
+.workbench__controls {
   border: 1px solid #ccc;
-  padding: 5px;
+  padding: 1rem;
   border-radius: 5px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
 .workbench__textarea {
-  width: 100%;
-  height: 3rem;
-  padding: 5px;
+  padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-system-ui);
 }
-.workbench__input-radius,
-.workbench__input-padding,
+
 .workbench__input-font-weight,
-.workbench__input-font-size,
-.workbench__input-padding-y,
-.workbench__input-padding-x {
+.workbench__input-border,
+.workbench__input-box-shadow-x,
+.workbench__input-box-shadow-y,
+.workbench__input-box-shadow-blur,
+.workbench__input-box-shadow-spread {
   width: 5rem;
   height: 3rem;
-  padding: 5px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .workbench__button-wrapper {
@@ -79,8 +110,8 @@ main {
 
 .workbench__copy-button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 16px;
   border: none;
   background: none;
   color: #ccc;
@@ -91,25 +122,24 @@ main {
 .workbench__icon-copy {
   fill: #727d8c;
   transition: fill 0.1s ease-in-out;
+  &:hover {
+    fill: #464646;
+  }
 }
 
-.workbench__icon-copy:hover {
-  fill: #464646;
-}
-
-.workbench__input-color {
+.workbench__input-color,
+.workbench__box-shadow-color {
   display: flex;
   justify-content: space-between;
-  gap: 0.5rem;
 }
 
-.workbench__font-color-preview, .workbench__background-color-preview {
-  font-size: 1rem;
-  width: 9rem;
+.workbench__font-color-preview,
+.workbench__background-color-preview,
+.workbench__border-color-preview,
+.workbench__box-shadow-color-preview {
+  font-size: 1.4rem;
   border: 1px solid #ccc;
-  display: inline-block;
-  margin-left: 0.5rem;
-  padding: 5px;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
@@ -119,16 +149,111 @@ input[type="color"] {
   border: 1px solid #ccc;
 }
 
-.workbench__text-padding-y, .workbench__text-padding-x {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
+.footer {
+  margin-top: 2rem;
 }
 
-/* .workbench__input-radius::after {
-  content: "px";
-  font-size: 0.8rem;
-  color: #999;
-  margin-left: 0.5rem;
-} */
+.footer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__tooltip {
+  position: relative;
+  fill: var(--color-text-black);
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.footer__tooltip::after {
+  content: "GitHub";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+  color: var(--color-text-white);
+  background-color: var(--color-text-black);
+  border-radius: 5px;
+  pointer-events: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.footer__tooltip:hover::after {
+  opacity: 1;
+  pointer-events: none;
+  padding: 0 0.5rem;
+  transform: translate(-50%, 100%);
+}
+
+.label {
+  border: 1px solid #ccc;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: var(--color-cyan-light);
+  margin: 0.5rem 0;
+}
+
+.workbench__padding-y,
+.workbench__padding-x {
+  width: 60px;
+}
+
+.workbench__input-radius-span {
+  width: 35px;
+}
+
+.workbench__input-font-size-wrapper,
+.workbench__input-font-weight-wrapper,
+.workbench__text-padding-y,
+.workbench__text-padding-x,
+.workbench__input-radius-wrapper,
+.workbench__input-border-wrapper,
+.workbench__box-shadow-x,
+.workbench__box-shadow-y,
+.workbench__box-shadow-blur,
+.workbench__box-shadow-spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.workbench__input-font-size,
+.workbench__input-font-weight,
+.workbench__input-border,
+.workbench__input-box-shadow-x,
+.workbench__input-box-shadow-y,
+.workbench__input-box-shadow-blur,
+.workbench__input-box-shadow-spread,
+.workbench__input-padding-x,
+.workbench__input-padding-y,
+.workbench__input-radius {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.workbench__input-font-size-span,
+.workbench__input-font-weight-span,
+.workbench__input-border-span {
+  width: 35px;
+}
+
+.workbench__shadow-x,
+.workbench__shadow-y,
+.workbench__box-shadow-blur-span,
+.workbench__box-shadow-spread-span {
+  width: 66px;
+}
+
+.workbench__box-shadow-blur-span {
+  width: 80px;
+}
+
+.workbench__box-shadow-spread-span {
+  width: 100px;
+}

@@ -1,5 +1,5 @@
 export const Button = ({
-  color,
+  backgroundColor,
   innerText,
   borderRadius,
   paddingY,
@@ -7,30 +7,43 @@ export const Button = ({
   fontWeight,
   fontSize,
   fontColor,
-  // shadow,
+  border,
+  borderColor,
+  boxShadowY,
+  boxShadowX,
+  boxShadowBlur,
+  boxShadowColor,
+  boxShadowSpread,
 }: {
-  color: string;
+  backgroundColor: string;
   innerText: string;
-  borderRadius?: number;
-  paddingY?: number;
-  paddingX?: number;
-  fontWeight?: number;
-  fontSize?: number;
-  fontColor?: string;
-  // shadow?: string;
+  borderRadius: number;
+  paddingY: number;
+  paddingX: number;
+  fontWeight: number;
+  fontSize: number;
+  fontColor: string;
+  border: number;
+  borderColor: string;
+  boxShadowY: number;
+  boxShadowX: number;
+  boxShadowBlur: number;
+  boxShadowColor: string;
+  boxShadowSpread: number;
 }) => {
   return (
     <div className="workbench__button-wrapper">
       <a
         className="workbench__button"
         style={{
-          backgroundColor: color,
+          backgroundColor: backgroundColor,
           borderRadius: `${borderRadius}px`,
           padding: `${paddingY}px ${paddingX}px`,
           fontWeight: fontWeight,
           fontSize: fontSize,
           color: fontColor,
-          // boxShadow: shadow,
+          border: `${border}px solid ${borderColor}`,
+          boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
         }}
       >
         {innerText}
