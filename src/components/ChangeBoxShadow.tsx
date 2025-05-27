@@ -30,48 +30,58 @@ export const ChangeBoxShadow = ({
         <div className="workbench__box-shadow-wrapper-coordinates">
           <div className="workbench__box-shadow-x">
             <input
-              type="number"
+              type="range"
               className="workbench__input-box-shadow-x"
+              min={-50}
+              max={50}
+              step={1}
               id="box-shadow-x"
               value={boxShadowX}
               onChange={onBoxShadowXChange}
             />
-            <span className="workbench__shadow-x">X</span>
+            <span className="workbench__shadow-x">X &nbsp;&nbsp;{boxShadowX}px</span>
           </div>
           <div className="workbench__box-shadow-y">
             <input
-              type="number"
+              type="range"
               className="workbench__input-box-shadow-y"
+              min={-50}
+              max={50}
+              step={1}
               id="box-shadow-y"
               value={boxShadowY}
               onChange={onBoxShadowYChange}
-            />{" "}
-            <span className="workbench__box-shadow-y">Y</span>
+            />
+            <span className="workbench__box-shadow-y">Y &nbsp;&nbsp;{boxShadowY}px</span>
           </div>
         </div>
 
         <div className="workbench__box-shadow-wrapper-blur-spread">
           <div className="workbench__box-shadow-blur">
             <input
-              type="number"
+              type="range"
               className="workbench__input-box-shadow-blur"
               id="box-shadow-blur"
               min={0}
+              max={50}
+              step={1}
               value={boxShadowBlur}
               onChange={onBoxShadowBlurChange}
             />
-            <span className="workbench__box-shadow-blur">Blur</span>
+            <span className="workbench__box-shadow-blur">Blur &nbsp;&nbsp;{boxShadowBlur}px</span>
           </div>
           <div className="workbench__box-shadow-spread">
             <input
-              type="number"
+              type="range"
               className="workbench__input-box-shadow-spread"
               id="box-shadow-spread"
               min={0}
+              max={50}
+              step={1}
               value={boxShadowSpread}
               onChange={onBoxShadowSpreadChange}
             />
-            <span className="workbench__box-shadow-spread">Spread</span>
+            <span className="workbench__box-shadow-spread">Spread &nbsp;&nbsp;{boxShadowSpread}px</span>
           </div>
         </div>
 
@@ -83,7 +93,12 @@ export const ChangeBoxShadow = ({
             value={boxShadowColor}
             onChange={onBoxShadowColorChange}
           />
-          <span className="workbench__box-shadow-color">Color</span>
+          <input
+            type="text"
+            className="workbench__box-shadow-color-preview"
+            value={boxShadowColor}
+            onChange={onBoxShadowColorChange}
+          />
         </div>
       </div>
     </>

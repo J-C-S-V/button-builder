@@ -96,7 +96,6 @@ main {
 
 .workbench__input-padding,
 .workbench__input-font-weight,
-.workbench__input-font-size,
 .workbench__input-border,
 .workbench__input-box-shadow-x,
 .workbench__input-box-shadow-y,
@@ -146,17 +145,18 @@ main {
   fill: #464646;
 }
 
-.workbench__input-color {
+.workbench__input-color,
+.workbench__box-shadow-color {
   display: flex;
   justify-content: space-between;
-  gap: 0.5rem;
 }
 
 .workbench__font-color-preview,
 .workbench__background-color-preview,
-.workbench__border-color-preview {
-  font-size: 1rem;
-  width: 9rem;
+.workbench__border-color-preview,
+.workbench__box-shadow-color-preview {
+  font-size: 1.3rem;
+  width: 14rem;
   border: 1px solid #ccc;
   display: inline-block;
   margin-left: 0.5rem;
@@ -168,13 +168,6 @@ input[type="color"] {
   width: 3rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-}
-
-.workbench__text-padding-y,
-.workbench__text-padding-x {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .footer {
@@ -236,14 +229,6 @@ input[type="color"] {
   justify-content: left;
 }
 
-.workbench__input-radius-wrapper,
-.workbench__text-padding-y,
-.workbench__text-padding-x {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .workbench__input-padding-x,
 .workbench__input-padding-y {
   flex-grow: 1;
@@ -261,5 +246,37 @@ input[type="color"] {
 }
 
 .workbench__input-radius-span {
+  width: 35px;
+}
+
+.workbench__input-font-size-wrapper,
+.workbench__input-font-weight-wrapper,
+.workbench__text-padding-y,
+.workbench__text-padding-x,
+.workbench__input-radius-wrapper,
+.workbench__input-border-wrapper,
+.workbench__box-shadow-x,
+.workbench__box-shadow-y,
+.workbench__box-shadow-blur,
+.workbench__box-shadow-spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workbench__input-font-size,
+.workbench__input-font-weight,
+.workbench__input-border,
+.workbench__input-box-shadow-x,
+.workbench__input-box-shadow-y,
+.workbench__input-box-shadow-blur,
+.workbench__input-box-shadow-spread {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.workbench__input-font-size-span,
+.workbench__input-font-weight-span,
+.workbench__input-border-span {
   width: 35px;
 }
