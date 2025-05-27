@@ -3,7 +3,7 @@ export const ChangeFontColor = ({
   onFontColorChange,
 }: {
   fontColor: string;
-  onFontColorChange: ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => void;
+  onFontColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
     <>

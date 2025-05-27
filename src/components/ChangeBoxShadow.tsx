@@ -10,11 +10,11 @@ export const ChangeBoxShadow = ({
   boxShadowColor,
   boxShadowSpread,
 }: {
-  onBoxShadowYChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  onBoxShadowXChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  onBoxShadowBlurChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  onBoxShadowColorChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  onBoxShadowSpreadChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowXChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowBlurChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowSpreadChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   boxShadowY: number;
   boxShadowX: number;
   boxShadowBlur: number;

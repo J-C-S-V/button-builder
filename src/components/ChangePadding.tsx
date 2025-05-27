@@ -4,8 +4,8 @@ export const ChangePadding = ({
   paddingY,
   paddingX,
 }: {
-  onPaddingYChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  onPaddingXChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onPaddingYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onPaddingXChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   paddingY: number;
   paddingX: number;
 }) => {

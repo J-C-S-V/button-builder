@@ -3,7 +3,7 @@ export const ChangeFontSize = ({
   onFontSizeChange,
 }: {
   fontSize: number;
-  onFontSizeChange: ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => void;
+  onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
     <>

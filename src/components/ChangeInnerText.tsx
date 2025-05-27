@@ -2,7 +2,7 @@ export const ChangeInnerText = ({
   onTextChange,
   innerText,
 }: {
-  onTextChange: ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => void;
+  onTextChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   innerText: string;
 }) => {
   return (

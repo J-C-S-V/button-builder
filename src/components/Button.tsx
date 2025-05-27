@@ -17,19 +17,19 @@ export const Button = ({
 }: {
   backgroundColor: string;
   innerText: string;
-  borderRadius?: number;
-  paddingY?: number;
-  paddingX?: number;
-  fontWeight?: number;
-  fontSize?: number;
-  fontColor?: string;
-  border?: number;
-  borderColor?: string;
-  boxShadowY?: number;
-  boxShadowX?: number;
-  boxShadowBlur?: number;
-  boxShadowColor?: string;
-  boxShadowSpread?: number;
+  borderRadius: number;
+  paddingY: number;
+  paddingX: number;
+  fontWeight: number;
+  fontSize: number;
+  fontColor: string;
+  border: number;
+  borderColor: string;
+  boxShadowY: number;
+  boxShadowX: number;
+  boxShadowBlur: number;
+  boxShadowColor: string;
+  boxShadowSpread: number;
 }) => {
   return (
     <div className="workbench__button-wrapper">

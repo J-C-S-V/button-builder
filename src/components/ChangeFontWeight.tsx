@@ -3,7 +3,7 @@ export const ChangeFontWeight = ({
   onFontWeightChange,
 }: {
   fontWeight: number;
-  onFontWeightChange: ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => void;
+  onFontWeightChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
     <>
