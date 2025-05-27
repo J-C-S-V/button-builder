@@ -52,7 +52,7 @@ export const ChangeBoxShadow = ({
               value={boxShadowY}
               onChange={onBoxShadowYChange}
             />
-            <span className="workbench__box-shadow-y">Y &nbsp;&nbsp;{boxShadowY}px</span>
+            <span className="workbench__shadow-y">Y &nbsp;&nbsp;{boxShadowY}px</span>
           </div>
         </div>
 
@@ -68,7 +68,7 @@ export const ChangeBoxShadow = ({
               value={boxShadowBlur}
               onChange={onBoxShadowBlurChange}
             />
-            <span className="workbench__box-shadow-blur">Blur &nbsp;&nbsp;{boxShadowBlur}px</span>
+            <span className="workbench__box-shadow-blur-span">Blur &nbsp;&nbsp;{boxShadowBlur}px</span>
           </div>
           <div className="workbench__box-shadow-spread">
             <input
@@ -81,7 +81,7 @@ export const ChangeBoxShadow = ({
               value={boxShadowSpread}
               onChange={onBoxShadowSpreadChange}
             />
-            <span className="workbench__box-shadow-spread">Spread &nbsp;&nbsp;{boxShadowSpread}px</span>
+            <span className="workbench__box-shadow-spread-span">Spread &nbsp;&nbsp;{boxShadowSpread}px</span>
           </div>
         </div>
 

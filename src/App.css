@@ -127,8 +127,8 @@ main {
 
 .workbench__copy-button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 16px;
   border: none;
   background: none;
   color: #ccc;
@@ -262,6 +262,7 @@ input[type="color"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .workbench__input-font-size,
@@ -279,4 +280,19 @@ input[type="color"] {
 .workbench__input-font-weight-span,
 .workbench__input-border-span {
   width: 35px;
+}
+
+.workbench__shadow-x,
+.workbench__shadow-y,
+.workbench__box-shadow-blur-span,
+.workbench__box-shadow-spread-span {
+  width: 66px;
+}
+
+.workbench__box-shadow-blur-span {
+  width: 80px;
+}
+
+.workbench__box-shadow-spread-span {
+  width: 100px;
 }
