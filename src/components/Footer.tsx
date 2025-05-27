@@ -6,7 +6,7 @@ export const Footer = () => {
       <p className="footer__text">
         © 2025 Free Button Builder. All rights reserved.{" "}
         <a target="_blank" href="https://github.com/J-C-S-V/button-builder">
-          <span className="footer__icon">
+          <span className="footer__tooltip">
             <IconGithub />
           </span>
         </a>

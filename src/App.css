@@ -1,6 +1,6 @@
 .app {
   text-align: center;
-  font-family: var(--font-family);
+  font-family: var(--font-system-ui);
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--color-text-black);
@@ -52,14 +52,14 @@
   border-radius: 19px;
 }
 
-main {
+/* main {
   margin: 0 auto;
   max-width: fit-content;
-}
+} */
 
 .workbench {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 3rem;
   width: 100%;
 }
@@ -68,33 +68,27 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  text-align: left;
+  text-align: right;
   width: 25rem;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-  background-color: var(--color-text-white);
 }
 
-.workbench__preview {
+.workbench__preview,
+.workbench__controls {
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-  background-color: var(--color-text-white);
 }
 
 .workbench__textarea {
-  width: 100%;
-  height: 3rem;
+  /* width: 100%; */
+  /* height: 3rem; */
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-system-ui);
 }
 
-.workbench__input-padding,
 .workbench__input-font-weight,
 .workbench__input-border,
 .workbench__input-box-shadow-x,
@@ -103,10 +97,7 @@ main {
 .workbench__input-box-shadow-spread {
   width: 5rem;
   height: 3rem;
-  padding: 0.5rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .workbench__button-wrapper {
@@ -139,10 +130,9 @@ main {
 .workbench__icon-copy {
   fill: #727d8c;
   transition: fill 0.1s ease-in-out;
-}
-
-.workbench__icon-copy:hover {
-  fill: #464646;
+  &:hover {
+    fill: #464646;
+  }
 }
 
 .workbench__input-color,
@@ -155,11 +145,8 @@ main {
 .workbench__background-color-preview,
 .workbench__border-color-preview,
 .workbench__box-shadow-color-preview {
-  font-size: 1.3rem;
-  width: 14rem;
+  font-size: 1.4rem;
   border: 1px solid #ccc;
-  display: inline-block;
-  margin-left: 0.5rem;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -181,16 +168,15 @@ input[type="color"] {
   gap: 2rem;
 }
 
-.footer__icon {
+.footer__tooltip {
   position: relative;
   fill: var(--color-text-black);
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-.footer__icon:hover {
-  transform: scale(1.1);
-}
-
-.footer__icon::after {
+.footer__tooltip::after {
   content: "GitHub";
   position: absolute;
   top: 50%;
@@ -204,7 +190,7 @@ input[type="color"] {
   transition: all 0.1s ease-in-out;
 }
 
-.footer__icon:hover::after {
+.footer__tooltip:hover::after {
   opacity: 1;
   pointer-events: none;
   padding: 0 0.5rem;
@@ -217,32 +203,20 @@ input[type="color"] {
   border-radius: 5px;
   width: fit-content;
   background-color: var(--color-cyan-light);
-  color: var(--color-text-black);
   margin: 0.5rem 0;
 }
 
-.workbench__padding-wrapper,
+/* .workbench__padding-wrapper,
 .workbench__box-shadow-wrapper-coordinates,
 .workbench__box-shadow-wrapper-blur-spread {
   display: flex;
   flex-direction: column;
   justify-content: left;
-}
-
-.workbench__input-padding-x,
-.workbench__input-padding-y {
-  flex-grow: 1;
-  margin-right: 1rem;
-}
+} */
 
 .workbench__padding-y,
 .workbench__padding-x {
   width: 60px;
-}
-
-.workbench__input-radius {
-  flex-grow: 1;
-  margin-right: 1rem;
 }
 
 .workbench__input-radius-span {
@@ -271,7 +245,10 @@ input[type="color"] {
 .workbench__input-box-shadow-x,
 .workbench__input-box-shadow-y,
 .workbench__input-box-shadow-blur,
-.workbench__input-box-shadow-spread {
+.workbench__input-box-shadow-spread,
+.workbench__input-padding-x,
+.workbench__input-padding-y,
+.workbench__input-radius {
   flex-grow: 1;
   margin-right: 1rem;
 }

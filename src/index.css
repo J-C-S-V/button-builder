@@ -19,12 +19,12 @@ html {
   --color-yellow: #f6dc43;
   --color-text-black: #242424;
   --color-text-white: #fff;
-  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body {
   height: 100dvh;
-  font-family: var(--font-family);
+  font-family: var(--font-system-ui);
   display: flex;
   justify-content: center;
   align-items: center;
