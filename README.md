@@ -1,12 +1,20 @@
-# Metronome App
+# Button Builder App
 
-A personalized metronome app for musicians. It allows users to set custom beats and tempos.
+Free Button Builder is a web-based tool designed to help users visually create custom CSS buttons without writing any code. The interface is clean and intuitive, divided into three main panels:
+
+- **Style Controls** – Users can adjust button text, font color, background color, border radius, padding (X and Y), font size, and more through sliders and color pickers.
+
+- **Advanced Styling** – Options include font weight, border width and color, and box shadow settings (X, Y, blur, spread, and color), allowing for detailed button design.
+
+- **Preview & Code** – A live preview of the button updates in real-time, and the corresponding CSS and HTML code is generated instantly for easy copying and integration.
+
+Perfect for designers, developers, or beginners, this tool makes button creation simple, fast, and highly customizable.
 
 <a name="readme-top"></a>
 
 <div align="center">
-  <a href="https://j-c-s-v.github.io/metronome/" target="_blank">
-  <img src="./metronome_hero.png" alt="logo" width="440" height="auto" /><br/>
+  <a href="https://button-builder-app.netlify.app/" target="_blank">
+  <img src="./public/button_builder_hero.png" alt="logo" width="440" height="auto" /><br/>
   </a>
 </div>
 
@@ -33,11 +41,7 @@ A personalized metronome app for musicians. It allows users to set custom beats 
 
 # 📖 About the project <a name="about-project"></a>
 
-This project is a metronome web application designed to help users maintain consistent rhythm and tempo through an intuitive and minimalistic metronome interface. It allows users to set beats per minute (BPM). The application is built using vanilla JavaScript.
-
-To ensure a responsive and accurate user experience, a smoke test was conducted, making sure the tempo shown on the interface matched the expected BPM. It offers both visual and auditory cues for beats.
-
-This project is a Single Page Application (SPA), utilizing modern web technologies to deliver a smooth and interactive experience. With client-side rendering, the app provides real-time feedback and settings adjustments without the need for page reloads, allowing users to focus entirely on their rhythm training.
+**Free Button Builder** is a responsive **React + TypeScript** web application that allows users to dynamically generate styled HTML buttons with real-time visual feedback. Built with Vite for fast development and hot module replacement, the app focuses on modularity, interactivity, and ease of customization. It employs a **centralized CSS file** (App.css) to maintain consistent styling across components, promoting reusability and simplifying design updates.
 
 ## 🛠 Built with <a name="built-with"></a>
 
@@ -47,24 +51,25 @@ This project is a Single Page Application (SPA), utilizing modern web technologi
   <summary>Languages and technologies</summary><br>
   <ul>
     <li><a href="https://react.dev/">React.js</a></li>
+    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
     <li><a href="https://git-scm.com/">Git</a></li>
-    <li><a href="https://motion.dev/">motion</a></li>
+    <li><a href="https://vite.dev/">Vite</a></li>
+
   </ul>
 </details>
 
 ### Key features <a name="key-features"></a>
 
-- **[Customizable BPM]**
-- **[Minimalistic user interface]**
-- **[Single Page Application]**
+- **[Real-Time Button Customization]**
+- **[Auto-Generated CSS & HTML Code]**
+- **[Responsive Design]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://j-c-s-v.github.io/metronome/)
+- [Live Demo Link](https://button-builder-app.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,15 +81,15 @@ To get a local copy up and running, follow these steps.
 
 Clone this repository to your desired folder:
 
-`git clone` https://github.com/J-C-S-V/metronome.git
+`git clone` https://github.com/J-C-S-V/button-builder.git
 
 ### Install
 
-No need to install any dependencies for this project.
+`npm install`.
 
 ### Usage
 
-Open the `index.html` file in your browser to view the project.
+`npm run dev`.
 
 ### Run tests
 
@@ -94,7 +99,7 @@ Tests will be added in the future.
 
 You can deploy this project using:
 
-- [GitHub Pages](https://pages.github.com/)
+- [Netlify](https://www.netlify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,15 +115,15 @@ You can deploy this project using:
 
 ## 🔭 Future features <a name="future-features"></a>
 
-- [ ] **[Personalized beats]**
-- [ ] **[Tempo tap detection]**
-- [ ] **[Custom subdivisions]**
+- [ ] **[Hover effects]**
+- [ ] **[Animations]**
+- [ ] **[Responsive design]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Make this app better. Contributions, issues, and feature requests are welcome! 😀
+Make the app better. Contributions, issues, and feature requests are welcome! 😀
 
 Fork this repository and create a pull request to add your changes.
 
@@ -128,18 +133,18 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you get inspired by this project you can give a star to this project here on Github 🙌
+If you get inspired by this project you can give it a star here on Github 🙌
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Reaper for providing the audio engine for this project 🚀
+I would like to thank Reaper for providing the audio engine for this project 🚀 -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/J-C-S-V/metronome/blob/main/README.md) licensed.
+This project is [MIT](https://github.com/J-C-S-V/button-builder/blob/main/LICENSE)licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
