@@ -2,11 +2,11 @@
 
 Free Button Builder is a web-based tool designed to help users visually create custom CSS buttons without writing any code. The interface is clean and intuitive, divided into three main panels:
 
-- Style Controls – Users can adjust button text, font color, background color, border radius, padding (X and Y), font size, and more through sliders and color pickers.
+- **Style Controls** – Users can adjust button text, font color, background color, border radius, padding (X and Y), font size, and more through sliders and color pickers.
 
-- Advanced Styling – Options include font weight, border width and color, and box shadow settings (X, Y, blur, spread, and color), allowing for detailed button design.
+- **Advanced Styling** – Options include font weight, border width and color, and box shadow settings (X, Y, blur, spread, and color), allowing for detailed button design.
 
-- Preview & Code – A live preview of the button updates in real-time, and the corresponding CSS and HTML code is generated instantly for easy copying and integration.
+- **Preview & Code** – A live preview of the button updates in real-time, and the corresponding CSS and HTML code is generated instantly for easy copying and integration.
 
 Perfect for designers, developers, or beginners, this tool makes button creation simple, fast, and highly customizable.
 
@@ -95,10 +95,6 @@ Clone this repository to your desired folder:
 
 Tests will be added in the future.
 
-### Run tests
-
-Tests will be added in the future.
-
 ### Deployment
 
 You can deploy this project using:
@@ -139,11 +135,11 @@ Feel free to check the [issues page](../../issues/).
 
 If you get inspired by this project you can give it a star here on Github 🙌
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Reaper for providing the audio engine for this project 🚀
+I would like to thank Reaper for providing the audio engine for this project 🚀 -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
