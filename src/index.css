@@ -21,6 +21,8 @@ html {
   --color-background-red: #ff0000;
   --color-background-white: #fff;
   --color-background-gray: #c2c2c2;
+  --color-background-gray-light: #e8e8e8;
+
   --color-background-dark: #292929;
 
   /* FONNT FAMILY*/
@@ -37,6 +39,7 @@ html {
   --color-background-red: #ff0000;
   --color-background-white: #292929;
   --color-background-gray: #c2c2c2;
+  --color-background-gray-light: #e8e8e8;
   --color-background-dark: #292929;
   --color-background-cyan-light: #006483;
 
@@ -57,11 +60,4 @@ textarea {
 
 li {
   list-style: none;
-}
-
-@media screen and (max-width: 1440px) {
-  body {
-    /* height: auto; */
-    /* padding: 5rem; */
-  }
 }
