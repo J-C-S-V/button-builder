@@ -20,6 +20,12 @@ html {
   --color-text-black: #242424;
   --color-text-white: #fff;
   --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --color-background-dark: #292929;
+}
+
+body.dark-theme {
+  --color-text-white: #292929;
 }
 
 body {
@@ -28,8 +34,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  /* background-color: #292929; */
+  background-color: var(--color-text-white);
+}
+
+.dark {
+  background-color: var(--color-background-dark);
 }
 
 textarea {

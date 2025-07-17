@@ -9,21 +9,37 @@
 .theme-button {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
   /* background-color: rgb(88, 88, 88); */
 }
 
 .theme-button__icon-bg {
-  width: 40px;
-  height: 20px;
+  position: relative;
+  width: 50px;
+  height: 15px;
   border-radius: 10px;
-  background-color: #4c43f8;
+  cursor: pointer;
+  background-color: #939393;
+  box-shadow: 0px 0px 0px 2px #c2c2c2;
 }
 
 .theme-button__icon-circle {
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #e8e8e8;
+  transition: all 1s ease-in;
+}
+
+.right {
+  left: 10px;
+}
+
+.theme-button__moon,
+.theme-button__sun {
+  display: flex;
 }
 
 .app__title {
@@ -38,7 +54,8 @@
   position: relative;
   padding: 0 2rem;
   color: var(--color-purple);
-  text-shadow: 0 0 2px var(--color-text-white), 0 0 5px var(--color-purple), 0 0 4px var(--color-purple);
+  text-shadow: 0 0 2px var(--color-text-white), 0 0 5px var(--color-purple),
+    0 0 4px var(--color-purple);
 }
 
 .app__title-span-1::before,
