@@ -28,12 +28,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  /* background-color: #292929; */
 }
 
 textarea {
   resize: none;
   border-radius: 5px;
   padding: 4px;
+}
+
+li {
+  list-style: none;
 }
 
 @media screen and (max-width: 1440px) {
