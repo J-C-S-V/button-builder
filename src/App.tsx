@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
 import { WorkBench } from "./components/WorkBench";
 import { Footer } from "./components/Footer";
@@ -8,26 +8,14 @@ import "./App.css";
 function App() {
   const { theme, handleClickTheme } = useContext(ThemeContext);
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.body.classList.add("dark-theme");
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
-  }, [theme]);
-
   return (
-    <main className={`app ${theme}`}>
+    <main data-theme={theme} className={`app ${theme}`}>
       <ul className="theme-button">
         <li className="theme-button__moon">
-          <MoonIcon />
+          <SunIcon />
         </li>
         <li onClick={handleClickTheme} className="theme-button__icon">
-          <div
-            className={`theme-button__icon-bg ${
-              theme === "dark" ? "right" : ""
-            }`}
-          >
+          <div className="theme-button__icon-bg">
             <div
               className={`theme-button__icon-circle ${
                 theme === "dark" ? "right" : ""
@@ -36,7 +24,7 @@ function App() {
           </div>
         </li>
         <li className="theme-button__sun">
-          <SunIcon />
+          <MoonIcon />
         </li>
       </ul>
       <h1 className="app__title">

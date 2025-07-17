@@ -9,13 +9,10 @@ interface ThemeProviderProps {
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState("light");
-
+  const right = "right";
   const handleClickTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
-
-  const right = "right";
-
   const data = { right, theme, handleClickTheme };
 
   return <ThemeContext.Provider value={data}>{children}</ThemeContext.Provider>;

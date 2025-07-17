@@ -11,30 +11,37 @@ html {
 }
 
 :root {
-  --color-background-red: #ff0000;
-  --color-violet: #410445;
+  /* TEXT COLOR */
   --color-purple: #a5158c;
-  --color-cyan-light: #60daff45;
-  --color-pink: #ff2df1;
-  --color-yellow: #f6dc43;
+  --color-background-cyan-light: #60daff45;
   --color-text-black: #242424;
   --color-text-white: #fff;
-  --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
 
+  /* BACKGROUND COLOR */
+  --color-background-red: #ff0000;
+  --color-background-white: #fff;
+  --color-background-gray: #c2c2c2;
   --color-background-dark: #292929;
+
+  /* FONNT FAMILY*/
+  --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-body.dark-theme {
-  --color-text-white: #292929;
-}
+[data-theme="dark"] {
+  /* TEXT COLOR */
+  --color-purple: #a5158c;
+  --color-text-black: #fff;
+  --color-text-white: #fff;
 
-body {
-  height: 100dvh;
-  font-family: var(--font-system-ui);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-text-white);
+  /* BACKGROUND COLOR */
+  --color-background-red: #ff0000;
+  --color-background-white: #292929;
+  --color-background-gray: #c2c2c2;
+  --color-background-dark: #292929;
+  --color-background-cyan-light: #006483;
+
+  /* FONNT FAMILY*/
+  --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .dark {
@@ -45,6 +52,7 @@ textarea {
   resize: none;
   border-radius: 5px;
   padding: 4px;
+  color: var(--color-text-black);
 }
 
 li {
@@ -53,7 +61,7 @@ li {
 
 @media screen and (max-width: 1440px) {
   body {
-    height: auto;
-    padding: 5rem;
+    /* height: auto; */
+    /* padding: 5rem; */
   }
 }
