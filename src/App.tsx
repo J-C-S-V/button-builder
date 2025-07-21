@@ -9,7 +9,7 @@ function App() {
   const { theme, handleClickTheme } = useContext(ThemeContext);
 
   return (
-    <main data-theme={theme} className={`app ${theme}`}>
+    <main data-theme={theme} className="app">
       <ul className="theme-button">
         <li className="theme-button__moon">
           <SunIcon />

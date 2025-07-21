@@ -41,14 +41,10 @@ html {
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
   --color-background-dark: #292929;
-  --color-background-cyan-light: #006483;
+  --color-background-cyan-light: #771065;
 
   /* FONNT FAMILY*/
   --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-.dark {
-  background-color: var(--color-background-dark);
 }
 
 textarea {
