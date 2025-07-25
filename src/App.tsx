@@ -1,9 +1,24 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ThemeContext from "./context/ThemeContext";
 import { WorkBench } from "./components/WorkBench";
 import { Footer } from "./components/Footer";
 import { MoonIcon, SunIcon } from "../public/assets/svg/Icons";
 import "./App.css";
+
+const Test = () => {
+  const [name, setName] = useState("Taylor");
+  const handleClickTest = () => {
+    const newName = "Robin"; // Use the value you're setting
+    setName(newName);
+    console.log(newName);
+  };
+
+  return (
+    <>
+      <h1 onClick={handleClickTest}>{name}</h1>
+    </>
+  );
+};
 
 function App() {
   const { theme, handleClickTheme } = useContext(ThemeContext);
@@ -34,8 +49,33 @@ function App() {
       </h1>
       <WorkBench />
       <Footer />
+      <Test />
     </main>
   );
 }
 
 export default App;
+
+
+
+
+
+
+const myObject = {
+  firstName: "Jota",
+  lastName: 'Doe',
+  email: 'john@example.com',
+};
+
+const myObjectTwo = {
+  firstName: "Jota",
+  lastName: 'Doe',
+  email: 'john@example.com',
+  firstName: "Juan"
+};
+
+const myObjectTwo = {
+  firstName: "Juan"
+  lastName: 'Doe',
+  email: 'john@example.com'
+};
