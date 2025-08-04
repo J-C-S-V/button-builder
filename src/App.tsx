@@ -6,16 +6,47 @@ import { MoonIcon, SunIcon } from "../public/assets/svg/Icons";
 import "./App.css";
 
 const Test = () => {
-  const [name, setName] = useState("Taylor");
-  const handleClickTest = () => {
-    const newName = "Robin"; // Use the value you're setting
-    setName(newName);
-    console.log(newName);
+  const [name, setName] = useState({
+    firstName: "Juank",
+    lastName: "San",
+    emailAddress: "juanksan@gmail.com",
+  });
+  const handleChangeTestName = (e) => {
+    setName({
+      ...name,
+      firstName: e.target.value,
+    });
+  };
+
+  const handleChangeTestLastName = (e) => {
+    setName({
+      ...name,
+      lastName: e.target.value,
+    });
+  };
+
+  const handleChangeTestEmail = (e) => {
+    setName({
+      ...name,
+      emailAddress: e.target.value,
+    });
   };
 
   return (
     <>
-      <h1 onClick={handleClickTest}>{name}</h1>
+      <label htmlFor="name">Name </label>
+      <input id="name" type="text" onChange={handleChangeTestName} />
+      <br />
+
+      <label htmlFor="lastName">Last Name </label>
+      <input type="text" id="lastName" onChange={handleChangeTestLastName} />
+      <br />
+
+      <label htmlFor="email">Email </label>
+      <input type="email" id="email" onChange={handleChangeTestEmail} />
+      <h2>Name: {name.firstName}</h2>
+      <h2>Last Name: {name.lastName}</h2>
+      <h2>Email Address: {name.emailAddress}</h2>
     </>
   );
 };
@@ -55,27 +86,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-const myObject = {
-  firstName: "Jota",
-  lastName: 'Doe',
-  email: 'john@example.com',
-};
-
-const myObjectTwo = {
-  firstName: "Jota",
-  lastName: 'Doe',
-  email: 'john@example.com',
-  firstName: "Juan"
-};
-
-const myObjectTwo = {
-  firstName: "Juan"
-  lastName: 'Doe',
-  email: 'john@example.com'
-};
