@@ -22,10 +22,9 @@ html {
   --color-background-white: #fff;
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
-
   --color-background-dark: #292929;
 
-  /* FONNT FAMILY*/
+  /* FONT FAMILY */
   --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
