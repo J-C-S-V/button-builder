@@ -1,15 +1,17 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
 import { WorkBench } from "./components/WorkBench";
 import { Footer } from "./components/Footer";
 import { MoonIcon, SunIcon } from "../public/assets/svg/Icons";
 import "./App.css";
+import { Profile } from "./components/Profile";
 
 function App() {
   const { theme, handleClickTheme } = useContext(ThemeContext);
 
   return (
     <main data-theme={theme} className="app">
+      <Profile />
       <ul className="theme-button">
         <li className="theme-button__moon">
           <SunIcon />
