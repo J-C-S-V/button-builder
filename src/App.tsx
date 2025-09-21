@@ -12,7 +12,7 @@ function App() {
   return (
     <main data-theme={theme} className="app">
       {/* <Profile /> */}
-      <ul className="theme-button">
+      {/* <ul className="theme-button">
         <li className="theme-button__moon">
           <SunIcon />
         </li>
@@ -24,14 +24,14 @@ function App() {
         <li className="theme-button__sun">
           <MoonIcon />
         </li>
-      </ul>
+      </ul> */}
       {/* <h1 className="app__title">
         <span className="app__title-span-1">Free</span>&nbsp;
         <span className="app__title-span-2">Button</span>&nbsp;
         <span className="app__title-span-3">Builder</span>
       </h1> */}
       <WorkBench />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

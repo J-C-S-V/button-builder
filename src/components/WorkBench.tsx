@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Controls } from "./Controls";
 import { ControlsTwo } from "./ControlsTwo";
-import { CodeArea } from "./CodeArea";
+import { ControlsTwoCopy } from "./ControlsTwoCopy";
+import { Button } from "./Button";
+// import { CodeArea } from "./CodeArea";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -98,7 +100,44 @@ export const WorkBench = () => {
         onFontSizeChange={handleFontSizeChange}
         fontSize={fontSize}
       />
-      <ControlsTwo
+      <div className="workbench__controls">
+        <Button
+          border={border}
+          borderColor={borderColor}
+          borderRadius={borderRadius}
+          backgroundColor={backgroundColor}
+          paddingY={paddingY}
+          paddingX={paddingX}
+          fontWeight={fontWeight}
+          fontSize={fontSize}
+          fontColor={fontColor}
+          innerText={innerText}
+          boxShadowY={boxShadowY}
+          boxShadowX={boxShadowX}
+          boxShadowBlur={boxShadowBlur}
+          boxShadowColor={boxShadowColor}
+          boxShadowSpread={boxShadowSpread}
+        />
+        <ControlsTwo
+          fontWeight={fontWeight}
+          onFontWeightChange={handleFontWeightChange}
+          border={border}
+          onBorderChange={handleBorderChange}
+          borderColor={borderColor}
+          onBorderColorChange={handleBorderColorChange}
+          boxShadowY={boxShadowY}
+          onBoxShadowYChange={handleBoxShadowYChange}
+          boxShadowX={boxShadowX}
+          onBoxShadowXChange={handleBoxShadowXChange}
+          boxShadowBlur={boxShadowBlur}
+          onBoxShadowBlurChange={handleBoxShadowBlurChange}
+          boxShadowColor={boxShadowColor}
+          onBoxShadowColorChange={handleBoxShadowColorChange}
+          boxShadowSpread={boxShadowSpread}
+          onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
+        />
+      </div>
+      <ControlsTwoCopy
         fontWeight={fontWeight}
         onFontWeightChange={handleFontWeightChange}
         border={border}
@@ -116,7 +155,8 @@ export const WorkBench = () => {
         boxShadowSpread={boxShadowSpread}
         onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
       />
-      <CodeArea
+
+      {/* <CodeArea
         innerText={innerText}
         backgroundColor={backgroundColor}
         borderRadius={borderRadius}
@@ -132,7 +172,7 @@ export const WorkBench = () => {
         boxShadowBlur={boxShadowBlur}
         boxShadowColor={boxShadowColor}
         boxShadowSpread={boxShadowSpread}
-      />
+      /> */}
     </section>
   );
 };

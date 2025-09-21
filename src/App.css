@@ -318,10 +318,27 @@ input[type="color"] {
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--color-text-black);
-  padding: 10rem;
+  /* padding: 10rem; */
   font-family: var(--font-system-ui);
   background-color: var(--color-background-white);
   height: 100dvh;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   border: 1px solid black;
+}
+
+.workbench {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.workbench > * {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.workbench__controls {
+  display: flex;
+  flex-direction: column;
 }
