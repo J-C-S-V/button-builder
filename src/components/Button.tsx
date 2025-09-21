@@ -32,7 +32,7 @@ export const Button = ({
   boxShadowSpread: number;
 }) => {
   return (
-    <div className="workbench__button-wrapper">
+    <div className="workbench__button-wrapper workbench__controls workbench__controls--button">
       <a
         className="workbench__button"
         style={{

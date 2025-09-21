@@ -323,13 +323,14 @@ input[type="color"] {
   background-color: var(--color-background-white);
   height: 100dvh;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  border: 1px solid black;
+  border: 1px dashed black;
 }
 
 .workbench {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  height: 100dvh;
 }
 
 .workbench > * {
@@ -339,6 +340,18 @@ input[type="color"] {
 }
 
 .workbench__controls {
+  border: 1px solid black;
+}
+
+.workbench__controls--middle {
   display: flex;
   flex-direction: column;
+}
+
+.workbench__controls--button {
+  height: 50%;
+}
+
+.workbench__controls--two {
+  height: 50%;
 }

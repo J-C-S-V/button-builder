@@ -100,7 +100,7 @@ export const WorkBench = () => {
         onFontSizeChange={handleFontSizeChange}
         fontSize={fontSize}
       />
-      <div className="workbench__controls">
+      <div className="workbench__controls--middle">
         <Button
           border={border}
           borderColor={borderColor}

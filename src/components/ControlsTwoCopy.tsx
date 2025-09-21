@@ -40,9 +40,9 @@ export const ControlsTwoCopy = ({
 }) => {
   return (
     <div className="workbench__controls">
-      <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
-      <ChangeBorder border={border} onBorderChange={onBorderChange} />
-      <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} />
+      {/* <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} /> */}
+      {/* <ChangeBorder border={border} onBorderChange={onBorderChange} /> */}
+      {/* <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} /> */}
       <ChangeBoxShadow
         boxShadowY={boxShadowY}
         onBoxShadowYChange={onBoxShadowYChange}

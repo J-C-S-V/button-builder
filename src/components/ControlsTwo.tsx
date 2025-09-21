@@ -39,10 +39,10 @@ export const ControlsTwo = ({
   boxShadowSpread: number;
 }) => {
   return (
-    <div className="workbench__controls">
-      <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
-      <ChangeBorder border={border} onBorderChange={onBorderChange} />
-      <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} />
+    <div className="workbench__controls workbench__controls--two">
+      {/* <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} /> */}
+      {/* <ChangeBorder border={border} onBorderChange={onBorderChange} /> */}
+      {/* <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} /> */}
       <ChangeBoxShadow
         boxShadowY={boxShadowY}
         onBoxShadowYChange={onBoxShadowYChange}
