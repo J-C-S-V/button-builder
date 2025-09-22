@@ -1,4 +1,4 @@
-import { IconCopy } from "./Icons";
+import { IconCopy } from "../assets/Icons";
 import { useRef, useState } from "react";
 
 export const CodeAreaCSS = ({
