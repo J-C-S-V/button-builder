@@ -1,7 +1,8 @@
-import { ChangeFontWeight } from "./ChangeFontWeight";
-import { ChangeBorder } from "./ChangeBorder";
-import { ChangeBorderColor } from "./ChangeBorderColor";
-import { ChangeBoxShadow } from "./ChangeBoxShadow";
+// import { ChangeFontWeight } from "../ChangeFontWeight";
+// import { ChangeBorder } from "../ChangeBorder";
+// import { ChangeBorderColor } from "../ChangeBorderColor";
+import { ChangeBoxShadow } from "../ChangeBoxShadow";
+import styles from "./ControlsTwo.module.css";
 
 export const ControlsTwo = ({
   onFontWeightChange,
@@ -39,7 +40,7 @@ export const ControlsTwo = ({
   boxShadowSpread: number;
 }) => {
   return (
-    <div className="workbench__controls workbench__controls--two">
+    <div className={styles["workbench__controls--two"]}>
       {/* <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} /> */}
       {/* <ChangeBorder border={border} onBorderChange={onBorderChange} /> */}
       {/* <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} /> */}

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Controls } from "./Controls";
-import { ControlsTwo } from "./ControlsTwo";
-import { ControlsTwoCopy } from "./ControlsTwoCopy";
-import { Button } from "./Button";
-// import { CodeArea } from "./CodeArea";
+import { Controls } from "../Controls";
+import { ControlsTwo } from "../ControlsTwo/ControlsTwo";
+import { ControlsTwoCopy } from "../ControlsTwoCopy";
+import { Button } from "../Button/Button";
+import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -83,26 +83,9 @@ export const WorkBench = () => {
   };
 
   return (
-    <section className="workbench">
-      {/* <Controls
-        onTextChange={handleInnerText}
-        innerText={innerText}
-        onBackgroundColorChange={handleChangebackgroundColor}
-        backgroundColor={backgroundColor}
-        onFontColorChange={handleFontColorChange}
-        fontColor={fontColor}
-        onBorderRadiusChange={handleBorderRadiusChange}
-        borderRadius={borderRadius}
-        onPaddingYChange={handlePaddingYChange}
-        paddingY={paddingY}
-        onPaddingXChange={handlePaddingXChange}
-        paddingX={paddingX}
-        onFontSizeChange={handleFontSizeChange}
-        fontSize={fontSize}
-      /> */}
-      <button className="button">Controls</button>
-
-      <div className="workbench__controls--middle">
+    <section className={styles.workbench}>
+      <h1>Buttons, profile and theme mode</h1>
+      <div className={styles["workbench__controls--middle"]}>
         <Button
           border={border}
           borderColor={borderColor}
@@ -120,26 +103,32 @@ export const WorkBench = () => {
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
         />
-        <ControlsTwo
-          fontWeight={fontWeight}
-          onFontWeightChange={handleFontWeightChange}
-          border={border}
-          onBorderChange={handleBorderChange}
-          borderColor={borderColor}
-          onBorderColorChange={handleBorderColorChange}
-          boxShadowY={boxShadowY}
-          onBoxShadowYChange={handleBoxShadowYChange}
-          boxShadowX={boxShadowX}
-          onBoxShadowXChange={handleBoxShadowXChange}
-          boxShadowBlur={boxShadowBlur}
-          onBoxShadowBlurChange={handleBoxShadowBlurChange}
-          boxShadowColor={boxShadowColor}
-          onBoxShadowColorChange={handleBoxShadowColorChange}
-          boxShadowSpread={boxShadowSpread}
-          onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
-        />
+
+        <div
+          className="container"
+          style={{ height: "50%", display: "flex", gap: "1rem", justifyContent: "center", alignItems: "center" }}
+        >
+          <button className="css">CSS</button>
+          <button className="html">HTML</button>
+        </div>
       </div>
-      <ControlsTwoCopy
+      <Controls
+        onTextChange={handleInnerText}
+        innerText={innerText}
+        onBackgroundColorChange={handleChangebackgroundColor}
+        backgroundColor={backgroundColor}
+        onFontColorChange={handleFontColorChange}
+        fontColor={fontColor}
+        onBorderRadiusChange={handleBorderRadiusChange}
+        borderRadius={borderRadius}
+        onPaddingYChange={handlePaddingYChange}
+        paddingY={paddingY}
+        onPaddingXChange={handlePaddingXChange}
+        paddingX={paddingX}
+        onFontSizeChange={handleFontSizeChange}
+        fontSize={fontSize}
+      />
+      {/* <ControlsTwo
         fontWeight={fontWeight}
         onFontWeightChange={handleFontWeightChange}
         border={border}
@@ -156,24 +145,6 @@ export const WorkBench = () => {
         onBoxShadowColorChange={handleBoxShadowColorChange}
         boxShadowSpread={boxShadowSpread}
         onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
-      />
-
-      {/* <CodeArea
-        innerText={innerText}
-        backgroundColor={backgroundColor}
-        borderRadius={borderRadius}
-        paddingY={paddingY}
-        paddingX={paddingX}
-        fontWeight={fontWeight}
-        fontSize={fontSize}
-        fontColor={fontColor}
-        border={border}
-        borderColor={borderColor}
-        boxShadowY={boxShadowY}
-        boxShadowX={boxShadowX}
-        boxShadowBlur={boxShadowBlur}
-        boxShadowColor={boxShadowColor}
-        boxShadowSpread={boxShadowSpread}
       /> */}
     </section>
   );

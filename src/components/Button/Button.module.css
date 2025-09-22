@@ -1,0 +1,11 @@
+.workbench__button {
+  height: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workbench__button--anchor {
+  color: blue;
+}

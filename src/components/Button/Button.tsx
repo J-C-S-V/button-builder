@@ -1,3 +1,5 @@
+import styles from "./Button.module.css";
+
 export const Button = ({
   backgroundColor,
   innerText,
@@ -32,9 +34,9 @@ export const Button = ({
   boxShadowSpread: number;
 }) => {
   return (
-    <div className="workbench__button-wrapper workbench__controls workbench__controls--button">
+    <div className={styles["workbench__button"]}>
       <a
-        className="workbench__button"
+        className={styles["workbench__button--anchor"]}
         style={{
           backgroundColor: backgroundColor,
           borderRadius: `${borderRadius}px`,
