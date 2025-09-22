@@ -356,6 +356,12 @@ input[type="color"] {
   height: 50%;
 }
 
+.button {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+}
+
 /* .test {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

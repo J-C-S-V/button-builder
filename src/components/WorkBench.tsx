@@ -84,7 +84,7 @@ export const WorkBench = () => {
 
   return (
     <section className="workbench">
-      <Controls
+      {/* <Controls
         onTextChange={handleInnerText}
         innerText={innerText}
         onBackgroundColorChange={handleChangebackgroundColor}
@@ -99,7 +99,9 @@ export const WorkBench = () => {
         paddingX={paddingX}
         onFontSizeChange={handleFontSizeChange}
         fontSize={fontSize}
-      />
+      /> */}
+      <button className="button">Controls</button>
+
       <div className="workbench__controls--middle">
         <Button
           border={border}
