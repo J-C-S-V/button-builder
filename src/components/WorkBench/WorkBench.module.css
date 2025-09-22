@@ -1,24 +1,13 @@
 .workbench {
   background-color: bisque;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
   grid-template-rows: 1fr;
   height: 100%;
 }
-
-/* .workbench > * {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-} */
-
-/* .workbench__controls {
-  border: 1px solid black;
-} */
 
 .workbench__controls--middle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: yellow;
 }

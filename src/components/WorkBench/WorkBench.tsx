@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Controls } from "../Controls";
+import { Controls } from "../Controls/Controls";
 import { ControlsTwo } from "../ControlsTwo/ControlsTwo";
 import { ControlsTwoCopy } from "../ControlsTwoCopy";
 import { Button } from "../Button/Button";
 import styles from "./WorkBench.module.css";
+import { Languages } from "../Languages/Languages";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -103,14 +104,7 @@ export const WorkBench = () => {
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
         />
-
-        <div
-          className="container"
-          style={{ height: "50%", display: "flex", gap: "1rem", justifyContent: "center", alignItems: "center" }}
-        >
-          <button className="css">CSS</button>
-          <button className="html">HTML</button>
-        </div>
+        <Languages />
       </div>
       <Controls
         onTextChange={handleInnerText}

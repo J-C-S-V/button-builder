@@ -23,6 +23,7 @@ html {
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
   --color-background-dark: #292929;
+  --color-background-dark-light: #383838;
 
   /* FONT FAMILY */
   --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -55,4 +56,8 @@ textarea {
 
 li {
   list-style: none;
+}
+
+* {
+  color: var(--color-text-white);
 }

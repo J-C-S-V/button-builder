@@ -1,9 +1,10 @@
-import { ChangeColor } from "./ChangeColor";
-import { ChangeBorderRadius } from "./ChangeBorderRadius";
-import { ChangeFontColor } from "./ChangeFontColor";
-import { ChangeInnerText } from "./ChangeInnerText";
-import { ChangePadding } from "./ChangePadding";
-import { ChangeFontSize } from "./ChangeFontSize";
+import { ChangeColor } from "../ChangeColor";
+import { ChangeBorderRadius } from "../ChangeBorderRadius";
+import { ChangeFontColor } from "../ChangeFontColor";
+import { ChangeInnerText } from "../ChangeInnerText";
+import { ChangePadding } from "../ChangePadding";
+import { ChangeFontSize } from "../ChangeFontSize";
+import styles from "./Controls.module.css";
 
 export const Controls = ({
   onTextChange,
@@ -37,7 +38,7 @@ export const Controls = ({
   fontSize: number;
 }) => {
   return (
-    <div className="workbench__controls">
+    <div className={styles["workbench__controls"]}>
       <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
       <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
       <ChangeColor backgroundColor={backgroundColor} onColorChange={onBackgroundColorChange} />

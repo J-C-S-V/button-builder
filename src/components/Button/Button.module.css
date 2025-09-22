@@ -4,8 +4,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.workbench__button--anchor {
-  color: blue;
+  background-color: var(--color-text-white);
 }

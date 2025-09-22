@@ -6,7 +6,7 @@ export const ChangeInnerText = ({
   innerText: string;
 }) => {
   return (
-    <>
+    <div style={{ backgroundColor: "var(--color-background-dark-light)" }}>
       <label htmlFor="innerText" className="label">
         Button Text:
       </label>
@@ -18,6 +18,6 @@ export const ChangeInnerText = ({
         placeholder="Change text..."
         value={innerText}
       />
-    </>
+    </div>
   );
 };
