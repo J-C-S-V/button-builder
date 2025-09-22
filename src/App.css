@@ -329,8 +329,8 @@ input[type="color"] {
 .workbench {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  height: 100dvh;
+  grid-template-rows: 1fr;
+  height: 100%;
 }
 
 .workbench > * {
@@ -355,3 +355,21 @@ input[type="color"] {
 .workbench__controls--two {
   height: 50%;
 }
+
+/* .test {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border: 1px dashed black;
+  height: 100dvh;
+}
+
+.column {
+  border: 1px solid black;
+  height: 100%;
+}
+
+.row {
+  height: 50%;
+  border: 1px dashed red;
+} */
