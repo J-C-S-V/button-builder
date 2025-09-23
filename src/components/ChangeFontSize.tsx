@@ -9,22 +9,20 @@ export const ChangeFontSize = ({
 }) => {
   return (
     <div className={styles["controls__font-size"]}>
-      <label htmlFor="fontSize" className="label">
+      <label htmlFor="fontSize" className={styles["controls__label"]}>
         Font Size:
       </label>
-      <div className="workbench__input-font-size-wrapper">
-        <input
-          className="workbench__input-font-size"
-          type="range"
-          id="fontSize"
-          min={0}
-          max={100}
-          step={1}
-          value={fontSize}
-          onChange={onFontSizeChange}
-        />
-        <span className="workbench__input-font-size-span">{fontSize}px</span>
-      </div>
+      <input
+        className={styles["workbench__input--font-size"]}
+        type="range"
+        id="fontSize"
+        min={0}
+        max={100}
+        step={1}
+        value={fontSize}
+        onChange={onFontSizeChange}
+      />
+      {/* <span className="workbench__input-font-size-span">{fontSize}px</span> */}
     </div>
   );
 };
