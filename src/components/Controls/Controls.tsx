@@ -39,10 +39,10 @@ export const Controls = ({
 }) => {
   return (
     <div className={styles["workbench__controls"]}>
-      <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
+      {/* <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
       <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
       <ChangeColor backgroundColor={backgroundColor} onColorChange={onBackgroundColorChange} />
-      <ChangeBorderRadius onBorderRadiusChange={onBorderRadiusChange} borderRadius={borderRadius} />
+      <ChangeBorderRadius onBorderRadiusChange={onBorderRadiusChange} borderRadius={borderRadius} /> */}
       <ChangePadding
         paddingY={paddingY}
         paddingX={paddingX}

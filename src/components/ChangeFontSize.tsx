@@ -1,3 +1,5 @@
+import styles from "./ChangeFontSize.module.css";
+
 export const ChangeFontSize = ({
   fontSize,
   onFontSizeChange,
@@ -6,7 +8,7 @@ export const ChangeFontSize = ({
   onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
-    <>
+    <div className={styles["controls__font-size"]}>
       <label htmlFor="fontSize" className="label">
         Font Size:
       </label>
@@ -23,6 +25,6 @@ export const ChangeFontSize = ({
         />
         <span className="workbench__input-font-size-span">{fontSize}px</span>
       </div>
-    </>
+    </div>
   );
 };

@@ -1,3 +1,5 @@
+import styles from "./ChangePadding.module.css";
+
 export const ChangePadding = ({
   onPaddingYChange,
   onPaddingXChange,
@@ -10,7 +12,7 @@ export const ChangePadding = ({
   paddingX: number;
 }) => {
   return (
-    <>
+    <div className={styles["controls__padding"]}>
       <label title="Enter padding" htmlFor="padding" className="label">
         Padding:
       </label>
@@ -44,6 +46,6 @@ export const ChangePadding = ({
           <span className="workbench__padding-x">X&nbsp;&nbsp;{paddingX}px</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };

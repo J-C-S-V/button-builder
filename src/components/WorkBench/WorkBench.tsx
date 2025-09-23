@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Controls } from "../Controls/Controls";
 import { ControlsTwo } from "../ControlsTwo/ControlsTwo";
-import { ControlsTwoCopy } from "../ControlsTwoCopy";
 import { Button } from "../Button/Button";
 import styles from "./WorkBench.module.css";
 import { Languages } from "../Languages/Languages";
@@ -106,22 +105,31 @@ export const WorkBench = () => {
         />
         <Languages />
       </div>
-      <Controls
-        onTextChange={handleInnerText}
-        innerText={innerText}
-        onBackgroundColorChange={handleChangebackgroundColor}
-        backgroundColor={backgroundColor}
-        onFontColorChange={handleFontColorChange}
-        fontColor={fontColor}
-        onBorderRadiusChange={handleBorderRadiusChange}
-        borderRadius={borderRadius}
-        onPaddingYChange={handlePaddingYChange}
-        paddingY={paddingY}
-        onPaddingXChange={handlePaddingXChange}
-        paddingX={paddingX}
-        onFontSizeChange={handleFontSizeChange}
-        fontSize={fontSize}
-      />
+      <div className={styles["workbench__controls"]}>
+        <div className={styles["workbench__header"]}>
+          <h2>Controls</h2>
+          <div>&gt;</div>
+        </div>
+        {true && (
+          <Controls
+            // onTextChange={handleInnerText}
+            // innerText={innerText}
+            // onBackgroundColorChange={handleChangebackgroundColor}
+            // backgroundColor={backgroundColor}
+            // onFontColorChange={handleFontColorChange}
+            // fontColor={fontColor}
+            // onBorderRadiusChange={handleBorderRadiusChange}
+            // borderRadius={borderRadius}
+            onPaddingYChange={handlePaddingYChange}
+            paddingY={paddingY}
+            onPaddingXChange={handlePaddingXChange}
+            paddingX={paddingX}
+            onFontSizeChange={handleFontSizeChange}
+            fontSize={fontSize}
+          />
+        )}
+      </div>
+
       {/* <ControlsTwo
         fontWeight={fontWeight}
         onFontWeightChange={handleFontWeightChange}

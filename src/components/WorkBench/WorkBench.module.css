@@ -12,3 +12,14 @@
   align-items: center;
   background-color: var(--color-background-white);
 }
+
+.workbench__controls {
+  color: var(--color-text-white);
+  background-color: var(--color-background-dark);
+}
+
+.workbench__header {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
