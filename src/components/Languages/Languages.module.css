@@ -1,6 +1,22 @@
 .languages {
+  width: 100%;
+  height: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 50%;
+  align-items: flex-end;
+  gap: 2em;
+}
+
+.languages__button {
+  margin-bottom: 3em;
+}
+
+.languages__css {
+  width: 6em;
+  height: 3em;
+}
+
+.languages__html {
+  width: 6em;
+  height: 3em;
 }
