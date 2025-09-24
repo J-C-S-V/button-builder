@@ -8,21 +8,25 @@ export const ChangeFontSize = ({
   onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
-    <div className={styles["controls__font-size"]}>
-      <label htmlFor="fontSize" className={styles["controls__label"]}>
+    <div className={styles["font-size"]}>
+      <label htmlFor="fontSize" className={styles["font-size__label"]}>
         Font Size:
       </label>
-      <input
-        className={styles["workbench__input--font-size"]}
-        type="range"
-        id="fontSize"
-        min={0}
-        max={100}
-        step={1}
-        value={fontSize}
-        onChange={onFontSizeChange}
-      />
-      {/* <span className="workbench__input-font-size-span">{fontSize}px</span> */}
+      <div className={styles["font-size__input-container"]}>
+        <input
+          className={styles["font-size__input"]}
+          type="range"
+          id="fontSize"
+          min={0}
+          max={100}
+          step={1}
+          value={fontSize}
+          onChange={onFontSizeChange}
+        />
+        <div className={styles["font-size__span-container"]}>
+          <span className={styles["font-size__span"]}>{fontSize}px</span>
+        </div>
+      </div>
     </div>
   );
 };

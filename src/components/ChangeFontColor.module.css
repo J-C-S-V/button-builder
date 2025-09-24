@@ -1,0 +1,14 @@
+.controls__font-color {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  border: 1px solid var(--color-text-black-light);
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+}
+
+.controls__label {
+  color: var(--color-text-black-light);
+}

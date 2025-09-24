@@ -16,6 +16,7 @@
 .workbench__controls {
   color: var(--color-text-white);
   background-color: var(--color-background-dark);
+  padding: 2rem;
 }
 
 .workbench__header {
