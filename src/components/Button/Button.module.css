@@ -6,16 +6,3 @@
   align-items: center;
   background-color: var(--color-text-white);
 }
-
-.workbench__button--anchor {
-  display: inline-block;
-  text-decoration: none;
-  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
-}
-
-/* Simulate hover via a CSS class and also natural :hover */
-.workbench__button--anchor:hover,
-.isHover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
