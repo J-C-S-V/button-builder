@@ -16,6 +16,7 @@
 }
 
 .font-color__input-container {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -31,4 +32,17 @@
   width: 100%;
   border: none;
   border-radius: 10px;
+  padding-left: 3rem;
+  color: var(--color-text-black-light);
+  font-size: 1.4rem;
+}
+
+.font-color__input-container::before {
+  content: "#";
+  position: absolute;
+  left: 6.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-black-light);
+  font-size: 1.4rem;
 }

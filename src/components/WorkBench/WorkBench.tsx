@@ -47,7 +47,7 @@ export const WorkBench = () => {
   };
 
   const handleFontColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFontColor(e.target.value);
+    setFontColor(`#${e.target.value}`);
   };
 
   const handleBorderRadiusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -116,7 +116,7 @@ export const WorkBench = () => {
             // innerText={innerText}
             // onBackgroundColorChange={handleChangebackgroundColor}
             // backgroundColor={backgroundColor}
-            // onFontColorChange={handleFontColorChange}
+            onFontColorChange={handleFontColorChange}
             // fontColor={fontColor}
             // onBorderRadiusChange={handleBorderRadiusChange}
             // borderRadius={borderRadius}
