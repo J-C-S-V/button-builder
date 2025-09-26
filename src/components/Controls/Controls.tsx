@@ -5,6 +5,7 @@ import { ChangeInnerText } from "../ChangeInnerText";
 import { ChangePadding } from "../ChangePadding";
 import { ChangeFontSize } from "../ChangeFontSize";
 import styles from "./Controls.module.css";
+import { useState } from "react";
 
 export const Controls = ({
   onTextChange,
@@ -37,19 +38,31 @@ export const Controls = ({
   onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   fontSize: number;
 }) => {
+  const [showControls, setShowControls] = useState(true);
+
   return (
     <div className={styles["controls__font"]}>
-      {/* <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
+      <h2 onClick={() => setShowControls(!showControls)} className={styles["controls__title"]}>
+        Controls
+      </h2>
+      <div className={styles["controls__content"]}>
+        {showControls && (
+          <>
+            <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
+            <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+          </>
+        )}
+        {/* <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
       <ChangeColor backgroundColor={backgroundColor} onColorChange={onBackgroundColorChange} />
       <ChangeBorderRadius onBorderRadiusChange={onBorderRadiusChange} borderRadius={borderRadius} /> */}
-      <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
-      <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-      {/* <ChangePadding
+
+        {/* <ChangePadding
         paddingY={paddingY}
         paddingX={paddingX}
         onPaddingYChange={onPaddingYChange}
         onPaddingXChange={onPaddingXChange}
       /> */}
+      </div>
     </div>
   );
 };

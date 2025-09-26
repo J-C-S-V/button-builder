@@ -3,6 +3,7 @@ import { Controls } from "../Controls/Controls";
 import { ControlsTwo } from "../ControlsTwo/ControlsTwo";
 import { Button } from "../Button/Button";
 import { Languages } from "../Languages/Languages";
+import { LeftSection } from "../LeftSection/LeftSection";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
@@ -84,8 +85,11 @@ export const WorkBench = () => {
 
   return (
     <section className={styles.workbench}>
-      <h1>Buttons, profile and theme mode</h1>
-      <div className={styles["controls--middle"]}>
+      <div className={styles["workbench__left"]}>
+        <LeftSection />
+      </div>
+
+      <div className={styles["workbench__middle"]}>
         <Button
           border={border}
           borderColor={borderColor}
@@ -105,49 +109,25 @@ export const WorkBench = () => {
         />
         <Languages />
       </div>
-      <div className={styles["controls"]}>
-        <div className={styles["controls__header"]}>
-          <input className={styles["controls__checkbox"]} type="checkbox" name="controls" id="controls" />
-          <label htmlFor="controls" className={styles["controls__label"]}>
-            Controls
-          </label>
-          <Controls
-            // onTextChange={handleInnerText}
-            // innerText={innerText}
-            // onBackgroundColorChange={handleChangebackgroundColor}
-            // backgroundColor={backgroundColor}
-            onFontColorChange={handleFontColorChange}
-            // fontColor={fontColor}
-            // onBorderRadiusChange={handleBorderRadiusChange}
-            // borderRadius={borderRadius}
-            onPaddingYChange={handlePaddingYChange}
-            paddingY={paddingY}
-            onPaddingXChange={handlePaddingXChange}
-            paddingX={paddingX}
-            onFontSizeChange={handleFontSizeChange}
-            fontSize={fontSize}
-          />
-        </div>
-      </div>
 
-      {/* <ControlsTwo
-        fontWeight={fontWeight}
-        onFontWeightChange={handleFontWeightChange}
-        border={border}
-        onBorderChange={handleBorderChange}
-        borderColor={borderColor}
-        onBorderColorChange={handleBorderColorChange}
-        boxShadowY={boxShadowY}
-        onBoxShadowYChange={handleBoxShadowYChange}
-        boxShadowX={boxShadowX}
-        onBoxShadowXChange={handleBoxShadowXChange}
-        boxShadowBlur={boxShadowBlur}
-        onBoxShadowBlurChange={handleBoxShadowBlurChange}
-        boxShadowColor={boxShadowColor}
-        onBoxShadowColorChange={handleBoxShadowColorChange}
-        boxShadowSpread={boxShadowSpread}
-        onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
-      /> */}
+      <div className={styles["workbench__right"]}>
+        <Controls
+          // onTextChange={handleInnerText}
+          // innerText={innerText}
+          // onBackgroundColorChange={handleChangebackgroundColor}
+          // backgroundColor={backgroundColor}
+          // fontColor={fontColor}
+          // onBorderRadiusChange={handleBorderRadiusChange}
+          // borderRadius={borderRadius}
+          onFontColorChange={handleFontColorChange}
+          onPaddingYChange={handlePaddingYChange}
+          paddingY={paddingY}
+          onPaddingXChange={handlePaddingXChange}
+          paddingX={paddingX}
+          onFontSizeChange={handleFontSizeChange}
+          fontSize={fontSize}
+        />
+      </div>
     </section>
   );
 };
