@@ -107,7 +107,10 @@ export const WorkBench = () => {
       </div>
       <div className={styles["workbench__controls"]}>
         <div className={styles["workbench__header"]}>
-          <h2>Controls</h2>
+          <label htmlFor="controls" className={styles["workbench__label"]}>
+            Controls
+          </label>
+          <input className={styles["workbench__checkbox"]} type="checkbox" name="controls" id="controls" />
           <div>&gt;</div>
         </div>
         {true && (

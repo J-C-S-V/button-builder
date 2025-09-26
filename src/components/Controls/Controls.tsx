@@ -38,7 +38,7 @@ export const Controls = ({
   fontSize: number;
 }) => {
   return (
-    <div className={styles["workbench__controls"]}>
+    <div className={styles["controls__font"]}>
       {/* <ChangeInnerText onTextChange={onTextChange} innerText={innerText} />
       <ChangeColor backgroundColor={backgroundColor} onColorChange={onBackgroundColorChange} />
       <ChangeBorderRadius onBorderRadiusChange={onBorderRadiusChange} borderRadius={borderRadius} /> */}

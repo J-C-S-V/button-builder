@@ -24,3 +24,11 @@
   justify-content: space-around;
   padding: 2rem 0;
 }
+
+.workbench__checkbox {
+  display: none;
+}
+
+.workbench__checkbox:checked + div {
+  display: none;
+}
