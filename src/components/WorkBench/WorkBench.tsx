@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Controls } from "../Controls/Controls";
 import { ControlsTwo } from "../ControlsTwo/ControlsTwo";
 import { Button } from "../Button/Button";
-import styles from "./WorkBench.module.css";
 import { Languages } from "../Languages/Languages";
+import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -85,7 +85,7 @@ export const WorkBench = () => {
   return (
     <section className={styles.workbench}>
       <h1>Buttons, profile and theme mode</h1>
-      <div className={styles["workbench__controls--middle"]}>
+      <div className={styles["controls--middle"]}>
         <Button
           border={border}
           borderColor={borderColor}
@@ -105,15 +105,12 @@ export const WorkBench = () => {
         />
         <Languages />
       </div>
-      <div className={styles["workbench__controls"]}>
-        <div className={styles["workbench__header"]}>
-          <label htmlFor="controls" className={styles["workbench__label"]}>
+      <div className={styles["controls"]}>
+        <div className={styles["controls__header"]}>
+          <input className={styles["controls__checkbox"]} type="checkbox" name="controls" id="controls" />
+          <label htmlFor="controls" className={styles["controls__label"]}>
             Controls
           </label>
-          <input className={styles["workbench__checkbox"]} type="checkbox" name="controls" id="controls" />
-          <div>&gt;</div>
-        </div>
-        {true && (
           <Controls
             // onTextChange={handleInnerText}
             // innerText={innerText}
@@ -130,7 +127,7 @@ export const WorkBench = () => {
             onFontSizeChange={handleFontSizeChange}
             fontSize={fontSize}
           />
-        )}
+        </div>
       </div>
 
       {/* <ControlsTwo

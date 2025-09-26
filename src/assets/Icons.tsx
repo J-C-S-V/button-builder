@@ -1,5 +1,3 @@
-import "../App.css";
-
 export const IconCopy = () => {
   return (
     <svg
