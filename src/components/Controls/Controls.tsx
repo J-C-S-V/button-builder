@@ -25,6 +25,13 @@ export const Controls = ({
       <div className={`${showControls ? styles["show"] : styles["controls__content"]}`}>
         <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
         <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
       </div>
       <hr />
     </div>
