@@ -13,7 +13,8 @@
 .controls__content {
   /* max-height: 0; */
   display: none;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* overflow: auto; */
 }
 
 .show {

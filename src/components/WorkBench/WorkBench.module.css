@@ -17,4 +17,5 @@
   color: var(--color-text-white);
   background-color: var(--color-background-dark);
   padding: 2rem;
+  overflow: scroll;
 }
