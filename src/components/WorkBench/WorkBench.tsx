@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Controls } from "../Controls/Controls";
-import { ControlsTwo } from "../ControlsTwo/ControlsTwo";
 import { Button } from "../Button/Button";
 import { Languages } from "../Languages/Languages";
 import { LeftSection } from "../LeftSection/LeftSection";
+import { Box } from "../Box/Box";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
@@ -112,18 +112,12 @@ export const WorkBench = () => {
 
       <div className={styles["workbench__right"]}>
         <Controls
-          // onTextChange={handleInnerText}
-          // innerText={innerText}
-          // onBackgroundColorChange={handleChangebackgroundColor}
-          // backgroundColor={backgroundColor}
-          // fontColor={fontColor}
-          // onBorderRadiusChange={handleBorderRadiusChange}
-          // borderRadius={borderRadius}
           onFontColorChange={handleFontColorChange}
           fontColor={fontColor}
           onFontSizeChange={handleFontSizeChange}
           fontSize={fontSize}
         />
+        <Box />
       </div>
     </section>
   );

@@ -1,0 +1,24 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.box__title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.box__content {
+  /* max-height: 0; */
+  display: none;
+  /* overflow: hidden; */
+  /* overflow: auto; */
+}
+
+.show {
+  /* max-height: 100%; */
+  display: block;
+}
