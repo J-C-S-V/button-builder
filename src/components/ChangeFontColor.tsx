@@ -7,6 +7,8 @@ export const ChangeFontColor = ({
   fontColor: string;
   onFontColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
+  const newFontColor = fontColor.slice(1, fontColor.length);
+
   return (
     <div className={styles["font-color"]}>
       <label htmlFor="fontColor" className={styles["font-color__label"]}>
@@ -17,10 +19,10 @@ export const ChangeFontColor = ({
           className={styles["font-color__input-color"]}
           type="color"
           id="fontColor"
-          value={fontColor}
+          value={newFontColor}
           onChange={onFontColorChange}
         />
-        <input type="text" className={styles["font-color__input-text"]} value={fontColor} onChange={onFontColorChange} />
+        <input type="text" className={styles["font-color__input-text"]} value={newFontColor} onChange={onFontColorChange} />
       </div>
     </div>
   );

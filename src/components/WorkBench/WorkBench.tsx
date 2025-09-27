@@ -48,7 +48,7 @@ export const WorkBench = () => {
   };
 
   const handleFontColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFontColor(`#${e.target.value}`);
+    setFontColor(`${e.target.value}`);
   };
 
   const handleBorderRadiusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -120,10 +120,7 @@ export const WorkBench = () => {
           // onBorderRadiusChange={handleBorderRadiusChange}
           // borderRadius={borderRadius}
           onFontColorChange={handleFontColorChange}
-          onPaddingYChange={handlePaddingYChange}
-          paddingY={paddingY}
-          onPaddingXChange={handlePaddingXChange}
-          paddingX={paddingX}
+          fontColor={fontColor}
           onFontSizeChange={handleFontSizeChange}
           fontSize={fontSize}
         />

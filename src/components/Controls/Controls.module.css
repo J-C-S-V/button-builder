@@ -1,8 +1,22 @@
 .controls__font {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
+}
+
+.controls__title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.controls__content {
   /* max-height: 0; */
+  display: none;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+}
+
+.show {
+  /* max-height: 100%; */
+  display: block;
 }
