@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Controls } from "../Controls/Controls";
+import { Font } from "../Font/Font";
 import { Button } from "../Button/Button";
 import { Languages } from "../Languages/Languages";
 import { LeftSection } from "../LeftSection/LeftSection";
@@ -112,7 +112,7 @@ export const WorkBench = () => {
       </div>
 
       <div className={styles["workbench__right"]}>
-        <Controls
+        <Font
           onFontColorChange={handleFontColorChange}
           fontColor={fontColor}
           onFontSizeChange={handleFontSizeChange}
