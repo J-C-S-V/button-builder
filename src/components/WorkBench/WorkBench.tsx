@@ -113,7 +113,12 @@ export const WorkBench = () => {
       </div>
 
       <div className={styles["workbench__right"]}>
-        <Font onFontSizeChange={handleFontSizeChange} fontSize={fontSize} />
+        <Font
+          onFontSizeChange={handleFontSizeChange}
+          fontSize={fontSize}
+          fontWeight={fontWeight}
+          onFontWeightChange={handleFontWeightChange}
+        />
         <Box
           onBorderRadiusChange={handleBorderRadiusChange}
           borderRadius={borderRadius}
@@ -123,6 +128,16 @@ export const WorkBench = () => {
           border={border}
           paddingY={paddingY}
           paddingX={paddingX}
+          boxShadowY={boxShadowY}
+          boxShadowX={boxShadowX}
+          boxShadowBlur={boxShadowBlur}
+          boxShadowColor={boxShadowColor}
+          boxShadowSpread={boxShadowSpread}
+          onBoxShadowYChange={handleBoxShadowYChange}
+          onBoxShadowXChange={handleBoxShadowXChange}
+          onBoxShadowBlurChange={handleBoxShadowBlurChange}
+          onBoxShadowColorChange={handleBoxShadowColorChange}
+          onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
         />
         <Color
           onFontColorChange={handleFontColorChange}

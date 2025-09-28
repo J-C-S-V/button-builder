@@ -3,6 +3,7 @@ import styles from "./Box.module.css";
 import { ChangeBorder } from "./Components/ChangeBorder";
 import { ChangePadding } from "./Components/ChangePadding";
 import { ChangeBorderRadius } from "./Components/ChangeBorderRadius";
+import { ChangeBoxShadow } from "./Components/ChangeBoxShadow";
 
 export const Box = ({
   onChangeBorder,
@@ -13,6 +14,16 @@ export const Box = ({
   paddingX,
   borderRadius,
   onBorderRadiusChange,
+  boxShadowY,
+  boxShadowX,
+  boxShadowBlur,
+  boxShadowColor,
+  boxShadowSpread,
+  onBoxShadowYChange,
+  onBoxShadowXChange,
+  onBoxShadowBlurChange,
+  onBoxShadowColorChange,
+  onBoxShadowSpreadChange,
 }: {
   onChangeBorder: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onPaddingYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -22,6 +33,16 @@ export const Box = ({
   paddingX: number;
   borderRadius: number;
   onBorderRadiusChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  boxShadowY: number;
+  boxShadowX: number;
+  boxShadowBlur: number;
+  boxShadowColor: string;
+  boxShadowSpread: number;
+  onBoxShadowYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowXChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowBlurChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBoxShadowSpreadChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   const [showBox, setShowBox] = useState(false);
 
@@ -40,6 +61,18 @@ export const Box = ({
         />
         <ChangeBorder border={border} onBorderChange={onChangeBorder} />
         <ChangeBorderRadius borderRadius={borderRadius} onBorderRadiusChange={onBorderRadiusChange} />
+        <ChangeBoxShadow
+          boxShadowY={boxShadowY}
+          boxShadowX={boxShadowX}
+          boxShadowBlur={boxShadowBlur}
+          boxShadowColor={boxShadowColor}
+          boxShadowSpread={boxShadowSpread}
+          onBoxShadowYChange={onBoxShadowYChange}
+          onBoxShadowXChange={onBoxShadowXChange}
+          onBoxShadowBlurChange={onBoxShadowBlurChange}
+          onBoxShadowColorChange={onBoxShadowColorChange}
+          onBoxShadowSpreadChange={onBoxShadowSpreadChange}
+        />
       </div>
       <hr />
     </div>
