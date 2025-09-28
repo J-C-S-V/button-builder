@@ -119,7 +119,7 @@ export const WorkBench = () => {
           onFontSizeChange={handleFontSizeChange}
           fontSize={fontSize}
         />
-        <Box onFontSizeChange={handleFontSizeChange} fontSize={fontSize} />
+        <Box onChangeBorder={handleBorderChange} border={border} />
         <Color
           onFontColorChange={handleFontColorChange}
           fontColor={fontColor}

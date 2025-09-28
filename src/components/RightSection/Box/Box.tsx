@@ -1,13 +1,13 @@
-import { ChangeFontSize } from "../../ChangeFontSize";
 import { useState } from "react";
 import styles from "./Box.module.css";
+import { ChangeBorder } from "./Components/ChangeBorder";
 
 export const Box = ({
-  onFontSizeChange,
-  fontSize,
+  onChangeBorder,
+  border,
 }: {
-  onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  fontSize: number;
+  onChangeBorder: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  border: number;
 }) => {
   const [showBox, setShowBox] = useState(false);
 
@@ -18,7 +18,7 @@ export const Box = ({
         {showBox ? <span className={styles["box__title-text"]}>–</span> : <span className={styles["box__title-text"]}>+</span>}
       </h2>
       <div className={`${showBox ? styles["show"] : styles["box__content"]}`}>
-        <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
+        <ChangeBorder border={border} onBorderChange={onChangeBorder} />
       </div>
       <hr />
     </div>
