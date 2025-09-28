@@ -4,6 +4,7 @@ import { Button } from "../Button/Button";
 import { Languages } from "../Languages/Languages";
 import { LeftSection } from "../LeftSection/LeftSection";
 import { Box } from "../Box/Box";
+import { Color } from "../Color/Color";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
@@ -117,7 +118,13 @@ export const WorkBench = () => {
           onFontSizeChange={handleFontSizeChange}
           fontSize={fontSize}
         />
-        <Box />
+        <Box onFontSizeChange={handleFontSizeChange} fontSize={fontSize} />
+        <Color
+          onFontColorChange={handleFontColorChange}
+          fontColor={fontColor}
+          onFontSizeChange={handleFontSizeChange}
+          fontSize={fontSize}
+        />
       </div>
     </section>
   );
