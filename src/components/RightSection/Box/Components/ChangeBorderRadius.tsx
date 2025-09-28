@@ -1,3 +1,5 @@
+import styles from "./ChangeBorderRadius.module.css";
+
 export const ChangeBorderRadius = ({
   onBorderRadiusChange,
   borderRadius,
@@ -6,13 +8,13 @@ export const ChangeBorderRadius = ({
   borderRadius: number;
 }) => {
   return (
-    <>
-      <label title="Enter border radius" htmlFor="borderRadius" className="label">
+    <div className={styles["border-radius"]}>
+      <label title="Enter border radius" htmlFor="borderRadius" className={styles["border-radius__label"]}>
         Border Radius:
       </label>
-      <div className="workbench__input-radius-wrapper">
+      <div className={styles["border-radius__input-container"]}>
         <input
-          className="workbench__input-radius"
+          className={styles["border-radius__input"]}
           type="range"
           id="borderRadius"
           onChange={onBorderRadiusChange}
@@ -22,8 +24,10 @@ export const ChangeBorderRadius = ({
           step={1}
           value={borderRadius}
         />
-        <span className="workbench__input-radius-span">{borderRadius}px</span>
+        <div className={styles["border-radius__span-container"]}>
+          <span className={styles["border-radius__span"]}>{borderRadius}px</span>
+        </div>
       </div>
-    </>
+    </div>
   );
 };

@@ -115,6 +115,8 @@ export const WorkBench = () => {
       <div className={styles["workbench__right"]}>
         <Font onFontSizeChange={handleFontSizeChange} fontSize={fontSize} />
         <Box
+          onBorderRadiusChange={handleBorderRadiusChange}
+          borderRadius={borderRadius}
           onChangeBorder={handleBorderChange}
           onPaddingYChange={handlePaddingYChange}
           onPaddingXChange={handlePaddingXChange}

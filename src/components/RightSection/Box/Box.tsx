@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Box.module.css";
 import { ChangeBorder } from "./Components/ChangeBorder";
 import { ChangePadding } from "./Components/ChangePadding";
+import { ChangeBorderRadius } from "./Components/ChangeBorderRadius";
 
 export const Box = ({
   onChangeBorder,
@@ -10,6 +11,8 @@ export const Box = ({
   border,
   paddingY,
   paddingX,
+  borderRadius,
+  onBorderRadiusChange,
 }: {
   onChangeBorder: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onPaddingYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,6 +20,8 @@ export const Box = ({
   border: number;
   paddingY: number;
   paddingX: number;
+  borderRadius: number;
+  onBorderRadiusChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   const [showBox, setShowBox] = useState(false);
 
@@ -34,6 +39,7 @@ export const Box = ({
           onPaddingXChange={onPaddingXChange}
         />
         <ChangeBorder border={border} onBorderChange={onChangeBorder} />
+        <ChangeBorderRadius borderRadius={borderRadius} onBorderRadiusChange={onBorderRadiusChange} />
       </div>
       <hr />
     </div>
