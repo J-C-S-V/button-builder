@@ -1,9 +1,9 @@
 import { ChangeFontColor } from "../ChangeFontColor";
 import { ChangeFontSize } from "../ChangeFontSize";
-import styles from "./Font.module.css";
+import styles from "./State.module.css";
 import { useState } from "react";
 
-export const Font = ({
+export const State = ({
   onFontColorChange,
   fontColor,
   onFontSizeChange,
@@ -14,16 +14,17 @@ export const Font = ({
   onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   fontSize: number;
 }) => {
-  const [showFont, setShowFont] = useState(false);
+  const [showState, setShowState] = useState(false);
 
   return (
-    <div className={`${styles["font"]}`}>
-      <h2 onClick={() => setShowFont(!showFont)} className={styles["font__title"]}>
-        <span className={styles["font__title-text"]}>Font</span>
-        {showFont ? <span className={styles["font__title-text"]}>–</span> : <span className={styles["font__title-text"]}>+</span>}
+    <div className={`${styles["state"]}`}>
+      <h2 onClick={() => setShowState(!showState)} className={styles["state__title"]}>
+        <span className={styles["state__title-text"]}>State</span>
+        {showState ? <span>–</span> : <span>+</span>}
       </h2>
-      <div className={`${showFont ? styles["show"] : styles["font__content"]}`}>
+      <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
         <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
+        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
         <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
       </div>
       <hr />

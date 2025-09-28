@@ -1,23 +1,28 @@
-.font {
+.state {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-.font__title {
+.state__title {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
 
-.font__title-text {
+.state__title-text {
   user-select: none;
 }
 
-.font__content {
+.state__content {
+  /* max-height: 0; */
   display: none;
+  /* overflow: hidden; */
+  /* overflow: auto; */
 }
 
 .show {
+  /* max-height: 100%; */
   display: block;
 }

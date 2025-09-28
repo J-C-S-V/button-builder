@@ -6,6 +6,7 @@ import { LeftSection } from "../LeftSection/LeftSection";
 import { Box } from "../Box/Box";
 import { Color } from "../Color/Color";
 import styles from "./WorkBench.module.css";
+import { State } from "../State/State";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -120,6 +121,12 @@ export const WorkBench = () => {
         />
         <Box onFontSizeChange={handleFontSizeChange} fontSize={fontSize} />
         <Color
+          onFontColorChange={handleFontColorChange}
+          fontColor={fontColor}
+          onFontSizeChange={handleFontSizeChange}
+          fontSize={fontSize}
+        />
+        <State
           onFontColorChange={handleFontColorChange}
           fontColor={fontColor}
           onFontSizeChange={handleFontSizeChange}
