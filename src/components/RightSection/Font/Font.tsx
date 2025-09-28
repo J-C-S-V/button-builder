@@ -1,5 +1,6 @@
 import { ChangeFontSize } from "./Components/ChangeFontSize";
 import { ChangeFontWeight } from "./Components/ChangeFontWeight";
+import { ChangeInnerText } from "./Components/ChangeInnerText";
 import styles from "./Font.module.css";
 import { useState } from "react";
 
@@ -8,11 +9,15 @@ export const Font = ({
   fontSize,
   fontWeight,
   onFontWeightChange,
+  onInnerTextChange,
+  innerText,
 }: {
   onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   fontSize: number;
   fontWeight: number;
   onFontWeightChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onInnerTextChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  innerText: string;
 }) => {
   const [showFont, setShowFont] = useState(false);
 
@@ -25,6 +30,7 @@ export const Font = ({
       <div className={`${showFont ? styles["show"] : styles["font__content"]}`}>
         <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
         <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
+        <ChangeInnerText innerText={innerText} onTextChange={onInnerTextChange} />
       </div>
       <hr />
     </div>

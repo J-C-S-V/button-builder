@@ -118,6 +118,8 @@ export const WorkBench = () => {
           fontSize={fontSize}
           fontWeight={fontWeight}
           onFontWeightChange={handleFontWeightChange}
+          onInnerTextChange={handleInnerText}
+          innerText={innerText}
         />
         <Box
           onBorderRadiusChange={handleBorderRadiusChange}
