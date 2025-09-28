@@ -113,18 +113,22 @@ export const WorkBench = () => {
       </div>
 
       <div className={styles["workbench__right"]}>
-        <Font
-          onFontColorChange={handleFontColorChange}
-          fontColor={fontColor}
-          onFontSizeChange={handleFontSizeChange}
-          fontSize={fontSize}
+        <Font onFontSizeChange={handleFontSizeChange} fontSize={fontSize} />
+        <Box
+          onChangeBorder={handleBorderChange}
+          onPaddingYChange={handlePaddingYChange}
+          onPaddingXChange={handlePaddingXChange}
+          border={border}
+          paddingY={paddingY}
+          paddingX={paddingX}
         />
-        <Box onChangeBorder={handleBorderChange} border={border} />
         <Color
           onFontColorChange={handleFontColorChange}
           fontColor={fontColor}
-          onFontSizeChange={handleFontSizeChange}
-          fontSize={fontSize}
+          onBorderColorChange={handleBorderColorChange}
+          borderColor={borderColor}
+          onBackgroundColorChange={handleChangebackgroundColor}
+          backgroundColor={backgroundColor}
         />
         <State
           onFontColorChange={handleFontColorChange}

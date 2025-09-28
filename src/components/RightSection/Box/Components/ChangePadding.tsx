@@ -12,15 +12,15 @@ export const ChangePadding = ({
   paddingX: number;
 }) => {
   return (
-    <div className={styles["controls__padding"]}>
-      <label title="Enter padding" htmlFor="padding" className="label">
+    <div className={styles["padding"]}>
+      <label title="Enter padding" htmlFor="padding" className={styles["padding__label"]}>
         Padding:
       </label>
-      <div className="workbench__padding-wrapper">
-        <div className="workbench__text-padding-y">
+      <div className={styles["padding__input-container"]}>
+        <div className={styles["padding__text-padding-y"]}>
           <input
             type="range"
-            className="workbench__input-padding-y"
+            className={styles["padding__input-padding-y"]}
             id="padding"
             placeholder={paddingY.toString()}
             min={0}
@@ -29,12 +29,12 @@ export const ChangePadding = ({
             value={paddingY}
             onChange={onPaddingYChange}
           />{" "}
-          <span className="workbench__padding-y">Y&nbsp;&nbsp;{paddingY}px</span>
+          <span className={styles["padding__span"]}>Y&nbsp;&nbsp;{paddingY}px</span>
         </div>
-        <div className="workbench__text-padding-x">
+        <div className={styles["padding__text-padding-x"]}>
           <input
             type="range"
-            className="workbench__input-padding-x"
+            className={styles["padding__input-padding-x"]}
             id="padding"
             placeholder={paddingX.toString()}
             min={0}
@@ -43,7 +43,7 @@ export const ChangePadding = ({
             value={paddingX}
             onChange={onPaddingXChange}
           />
-          <span className="workbench__padding-x">X&nbsp;&nbsp;{paddingX}px</span>
+          <span className={styles["padding__span"]}>X&nbsp;&nbsp;{paddingX}px</span>
         </div>
       </div>
     </div>

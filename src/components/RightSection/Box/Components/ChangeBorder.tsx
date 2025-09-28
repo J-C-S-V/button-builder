@@ -1,11 +1,11 @@
 import styles from "./ChangeBorder.module.css";
 
 export const ChangeBorder = ({
-  border,
   onBorderChange,
+  border,
 }: {
-  border: number;
   onBorderChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  border: number;
 }) => {
   return (
     <div className={styles["border"]}>

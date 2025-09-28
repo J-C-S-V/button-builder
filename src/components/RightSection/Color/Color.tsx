@@ -1,18 +1,23 @@
-import { ChangeFontColor } from "../../ChangeFontColor";
-import { ChangeFontSize } from "../../ChangeFontSize";
+import { ChangeFontColor } from "./Components/ChangeFontColor";
+import { ChangeBorderColor } from "./Components/ChangeBorderColor";
+import { ChangeBackgroundColor } from "./Components/ChangeBackgroundColor";
 import styles from "./Color.module.css";
 import { useState } from "react";
 
 export const Color = ({
   onFontColorChange,
+  onBorderColorChange,
+  onBackgroundColorChange,
   fontColor,
-  onFontSizeChange,
-  fontSize,
+  borderColor,
+  backgroundColor,
 }: {
   onFontColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBorderColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   fontColor: string;
-  onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  fontSize: number;
+  borderColor: string;
+  backgroundColor: string;
 }) => {
   const [showColor, setShowColor] = useState(false);
 
@@ -27,15 +32,9 @@ export const Color = ({
         )}
       </h2>
       <div className={`${showColor ? styles["show"] : styles["color__content"]}`}>
-        <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
         <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} />
+        <ChangeBackgroundColor backgroundColor={backgroundColor} onBackgroundColorChange={onBackgroundColorChange} />
       </div>
       <hr />
     </div>
