@@ -11,14 +11,14 @@
   cursor: pointer;
 }
 
+.box__title-text {
+  user-select: none;
+}
+
 .box__content {
-  /* max-height: 0; */
   display: none;
-  /* overflow: hidden; */
-  /* overflow: auto; */
 }
 
 .show {
-  /* max-height: 100%; */
   display: block;
 }

@@ -1,5 +1,5 @@
-import { ChangeFontColor } from "../ChangeFontColor";
-import { ChangeFontSize } from "../ChangeFontSize";
+import { ChangeFontColor } from "../../ChangeFontColor";
+import { ChangeFontSize } from "../../ChangeFontSize";
 import styles from "./State.module.css";
 import { useState } from "react";
 
@@ -20,11 +20,14 @@ export const State = ({
     <div className={`${styles["state"]}`}>
       <h2 onClick={() => setShowState(!showState)} className={styles["state__title"]}>
         <span className={styles["state__title-text"]}>State</span>
-        {showState ? <span>–</span> : <span>+</span>}
+        {showState ? (
+          <span className={styles["state__title-text"]}>–</span>
+        ) : (
+          <span className={styles["state__title-text"]}>+</span>
+        )}
       </h2>
       <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
         <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
         <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
       </div>
       <hr />

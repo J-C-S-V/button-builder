@@ -1,4 +1,4 @@
-import { Button } from "./Button/Button";
+import { Button } from "./MidSection/Button/Button";
 import { CodeAreaCSS } from "./CodeAreaCSS";
 import { CodeAreaHTML } from "./CodeAreaHTML";
 

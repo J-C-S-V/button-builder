@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.color__title-text {
+  user-select: none;
+}
+
 .color__content {
   /* max-height: 0; */
   display: none;

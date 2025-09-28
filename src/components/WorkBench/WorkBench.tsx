@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Font } from "../Font/Font";
-import { Button } from "../Button/Button";
-import { Languages } from "../Languages/Languages";
+import { Font } from "../RightSection/Font/Font";
+import { Button } from "../MidSection/Button/Button";
+import { Languages } from "../MidSection/Languages/Languages";
 import { LeftSection } from "../LeftSection/LeftSection";
-import { Box } from "../Box/Box";
-import { Color } from "../Color/Color";
+import { Box } from "../RightSection/Box/Box";
+import { Color } from "../RightSection/Color/Color";
+import { State } from "../RightSection/State/State";
 import styles from "./WorkBench.module.css";
-import { State } from "../State/State";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");

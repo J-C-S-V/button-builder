@@ -1,5 +1,5 @@
-import { ChangeFontColor } from "../ChangeFontColor";
-import { ChangeFontSize } from "../ChangeFontSize";
+import { ChangeFontColor } from "../../ChangeFontColor";
+import { ChangeFontSize } from "../../ChangeFontSize";
 import styles from "./Font.module.css";
 import { useState } from "react";
 

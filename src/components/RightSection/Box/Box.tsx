@@ -1,4 +1,4 @@
-import { ChangeFontSize } from "../ChangeFontSize";
+import { ChangeFontSize } from "../../ChangeFontSize";
 import { useState } from "react";
 import styles from "./Box.module.css";
 
@@ -14,8 +14,8 @@ export const Box = ({
   return (
     <div className={`${styles["box"]}`}>
       <h2 onClick={() => setShowBox(!showBox)} className={styles["box__title"]}>
-        <span>Box</span>
-        {showBox ? <span>–</span> : <span>+</span>}
+        <span className={styles["box__title-text"]}>Box</span>
+        {showBox ? <span className={styles["box__title-text"]}>–</span> : <span className={styles["box__title-text"]}>+</span>}
       </h2>
       <div className={`${showBox ? styles["show"] : styles["box__content"]}`}>
         <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
