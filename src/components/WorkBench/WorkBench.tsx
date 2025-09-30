@@ -109,7 +109,23 @@ export const WorkBench = () => {
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
         />
-        <Languages />
+        <Languages
+          border={border}
+          borderColor={borderColor}
+          borderRadius={borderRadius}
+          backgroundColor={backgroundColor}
+          paddingY={paddingY}
+          paddingX={paddingX}
+          fontWeight={fontWeight}
+          fontSize={fontSize}
+          fontColor={fontColor}
+          innerText={innerText}
+          boxShadowY={boxShadowY}
+          boxShadowX={boxShadowX}
+          boxShadowBlur={boxShadowBlur}
+          boxShadowColor={boxShadowColor}
+          boxShadowSpread={boxShadowSpread}
+        />
       </div>
 
       <div className={styles["workbench__right"]}>
