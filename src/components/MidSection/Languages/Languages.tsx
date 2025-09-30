@@ -36,7 +36,7 @@ export const Languages = ({
 }) => {
   return (
     <div className={styles.languages}>
-      <CodeAreaCSS
+      {/* <CodeAreaCSS
         border={border}
         borderColor={borderColor}
         borderRadius={borderRadius}
@@ -52,9 +52,9 @@ export const Languages = ({
         boxShadowBlur={boxShadowBlur}
         boxShadowColor={boxShadowColor}
         boxShadowSpread={boxShadowSpread}
-      />
-      <button className={`${styles.languages__css} ${styles.languages__button}`}>CSS</button>
-      <button className={`${styles.languages__html} ${styles.languages__button}`}>HTML</button>
+      /> */}
+      <button className={`${styles.languages__css} ${styles.languages__button}`}>Get CSS</button>
+      <button className={`${styles.languages__html} ${styles.languages__button}`}>Get HTML</button>
     </div>
   );
 };
