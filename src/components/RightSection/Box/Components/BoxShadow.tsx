@@ -24,12 +24,12 @@ export const BoxShadow = ({
   boxShadowSpread: number;
 }) => {
   return (
-    <>
+    <div className={style["box-shadow"]}>
       <label title="Enter Y position" htmlFor="box-shadow-y" className={style["box-shadow__label"]}>
         Box Shadow:
       </label>
-      <div className={style["box-shadow__wrapper"]}>
-        <div className={style["box-shadow__wrapper-coordinates"]}>
+      <div className={style["box-shadow__container"]}>
+        <div className={style["box-shadow__coordinates"]}>
           <div className={style["box-shadow__x"]}>
             <input
               type="range"
@@ -41,7 +41,7 @@ export const BoxShadow = ({
               value={boxShadowX}
               onChange={onBoxShadowXChange}
             />
-            <span className={style["box-shadow__shadow-x"]}>X &nbsp;&nbsp;{boxShadowX}px</span>
+            <span className={style["box-shadow__span"]}>X &nbsp;&nbsp;{boxShadowX}px</span>
           </div>
           <div className={style["box-shadow__y"]}>
             <input
@@ -54,12 +54,15 @@ export const BoxShadow = ({
               value={boxShadowY}
               onChange={onBoxShadowYChange}
             />
-            <span className={style["box-shadow__shadow-y"]}>Y &nbsp;&nbsp;{boxShadowY}px</span>
+            <span className={style["box-shadow__span"]}>Y &nbsp;&nbsp;{boxShadowY}px</span>
           </div>
         </div>
 
-        <div className={style["box-shadow__wrapper-blur-spread"]}>
-          <div className={style["box-shadow__blur"]}>
+        <div className={style["box-shadow__blur"]}>
+          <label title="Enter blur position" htmlFor="box-shadow-blur" className={style["box-shadow__label"]}>
+            Blur:
+          </label>
+          <div className={style["box-shadow__blur-container"]}>
             <input
               type="range"
               className={style["box-shadow__input-blur"]}
@@ -70,9 +73,14 @@ export const BoxShadow = ({
               value={boxShadowBlur}
               onChange={onBoxShadowBlurChange}
             />
-            <span className={style["box-shadow__blur-span"]}>Blur &nbsp;&nbsp;{boxShadowBlur}px</span>
+            <span className={style["box-shadow__span"]}>{boxShadowBlur}px</span>
           </div>
-          <div className={style["box-shadow__spread"]}>
+        </div>
+        <div className={style["box-shadow__spread"]}>
+          <label className={style["box-shadow__label"]} title="Enter spread position" htmlFor="box-shadow-spread">
+            Spread:
+          </label>
+          <div className={style["box-shadow__spread-container"]}>
             <input
               type="range"
               className={style["box-shadow__input-spread"]}
@@ -83,26 +91,33 @@ export const BoxShadow = ({
               value={boxShadowSpread}
               onChange={onBoxShadowSpreadChange}
             />
-            <span className={style["box-shadow__spread-span"]}>Spread &nbsp;&nbsp;{boxShadowSpread}px</span>
+            <div className={style["box-shadow__span-container"]}>
+              <span className={style["box-shadow__span"]}>{boxShadowSpread}px</span>
+            </div>
           </div>
         </div>
 
         <div className={style["box-shadow__color"]}>
-          <input
-            type="color"
-            className={style["box-shadow__input-color"]}
-            id="box-shadow-color"
-            value={boxShadowColor}
-            onChange={onBoxShadowColorChange}
-          />
-          <input
-            type="text"
-            className={style["box-shadow__color-preview"]}
-            value={boxShadowColor}
-            onChange={onBoxShadowColorChange}
-          />
+          <label title="Enter color" htmlFor="box-shadow-color" className={style["box-shadow__label"]}>
+            Color:
+          </label>
+          <div className={style["box-shadow__color-container"]}>
+            <input
+              type="color"
+              className={style["box-shadow__input-color"]}
+              id="box-shadow-color"
+              value={boxShadowColor}
+              onChange={onBoxShadowColorChange}
+            />
+            <input
+              type="text"
+              className={style["box-shadow__input-text"]}
+              value={boxShadowColor}
+              onChange={onBoxShadowColorChange}
+            />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
