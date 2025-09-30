@@ -10,16 +10,15 @@
 }
 
 .left-section__button {
-  width: 10rem;
-  height: 4rem;
-  line-height: 2.5em;
-  cursor: pointer;
-  border: 2px solid #560bad;
+  background-color: #ff0000;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
   font-size: 16px;
-  border-radius: 6px;
-  font-weight: 500;
-  color: #560bad;
-  transition: background-color 0.3s ease;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: -7px 7px 0px 0px #ff0000;
+  cursor: pointer;
 }
 
 .left-section__button--two {
@@ -45,14 +44,16 @@
 }
 
 .left-section__button--four {
-  padding: 1rem 1rem;
-  letter-spacing: 0.5rem;
-  color: #001100;
-  border: 3px solid #ff0;
-  font-size: 14px;
-  position: relative;
-  background: transparent;
+  width: 10rem;
+  height: 4rem;
+  line-height: 2.5em;
   cursor: pointer;
+  border: 2px solid #560bad;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #560bad;
+  transition: background-color 0.3s ease;
 }
 
 .left-section__button--five {

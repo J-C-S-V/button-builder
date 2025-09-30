@@ -25,7 +25,7 @@ export const BoxShadow = ({
 }) => {
   return (
     <div className={style["box-shadow"]}>
-      <label title="Enter Y position" htmlFor="box-shadow-y" className={style["box-shadow__label"]}>
+      <label className={style["box-shadow__label"]} title="Enter Y position" htmlFor="box-shadow-y">
         Box Shadow:
       </label>
       <div className={style["box-shadow__container"]}>
@@ -41,7 +41,9 @@ export const BoxShadow = ({
               value={boxShadowX}
               onChange={onBoxShadowXChange}
             />
-            <span className={style["box-shadow__span"]}>X &nbsp;&nbsp;{boxShadowX}px</span>
+            <div className={style["box-shadow__span-container-two"]}>
+              <span className={style["box-shadow__span"]}>X &nbsp;&nbsp;{boxShadowX}px</span>
+            </div>
           </div>
           <div className={style["box-shadow__y"]}>
             <input
@@ -54,12 +56,14 @@ export const BoxShadow = ({
               value={boxShadowY}
               onChange={onBoxShadowYChange}
             />
-            <span className={style["box-shadow__span"]}>Y &nbsp;&nbsp;{boxShadowY}px</span>
+            <div className={style["box-shadow__span-container-two"]}>
+              <span className={style["box-shadow__span"]}>Y &nbsp;&nbsp;{boxShadowY}px</span>
+            </div>
           </div>
         </div>
 
         <div className={style["box-shadow__blur"]}>
-          <label title="Enter blur position" htmlFor="box-shadow-blur" className={style["box-shadow__label"]}>
+          <label className={style["box-shadow__label"]} title="Enter blur position" htmlFor="box-shadow-blur">
             Blur:
           </label>
           <div className={style["box-shadow__blur-container"]}>
@@ -73,9 +77,12 @@ export const BoxShadow = ({
               value={boxShadowBlur}
               onChange={onBoxShadowBlurChange}
             />
-            <span className={style["box-shadow__span"]}>{boxShadowBlur}px</span>
+            <div className={style["box-shadow__span-container"]}>
+              <span className={style["box-shadow__span"]}>{boxShadowBlur}px</span>
+            </div>
           </div>
         </div>
+
         <div className={style["box-shadow__spread"]}>
           <label className={style["box-shadow__label"]} title="Enter spread position" htmlFor="box-shadow-spread">
             Spread:
