@@ -17,10 +17,10 @@ export const Padding = ({
         Padding:
       </label>
       <div className={styles["padding__input-container"]}>
-        <div className={styles["padding__text-padding-y"]}>
+        <div className={styles["padding__span-container"]}>
           <input
             type="range"
-            className={styles["padding__input-padding-y"]}
+            className={styles["padding__input"]}
             id="padding"
             placeholder={paddingY.toString()}
             min={0}
@@ -31,10 +31,10 @@ export const Padding = ({
           />{" "}
           <span className={styles["padding__span"]}>Y&nbsp;&nbsp;{paddingY}px</span>
         </div>
-        <div className={styles["padding__text-padding-x"]}>
+        <div className={styles["padding__span-container"]}>
           <input
             type="range"
-            className={styles["padding__input-padding-x"]}
+            className={styles["padding__input"]}
             id="padding"
             placeholder={paddingX.toString()}
             min={0}
