@@ -66,3 +66,15 @@
   border: 2px solid #ffffff;
   box-shadow: -7px 7px 0px 0px #c2c2c2;
 }
+
+.left-section__button--six {
+  cursor: pointer;
+  background-color: #ff0000;
+  border-radius: 0px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #050505;
+  border: 4px solid #000000;
+  box-shadow: -8px 7px 0px 0px #c2c2c2;
+}
