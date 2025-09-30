@@ -1,6 +1,6 @@
-import styles from "./ChangeFontSize.module.css";
+import styles from "./FontSize.module.css";
 
-export const ChangeFontSize = ({
+export const FontSize = ({
   fontSize,
   onFontSizeChange,
 }: {

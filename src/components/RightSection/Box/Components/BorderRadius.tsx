@@ -1,6 +1,6 @@
-import styles from "./ChangeBorderRadius.module.css";
+import styles from "./BorderRadius.module.css";
 
-export const ChangeBorderRadius = ({
+export const BorderRadius = ({
   onBorderRadiusChange,
   borderRadius,
 }: {

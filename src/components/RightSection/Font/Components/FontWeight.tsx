@@ -1,6 +1,6 @@
-import styles from "./ChangeFontWeight.module.css";
+import styles from "./FontWeight.module.css";
 
-export const ChangeFontWeight = ({
+export const FontWeight = ({
   fontWeight,
   onFontWeightChange,
 }: {

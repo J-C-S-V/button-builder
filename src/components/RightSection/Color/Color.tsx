@@ -1,6 +1,6 @@
-import { ChangeFontColor } from "./Components/ChangeFontColor";
-import { ChangeBorderColor } from "./Components/ChangeBorderColor";
-import { ChangeBackgroundColor } from "./Components/ChangeBackgroundColor";
+import { FontColor } from "./Components/FontColor";
+import { BorderColor } from "./Components/BorderColor";
+import { BackgroundColor } from "./Components/BackgroundColor";
 import styles from "./Color.module.css";
 import { useState } from "react";
 
@@ -32,9 +32,9 @@ export const Color = ({
         )}
       </h2>
       <div className={`${showColor ? styles["show"] : styles["color__content"]}`}>
-        <ChangeFontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
-        <ChangeBorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} />
-        <ChangeBackgroundColor backgroundColor={backgroundColor} onBackgroundColorChange={onBackgroundColorChange} />
+        <FontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
+        <BorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} />
+        <BackgroundColor backgroundColor={backgroundColor} onBackgroundColorChange={onBackgroundColorChange} />
       </div>
       <hr />
     </div>

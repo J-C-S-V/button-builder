@@ -1,6 +1,6 @@
-import styles from "./ChangeBackgroundColor.module.css";
+import styles from "./BackgroundColor.module.css";
 
-export const ChangeBackgroundColor = ({
+export const BackgroundColor = ({
   onBackgroundColorChange,
   backgroundColor,
 }: {

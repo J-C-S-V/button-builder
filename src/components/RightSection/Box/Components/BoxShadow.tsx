@@ -1,4 +1,6 @@
-export const ChangeBoxShadow = ({
+import style from "./BoxShadow.module.css";
+
+export const BoxShadow = ({
   onBoxShadowYChange,
   onBoxShadowXChange,
   onBoxShadowBlurChange,
@@ -23,15 +25,15 @@ export const ChangeBoxShadow = ({
 }) => {
   return (
     <>
-      <label title="Enter Y position" htmlFor="box-shadow-y" className="label">
+      <label title="Enter Y position" htmlFor="box-shadow-y" className={style["box-shadow__label"]}>
         Box Shadow:
       </label>
-      <div className="workbench__box-shadow-wrapper">
-        <div className="workbench__box-shadow-wrapper-coordinates">
-          <div className="workbench__box-shadow-x">
+      <div className={style["box-shadow__wrapper"]}>
+        <div className={style["box-shadow__wrapper-coordinates"]}>
+          <div className={style["box-shadow__x"]}>
             <input
               type="range"
-              className="workbench__input-box-shadow-x"
+              className={style["box-shadow__input-x"]}
               min={-50}
               max={50}
               step={1}
@@ -39,12 +41,12 @@ export const ChangeBoxShadow = ({
               value={boxShadowX}
               onChange={onBoxShadowXChange}
             />
-            <span className="workbench__shadow-x">X &nbsp;&nbsp;{boxShadowX}px</span>
+            <span className={style["box-shadow__shadow-x"]}>X &nbsp;&nbsp;{boxShadowX}px</span>
           </div>
-          <div className="workbench__box-shadow-y">
+          <div className={style["box-shadow__y"]}>
             <input
               type="range"
-              className="workbench__input-box-shadow-y"
+              className={style["box-shadow__input-y"]}
               min={-50}
               max={50}
               step={1}
@@ -52,15 +54,15 @@ export const ChangeBoxShadow = ({
               value={boxShadowY}
               onChange={onBoxShadowYChange}
             />
-            <span className="workbench__shadow-y">Y &nbsp;&nbsp;{boxShadowY}px</span>
+            <span className={style["box-shadow__shadow-y"]}>Y &nbsp;&nbsp;{boxShadowY}px</span>
           </div>
         </div>
 
-        <div className="workbench__box-shadow-wrapper-blur-spread">
-          <div className="workbench__box-shadow-blur">
+        <div className={style["box-shadow__wrapper-blur-spread"]}>
+          <div className={style["box-shadow__blur"]}>
             <input
               type="range"
-              className="workbench__input-box-shadow-blur"
+              className={style["box-shadow__input-blur"]}
               id="box-shadow-blur"
               min={0}
               max={50}
@@ -68,12 +70,12 @@ export const ChangeBoxShadow = ({
               value={boxShadowBlur}
               onChange={onBoxShadowBlurChange}
             />
-            <span className="workbench__box-shadow-blur-span">Blur &nbsp;&nbsp;{boxShadowBlur}px</span>
+            <span className={style["box-shadow__blur-span"]}>Blur &nbsp;&nbsp;{boxShadowBlur}px</span>
           </div>
-          <div className="workbench__box-shadow-spread">
+          <div className={style["box-shadow__spread"]}>
             <input
               type="range"
-              className="workbench__input-box-shadow-spread"
+              className={style["box-shadow__input-spread"]}
               id="box-shadow-spread"
               min={0}
               max={50}
@@ -81,21 +83,21 @@ export const ChangeBoxShadow = ({
               value={boxShadowSpread}
               onChange={onBoxShadowSpreadChange}
             />
-            <span className="workbench__box-shadow-spread-span">Spread &nbsp;&nbsp;{boxShadowSpread}px</span>
+            <span className={style["box-shadow__spread-span"]}>Spread &nbsp;&nbsp;{boxShadowSpread}px</span>
           </div>
         </div>
 
-        <div className="workbench__box-shadow-color">
+        <div className={style["box-shadow__color"]}>
           <input
             type="color"
-            className="workbench__input-box-shadow-color"
+            className={style["box-shadow__input-color"]}
             id="box-shadow-color"
             value={boxShadowColor}
             onChange={onBoxShadowColorChange}
           />
           <input
             type="text"
-            className="workbench__box-shadow-color-preview"
+            className={style["box-shadow__color-preview"]}
             value={boxShadowColor}
             onChange={onBoxShadowColorChange}
           />

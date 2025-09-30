@@ -1,6 +1,6 @@
-import { ChangeFontSize } from "./Components/ChangeFontSize";
-import { ChangeFontWeight } from "./Components/ChangeFontWeight";
-import { ChangeInnerText } from "./Components/ChangeInnerText";
+import { FontSize } from "./Components/FontSize";
+import { FontWeight } from "./Components/FontWeight";
+import { InnerText } from "./Components/InnerText";
 import styles from "./Font.module.css";
 import { useState } from "react";
 
@@ -28,9 +28,9 @@ export const Font = ({
         {showFont ? <span className={styles["font__title-text"]}>–</span> : <span className={styles["font__title-text"]}>+</span>}
       </h2>
       <div className={`${showFont ? styles["show"] : styles["font__content"]}`}>
-        <ChangeFontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
-        <ChangeFontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
-        <ChangeInnerText innerText={innerText} onTextChange={onInnerTextChange} />
+        <FontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
+        <FontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
+        <InnerText innerText={innerText} onTextChange={onInnerTextChange} />
       </div>
       <hr />
     </div>

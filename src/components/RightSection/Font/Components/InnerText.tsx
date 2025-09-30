@@ -1,6 +1,6 @@
-import styles from "./ChangeInnerText.module.css";
+import styles from "./InnerText.module.css";
 
-export const ChangeInnerText = ({
+export const InnerText = ({
   onTextChange,
   innerText,
 }: {

@@ -1,6 +1,6 @@
-import styles from "./ChangeFontColor.module.css";
+import styles from "./FontColor.module.css";
 
-export const ChangeFontColor = ({
+export const FontColor = ({
   fontColor,
   onFontColorChange,
 }: {

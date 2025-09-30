@@ -1,6 +1,6 @@
-import styles from "./ChangeBorderColor.module.css";
+import styles from "./BorderColor.module.css";
 
-export const ChangeBorderColor = ({
+export const BorderColor = ({
   onBorderColorChange,
   borderColor,
 }: {

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "./Box.module.css";
-import { ChangeBorder } from "./Components/ChangeBorder";
-import { ChangePadding } from "./Components/ChangePadding";
-import { ChangeBorderRadius } from "./Components/ChangeBorderRadius";
-import { ChangeBoxShadow } from "./Components/ChangeBoxShadow";
+import { Border } from "./Components/Border";
+import { Padding } from "./Components/Padding";
+import { BorderRadius } from "./Components/BorderRadius";
+import { BoxShadow } from "./Components/BoxShadow";
 
 export const Box = ({
   onChangeBorder,
@@ -53,15 +53,15 @@ export const Box = ({
         {showBox ? <span className={styles["box__title-text"]}>–</span> : <span className={styles["box__title-text"]}>+</span>}
       </h2>
       <div className={`${showBox ? styles["show"] : styles["box__content"]}`}>
-        <ChangePadding
+        <Padding
           paddingY={paddingY}
           paddingX={paddingX}
           onPaddingYChange={onPaddingYChange}
           onPaddingXChange={onPaddingXChange}
         />
-        <ChangeBorder border={border} onBorderChange={onChangeBorder} />
-        <ChangeBorderRadius borderRadius={borderRadius} onBorderRadiusChange={onBorderRadiusChange} />
-        <ChangeBoxShadow
+        <Border border={border} onBorderChange={onChangeBorder} />
+        <BorderRadius borderRadius={borderRadius} onBorderRadiusChange={onBorderRadiusChange} />
+        <BoxShadow
           boxShadowY={boxShadowY}
           boxShadowX={boxShadowX}
           boxShadowBlur={boxShadowBlur}

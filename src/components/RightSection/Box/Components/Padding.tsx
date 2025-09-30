@@ -1,6 +1,6 @@
-import styles from "./ChangePadding.module.css";
+import styles from "./Padding.module.css";
 
-export const ChangePadding = ({
+export const Padding = ({
   onPaddingYChange,
   onPaddingXChange,
   paddingY,
