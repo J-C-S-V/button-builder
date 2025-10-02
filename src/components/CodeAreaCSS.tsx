@@ -51,9 +51,9 @@ export const CodeAreaCSS = ({
 
   return (
     <>
-      <h2>CSS code</h2>
       <div className="workbench__code-area-wrapper" style={{ position: "relative" }}>
         <textarea
+          style={{ display: "none" }}
           ref={textareaRef}
           rows={10}
           cols={50}
