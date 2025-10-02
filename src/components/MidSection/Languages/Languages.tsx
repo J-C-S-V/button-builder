@@ -60,7 +60,8 @@ export const Languages = ({
   font-size: ${fontSize}px;
   color: ${fontColor};
   border: ${border}px solid ${borderColor};
-  box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};}`
+  box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};
+}`
       )
       .then(() => {
         setCopied(true);
