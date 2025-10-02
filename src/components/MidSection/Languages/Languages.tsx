@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Footer } from "../../Footer";
 import styles from "./Languages.module.css";
 
 export const Languages = ({
@@ -80,6 +81,7 @@ export const Languages = ({
       <button onClick={handleCopyHTML} className={`${styles.languages__html} ${styles.languages__button}`}>
         Get HTML
       </button>
+      <Footer />
     </div>
   );
 };

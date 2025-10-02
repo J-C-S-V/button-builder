@@ -7,6 +7,7 @@
   padding: 2rem 2rem;
   height: 100%;
   background-color: var(--color-background-dark);
+  border: 2px solid var(--color-background-white);
 }
 
 .left-section__button {
