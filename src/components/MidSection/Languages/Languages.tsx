@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { CodeAreaCSS } from "../../CodeAreaCSS";
 import styles from "./Languages.module.css";
 
 export const Languages = ({
@@ -35,15 +34,29 @@ export const Languages = ({
   boxShadowColor: string;
   boxShadowSpread: number;
 }) => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const textareaRefHTML = useRef<HTMLTextAreaElement>(null);
+  const textareaRefCSS = useRef<HTMLTextAreaElement>(null);
   const [copied, setCopied] = useState(false);
 
-  const handleCopyCSS = () => {
-    if (textareaRef.current) {
+  const handleCopyHTML = () => {
+    if (textareaRefHTML.current) {
       navigator.clipboard
-        .writeText(textareaRef.current.value)
+        .writeText(textareaRefHTML.current.value)
         .then(() => {
-          console.log("Copied!");
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1000);
+        })
+        .catch((err) => {
+          console.error("Failed to copy:", err);
+        });
+    }
+  };
+
+  const handleCopyCSS = () => {
+    if (textareaRefCSS.current) {
+      navigator.clipboard
+        .writeText(textareaRefCSS.current.value)
+        .then(() => {
           setCopied(true);
           setTimeout(() => setCopied(false), 1000);
         })
@@ -54,30 +67,10 @@ export const Languages = ({
   };
   return (
     <div className={styles.languages}>
-      <CodeAreaCSS
-        border={border}
-        borderColor={borderColor}
-        borderRadius={borderRadius}
-        backgroundColor={backgroundColor}
-        paddingY={paddingY}
-        paddingX={paddingX}
-        fontWeight={fontWeight}
-        fontSize={fontSize}
-        fontColor={fontColor}
-        innerText={innerText}
-        boxShadowY={boxShadowY}
-        boxShadowX={boxShadowX}
-        boxShadowBlur={boxShadowBlur}
-        boxShadowColor={boxShadowColor}
-        boxShadowSpread={boxShadowSpread}
-      />
-
+      <textarea className={styles.languages__textarea} ref={textareaRefHTML} value={`<a class="button">${innerText}</a>`} />
       <textarea
-        style={{ display: "none" }}
-        ref={textareaRef}
-        rows={10}
-        cols={50}
-        disabled
+        className={styles.languages__textarea}
+        ref={textareaRefCSS}
         value={`.button {
   cursor: pointer;
   background-color: ${backgroundColor};
@@ -90,27 +83,13 @@ export const Languages = ({
   box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};
 }`}
       />
+      {copied && <div className={styles.languages__copied}>Copied!</div>}
       <button onClick={handleCopyCSS} className={`${styles.languages__css} ${styles.languages__button}`}>
         Get CSS
       </button>
-      <button className={`${styles.languages__html} ${styles.languages__button}`}>Get HTML</button>
-      {copied && (
-        <div
-          style={{
-            position: "absolute",
-            top: "-1.5rem",
-            right: "0",
-            backgroundColor: "#333",
-            color: "#fff",
-            padding: "0.25rem 0.5rem",
-            borderRadius: "0.25rem",
-            fontSize: "0.8rem",
-            pointerEvents: "none",
-          }}
-        >
-          Copied!
-        </div>
-      )}
+      <button onClick={handleCopyHTML} className={`${styles.languages__html} ${styles.languages__button}`}>
+        Get HTML
+      </button>
     </div>
   );
 };
