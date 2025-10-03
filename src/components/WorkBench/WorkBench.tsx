@@ -27,7 +27,7 @@ export const WorkBench = () => {
   const [isHoverBrightness, setIsHoverBrightness] = useState(1);
   const [isHoverScale, setIsHoverScale] = useState(1.1);
   const [isHoverColor, setIsHoverColor] = useState("#ffffff");
-  const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#ffffff");
+  const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#000000");
   const [transition, setTransition] = useState(0.3);
 
   const handleTransition = (e) => {
@@ -159,6 +159,7 @@ export const WorkBench = () => {
           isHoverScale={isHoverScale}
           isHoverColor={isHoverColor}
           isHoverBackgroundColor={isHoverBackgroundColor}
+          transition={transition}
         />
       </div>
 

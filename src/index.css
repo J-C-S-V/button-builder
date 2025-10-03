@@ -46,7 +46,7 @@ html {
   --color-background-cyan-light: #771065;
 
   /* FONNT FAMILY*/
-  --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif; */
 }
 
 textarea {

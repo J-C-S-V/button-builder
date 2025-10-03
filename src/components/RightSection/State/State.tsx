@@ -34,7 +34,7 @@ export const State = ({
   return (
     <div className={`${styles["state"]}`}>
       <h2 onClick={() => setShowState(!showState)} className={styles["state__title"]}>
-        <span className={styles["state__title-text"]}>State</span>
+        <span className={styles["state__title-text"]}>State on hover</span>
         {showState ? (
           <span className={styles["state__title-text"]}>–</span>
         ) : (

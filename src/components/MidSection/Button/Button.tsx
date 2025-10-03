@@ -75,7 +75,7 @@ export const Button = ({
                 color: fontColor,
                 border: `${border}px solid ${borderColor}`,
                 boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
-                transition: "all 0.3s ease-in-out",
+                transition: `all ${transition}s ease-in-out`,
               }
         }
         onMouseLeave={() => setIsHover(false)}

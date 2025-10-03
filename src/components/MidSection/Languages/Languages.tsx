@@ -18,6 +18,7 @@ export const Languages = ({
   boxShadowBlur,
   boxShadowColor,
   boxShadowSpread,
+  transition,
 }: {
   border: number;
   borderColor: string;
@@ -34,6 +35,7 @@ export const Languages = ({
   boxShadowBlur: number;
   boxShadowColor: string;
   boxShadowSpread: number;
+  transition: number;
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -62,6 +64,7 @@ export const Languages = ({
   color: ${fontColor};
   border: ${border}px solid ${borderColor};
   box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};
+  transition: all ${transition}s ease-in-out;
 }`
       )
       .then(() => {
