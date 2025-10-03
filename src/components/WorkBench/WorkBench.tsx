@@ -24,7 +24,7 @@ export const WorkBench = () => {
   const [boxShadowBlur, setBoxShadowBlur] = useState(0);
   const [boxShadowSpread, setBoxShadowSpread] = useState(0);
   const [boxShadowColor, setBoxShadowColor] = useState("#c2c2c2");
-  const [isHoverBrightness, setIsHoverBrightness] = useState(100);
+  const [isHoverBrightness, setIsHoverBrightness] = useState(1);
   const [isHoverScale, setIsHoverScale] = useState(1.1);
   const [isHoverColor, setIsHoverColor] = useState("#ffffff");
   const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#ffffff");

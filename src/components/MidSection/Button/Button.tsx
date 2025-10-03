@@ -44,7 +44,7 @@ export const Button = ({
 }) => {
   const [isHover, setIsHover] = useState(false);
   const hoverStyle = {
-    filter: `brightness(${isHoverBrightness}%)`,
+    filter: `brightness(${isHoverBrightness})`,
     transform: `scale(${isHoverScale})`,
     backgroundColor: isHoverBackgroundColor,
     borderRadius: `${borderRadius}px`,

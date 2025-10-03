@@ -2,6 +2,7 @@ import styles from "./State.module.css";
 import { useState } from "react";
 // import { Hover } from "./components/Hover";
 import { Scale } from "./components/Scale";
+import { Brightness } from "./components/Brightness";
 
 export const State = ({
   isHoverBrightness,
@@ -44,6 +45,7 @@ export const State = ({
           onHoverBackgroundColorChange={onHoverBackgroundColorChange}
         /> */}
         <Scale isHoverScale={isHoverScale} onHoverScaleChange={onHoverScaleChange} />
+        <Brightness isHoverBrightness={isHoverBrightness} onHoverBrightnessChange={onHoverBrightnessChange} />
       </div>
       <hr />
     </div>

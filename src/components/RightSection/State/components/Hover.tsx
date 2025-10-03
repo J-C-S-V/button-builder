@@ -1,8 +1,6 @@
 import styles from "./Hover.module.css";
 
 export const Hover = ({
-  isHoverBrightness,
-  onHoverBrightnessChange,
   isHoverScale,
   onHoverScaleChange,
   isHoverColor,
@@ -10,8 +8,6 @@ export const Hover = ({
   isHoverBackgroundColor,
   onHoverBackgroundColorChange,
 }: {
-  isHoverBrightness: string;
-  onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isHoverScale: string;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isHoverColor: string;
@@ -23,7 +19,6 @@ export const Hover = ({
     <div className={styles["hover"]}>
       <h2>Hover</h2>
       <div>
-        <input type="range" min="0" max="200" value={isHoverBrightness} onChange={onHoverBrightnessChange} />
         <input type="range" min="0.5" max="2" value={isHoverScale} onChange={onHoverScaleChange} />
         <div className={styles["font-color"]}>
           <label htmlFor="fontColor" className={styles["font-color__label"]}>
