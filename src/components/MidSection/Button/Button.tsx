@@ -1,4 +1,5 @@
 import styles from "./Button.module.css";
+import { useState } from "react";
 
 export const Button = ({
   backgroundColor,
@@ -16,6 +17,10 @@ export const Button = ({
   boxShadowBlur,
   boxShadowColor,
   boxShadowSpread,
+  isHoverBrightness,
+  isHoverScale,
+  isHoverColor,
+  isHoverBackgroundColor,
 }: {
   backgroundColor: string;
   innerText: string;
@@ -32,21 +37,47 @@ export const Button = ({
   boxShadowBlur: number;
   boxShadowColor: string;
   boxShadowSpread: number;
+  isHoverBrightness: number;
+  isHoverScale: number;
+  isHoverColor: string;
+  isHoverBackgroundColor: string;
 }) => {
+  const [isHover, setIsHover] = useState(false);
+  const hoverStyle = {
+    filter: `brightness(${isHoverBrightness}%)`,
+    transform: `scale(${isHoverScale})`,
+    backgroundColor: isHoverBackgroundColor,
+    borderRadius: `${borderRadius}px`,
+    padding: `${paddingY}px ${paddingX}px`,
+    fontWeight: fontWeight,
+    fontSize: fontSize,
+    color: isHoverColor,
+    border: `${border}px solid ${borderColor}`,
+    boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
+    transition: "all 0.3s ease-in-out",
+  };
+
   return (
     <div className={styles["workbench__button"]}>
       <a
         className={styles["workbench__button--anchor"]}
-        style={{
-          backgroundColor: backgroundColor,
-          borderRadius: `${borderRadius}px`,
-          padding: `${paddingY}px ${paddingX}px`,
-          fontWeight: fontWeight,
-          fontSize: fontSize,
-          color: fontColor,
-          border: `${border}px solid ${borderColor}`,
-          boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
-        }}
+        style={
+          isHover
+            ? hoverStyle
+            : {
+                backgroundColor: backgroundColor,
+                borderRadius: `${borderRadius}px`,
+                padding: `${paddingY}px ${paddingX}px`,
+                fontWeight: fontWeight,
+                fontSize: fontSize,
+                color: fontColor,
+                border: `${border}px solid ${borderColor}`,
+                boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
+                transition: "all 0.3s ease-in-out",
+              }
+        }
+        onMouseLeave={() => setIsHover(false)}
+        onMouseOver={() => setIsHover(true)}
       >
         {innerText}
       </a>

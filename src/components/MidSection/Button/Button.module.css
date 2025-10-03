@@ -6,3 +6,8 @@
   align-items: center;
   background-color: var(--color-text-white);
 }
+
+.workbench__button--anchor:hover {
+  cursor: pointer;
+  transform: skewX(20deg);
+}

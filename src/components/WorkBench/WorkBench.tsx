@@ -24,6 +24,10 @@ export const WorkBench = () => {
   const [boxShadowBlur, setBoxShadowBlur] = useState(0);
   const [boxShadowSpread, setBoxShadowSpread] = useState(0);
   const [boxShadowColor, setBoxShadowColor] = useState("#c2c2c2");
+  const [isHoverBrightness, setIsHoverBrightness] = useState(100);
+  const [isHoverScale, setIsHoverScale] = useState(1.1);
+  const [isHoverColor, setIsHoverColor] = useState("#ffffff");
+  const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#ffffff");
 
   const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
@@ -85,6 +89,22 @@ export const WorkBench = () => {
     setBoxShadowSpread(Number(e.target.value));
   };
 
+  const handleHoverBrightnessChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsHoverBrightness(Number(e.target.value));
+  };
+
+  const handleHoverScaleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsHoverScale(Number(e.target.value));
+  };
+
+  const handleHoverColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsHoverColor(e.target.value);
+  };
+
+  const handleHoverBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsHoverBackgroundColor(e.target.value);
+  };
+
   return (
     <section className={styles.workbench}>
       <div className={styles["workbench__left"]}>
@@ -108,6 +128,9 @@ export const WorkBench = () => {
           boxShadowBlur={boxShadowBlur}
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
+          isHoverBrightness={isHoverBrightness}
+          isHoverScale={isHoverScale}
+          isHoverColor={isHoverColor}
         />
         <Languages
           border={border}
@@ -125,6 +148,9 @@ export const WorkBench = () => {
           boxShadowBlur={boxShadowBlur}
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
+          isHoverBrightness={isHoverBrightness}
+          isHoverScale={isHoverScale}
+          isHoverColor={isHoverColor}
         />
       </div>
 
@@ -166,10 +192,14 @@ export const WorkBench = () => {
           backgroundColor={backgroundColor}
         />
         <State
-          onFontColorChange={handleFontColorChange}
-          fontColor={fontColor}
-          onFontSizeChange={handleFontSizeChange}
-          fontSize={fontSize}
+          onHoverScaleChange={handleHoverScaleChange}
+          onHoverBrightnessChange={handleHoverBrightnessChange}
+          isHoverScale={isHoverScale}
+          isHoverBrightness={isHoverBrightness}
+          isHoverColor={isHoverColor}
+          onHoverColorChange={handleHoverColorChange}
+          isHoverBackgroundColor={isHoverBackgroundColor}
+          onHoverBackgroundColorChange={handleHoverBackgroundColorChange}
         />
       </div>
     </section>

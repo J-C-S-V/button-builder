@@ -1,17 +1,25 @@
-import { FontSize } from "../Font/Components/FontSize";
 import styles from "./State.module.css";
 import { useState } from "react";
+import { Hover } from "./components/Hover";
 
 export const State = ({
-  onFontColorChange,
-  fontColor,
-  onFontSizeChange,
-  fontSize,
+  isHoverBrightness,
+  onHoverBrightnessChange,
+  isHoverScale,
+  onHoverScaleChange,
+  isHoverColor,
+  onHoverColorChange,
+  isHoverBackgroundColor,
+  onHoverBackgroundColorChange,
 }: {
-  onFontColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  fontColor: string;
-  onFontSizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  fontSize: number;
+  isHoverBrightness: number;
+  onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isHoverScale: number;
+  onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isHoverColor: string;
+  onHoverColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isHoverBackgroundColor: string;
+  onHoverBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   const [showState, setShowState] = useState(false);
 
@@ -26,7 +34,16 @@ export const State = ({
         )}
       </h2>
       <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
-        <FontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
+        <Hover
+          isHoverScale={isHoverScale}
+          onHoverScaleChange={onHoverScaleChange}
+          isHoverBrightness={isHoverBrightness}
+          onHoverBrightnessChange={onHoverBrightnessChange}
+          isHoverColor={isHoverColor}
+          onHoverColorChange={onHoverColorChange}
+          isHoverBackgroundColor={isHoverBackgroundColor}
+          onHoverBackgroundColorChange={onHoverBackgroundColorChange}
+        />
       </div>
       <hr />
     </div>
