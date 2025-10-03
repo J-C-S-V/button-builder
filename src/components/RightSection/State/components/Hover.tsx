@@ -25,7 +25,7 @@ export const Hover = ({
       <div>
         <input type="range" min="0" max="200" value={isHoverBrightness} onChange={onHoverBrightnessChange} />
         <input type="range" min="0.5" max="2" value={isHoverScale} onChange={onHoverScaleChange} />
-        {/* <div className={styles["font-color"]}>
+        <div className={styles["font-color"]}>
           <label htmlFor="fontColor" className={styles["font-color__label"]}>
             Hover Font Color:
           </label>
@@ -56,7 +56,7 @@ export const Hover = ({
                 value={isHoverBackgroundColor}
                 onChange={onHoverBackgroundColorChange}
               />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
