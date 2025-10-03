@@ -1,6 +1,6 @@
-import styles from "./Scale.module.css";
+import styles from "./HoverScale.module.css";
 
-export const Scale = ({
+export const HoverScale = ({
   isHoverScale,
   onHoverScaleChange,
 }: {

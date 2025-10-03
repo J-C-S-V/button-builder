@@ -131,6 +131,7 @@ export const WorkBench = () => {
           isHoverBrightness={isHoverBrightness}
           isHoverScale={isHoverScale}
           isHoverColor={isHoverColor}
+          isHoverBackgroundColor={isHoverBackgroundColor}
         />
         <Languages
           border={border}
@@ -151,6 +152,7 @@ export const WorkBench = () => {
           isHoverBrightness={isHoverBrightness}
           isHoverScale={isHoverScale}
           isHoverColor={isHoverColor}
+          isHoverBackgroundColor={isHoverBackgroundColor}
         />
       </div>
 

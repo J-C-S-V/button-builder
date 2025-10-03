@@ -1,6 +1,6 @@
-import styles from "./Brightness.module.css";
+import styles from "./HoverBrightness.module.css";
 
-export const Brightness = ({
+export const HoverBrightness = ({
   isHoverBrightness,
   onHoverBrightnessChange,
 }: {
