@@ -21,6 +21,7 @@ export const Button = ({
   isHoverScale,
   isHoverColor,
   isHoverBackgroundColor,
+  transition,
 }: {
   backgroundColor: string;
   innerText: string;
@@ -41,6 +42,7 @@ export const Button = ({
   isHoverScale: number;
   isHoverColor: string;
   isHoverBackgroundColor: string;
+  transition: number;
 }) => {
   const [isHover, setIsHover] = useState(false);
   const hoverStyle = {
@@ -54,7 +56,7 @@ export const Button = ({
     color: isHoverColor,
     border: `${border}px solid ${borderColor}`,
     boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
-    transition: "all 0.3s ease-in-out",
+    transition: `all ${transition}s ease-in-out`,
   };
 
   return (

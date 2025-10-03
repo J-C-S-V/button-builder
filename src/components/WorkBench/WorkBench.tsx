@@ -28,6 +28,11 @@ export const WorkBench = () => {
   const [isHoverScale, setIsHoverScale] = useState(1.1);
   const [isHoverColor, setIsHoverColor] = useState("#ffffff");
   const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#ffffff");
+  const [transition, setTransition] = useState(0.3);
+
+  const handleTransition = (e) => {
+    setTransition(e.target.value);
+  };
 
   const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
@@ -132,6 +137,7 @@ export const WorkBench = () => {
           isHoverScale={isHoverScale}
           isHoverColor={isHoverColor}
           isHoverBackgroundColor={isHoverBackgroundColor}
+          transition={transition}
         />
         <Languages
           border={border}
@@ -202,6 +208,8 @@ export const WorkBench = () => {
           onHoverColorChange={handleHoverColorChange}
           isHoverBackgroundColor={isHoverBackgroundColor}
           onHoverBackgroundColorChange={handleHoverBackgroundColorChange}
+          transition={transition}
+          onTransitionChange={handleTransition}
         />
       </div>
     </section>

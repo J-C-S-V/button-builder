@@ -3,9 +3,12 @@ import { HoverBrightness } from "./components/HoverBrightness";
 import { HoverScale } from "./components/HoverScale";
 import { HoverFontColor } from "./components/HoverFontColor";
 import { HoverBackgroundColor } from "./components/HoverBackgroundColor";
+import { HoverTransition } from "./components/HoverTransition";
 import styles from "./State.module.css";
 
 export const State = ({
+  transition,
+  onTransitionChange,
   isHoverBrightness,
   onHoverBrightnessChange,
   isHoverColor,
@@ -15,9 +18,11 @@ export const State = ({
   isHoverScale,
   onHoverScaleChange,
 }: {
-  isHoverBrightness: number;
+  transition: number;
+  onTransitionChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isHoverBrightness: string;
   onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isHoverScale: number;
+  isHoverScale: string;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isHoverColor: string;
   onHoverColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -44,6 +49,7 @@ export const State = ({
           isHoverBackgroundColor={isHoverBackgroundColor}
           onHoverBackgroundColorChange={onHoverBackgroundColorChange}
         />
+        <HoverTransition transition={transition} onTransitionChange={onTransitionChange} />
       </div>
       <hr />
     </div>
