@@ -1,16 +1,17 @@
 import styles from "./State.module.css";
 import { useState } from "react";
-import { Hover } from "./components/Hover";
+// import { Hover } from "./components/Hover";
+import { Scale } from "./components/Scale";
 
 export const State = ({
   isHoverBrightness,
   onHoverBrightnessChange,
-  isHoverScale,
-  onHoverScaleChange,
   isHoverColor,
   onHoverColorChange,
   isHoverBackgroundColor,
   onHoverBackgroundColorChange,
+  isHoverScale,
+  onHoverScaleChange,
 }: {
   isHoverBrightness: number;
   onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -34,16 +35,15 @@ export const State = ({
         )}
       </h2>
       <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
-        <Hover
-          isHoverScale={isHoverScale}
-          onHoverScaleChange={onHoverScaleChange}
+        {/* <Hover
           isHoverBrightness={isHoverBrightness}
           onHoverBrightnessChange={onHoverBrightnessChange}
           isHoverColor={isHoverColor}
           onHoverColorChange={onHoverColorChange}
           isHoverBackgroundColor={isHoverBackgroundColor}
           onHoverBackgroundColorChange={onHoverBackgroundColorChange}
-        />
+        /> */}
+        <Scale isHoverScale={isHoverScale} onHoverScaleChange={onHoverScaleChange} />
       </div>
       <hr />
     </div>
