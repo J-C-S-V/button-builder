@@ -26,6 +26,7 @@ html {
   --color-background-dark-hard: #101010;
   --color-background-dark: #292929;
   --color-background-dark-light: #383838;
+  --color-background-blue: #0160e0;
 
   /* FONT FAMILY */
   --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -44,7 +45,7 @@ html {
   --color-background-gray-light: #e8e8e8;
   --color-background-dark: #292929;
   --color-background-cyan-light: #771065;
-
+  --color-background-blue: #0160e0;
   /* FONNT FAMILY*/
   /* --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif; */
 }
@@ -58,4 +59,8 @@ textarea {
 
 li {
   list-style: none;
+}
+
+input[type="range"] {
+  accent-color: var(--color-background-blue);
 }
