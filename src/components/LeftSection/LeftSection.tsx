@@ -1,18 +1,39 @@
+import { buttonsStyle } from "../../data/buttonsStyle";
 import styles from "./LeftSection.module.css";
 
-export const LeftSection = () => {
+export const LeftSection = ({ handleClickButtonOne }: { handleClickButtonOne: (e: any) => void }) => {
   return (
     <div className={styles["left-section"]}>
-      <button className={styles["left-section__button"]}>Click me!</button>
-      <button className={styles["left-section__button--two"]}>Click me!</button>
-      <button className={styles["left-section__button--three"]}>Click me!</button>
-      <button className={styles["left-section__button--four"]}>Click me!</button>
-      <button className={styles["left-section__button--five"]}>Click me!</button>
-      <button className={styles["left-section__button--six"]}>Click me!</button>
-      <button className={styles["left-section__button--seven"]}>Click me!</button>
-      <button className={styles["left-section__button--eight"]}>Click me!</button>
-      <button className={styles["left-section__button--nine"]}>Click me!</button>
-      <button className={styles["left-section__button--ten"]}>Click me!</button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[0].style)} style={buttonsStyle[0].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[1].style)} style={buttonsStyle[1].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[2].style)} style={buttonsStyle[2].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[3].style)} style={buttonsStyle[3].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[4].style)} style={buttonsStyle[4].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[5].style)} style={buttonsStyle[5].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[6].style)} style={buttonsStyle[6].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[7].style)} style={buttonsStyle[7].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[8].style)} style={buttonsStyle[8].style}>
+        Click me!
+      </button>
+      <button onClick={() => handleClickButtonOne(buttonsStyle[9].style)} style={buttonsStyle[9].style}>
+        Click me!
+      </button>
     </div>
   );
 };

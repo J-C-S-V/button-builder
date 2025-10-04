@@ -28,7 +28,24 @@ export const WorkBench = () => {
   const [isHoverScale, setIsHoverScale] = useState(1.1);
   const [isHoverColor, setIsHoverColor] = useState("#ffffff");
   const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#000000");
-  const [transition, setTransition] = useState(0.3);
+  const [transition, setTransition] = useState(0.1);
+
+  const handleClickButtonOne = (stl: any) => {
+    setbackgroundColor(stl.backgroundColor);
+    // setBorderRadius(stl.borderRadius);
+    // setPaddingY(stl.paddingY);
+    // setPaddingX(stl.paddingX);
+    // setFontWeight(stl.fontWeight);
+    setFontSize(stl.fontSize);
+    // setFontColor(stl.fontColor);
+    // setBorder(stl.border);
+    // setBorderColor(stl.borderColor);
+    // setBoxShadowX(stl.boxShadowX);
+    // setBoxShadowY(stl.boxShadowY);
+    // setBoxShadowBlur(stl.boxShadowBlur);
+    // setBoxShadowSpread(stl.boxShadowSpread);
+    // setBoxShadowColor(stl.boxShadowColor);
+  };
 
   const handleTransition = (e) => {
     setTransition(e.target.value);
@@ -113,7 +130,7 @@ export const WorkBench = () => {
   return (
     <section className={styles.workbench}>
       <div className={styles["workbench__left"]}>
-        <LeftSection />
+        <LeftSection handleClickButtonOne={handleClickButtonOne} />
       </div>
 
       <div className={styles["workbench__middle"]}>
