@@ -30,7 +30,7 @@ export const WorkBench = () => {
   const [isHoverBackgroundColor, setIsHoverBackgroundColor] = useState("#000000");
   const [transition, setTransition] = useState(0.1);
 
-  const handleClickButtonOne = (stl: any) => {
+  const handleClickButton = (stl: any) => {
     setbackgroundColor(stl.backgroundColor);
     // setBorderRadius(stl.borderRadius);
     // setPaddingY(stl.paddingY);
@@ -47,15 +47,15 @@ export const WorkBench = () => {
     // setBoxShadowColor(stl.boxShadowColor);
   };
 
-  const handleTransition = (e) => {
-    setTransition(e.target.value);
+  const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTransition(Number(e.target.value));
   };
 
-  const handleInnerText = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInnerTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInnerText(e.target.value);
   };
 
-  const handleChangebackgroundColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setbackgroundColor(e.target.value);
   };
 
@@ -128,9 +128,9 @@ export const WorkBench = () => {
   };
 
   return (
-    <section className={styles.workbench}>
+    <section className={styles["workbench"]}>
       <div className={styles["workbench__left"]}>
-        <LeftSection handleClickButtonOne={handleClickButtonOne} />
+        <LeftSection onClickButton={handleClickButton} />
       </div>
 
       <div className={styles["workbench__middle"]}>
@@ -186,7 +186,7 @@ export const WorkBench = () => {
           fontSize={fontSize}
           fontWeight={fontWeight}
           onFontWeightChange={handleFontWeightChange}
-          onInnerTextChange={handleInnerText}
+          onInnerTextChange={handleInnerTextChange}
           innerText={innerText}
         />
         <Box
@@ -214,7 +214,7 @@ export const WorkBench = () => {
           fontColor={fontColor}
           onBorderColorChange={handleBorderColorChange}
           borderColor={borderColor}
-          onBackgroundColorChange={handleChangebackgroundColor}
+          onBackgroundColorChange={handleBackgroundColorChange}
           backgroundColor={backgroundColor}
         />
         <State
@@ -227,7 +227,7 @@ export const WorkBench = () => {
           isHoverBackgroundColor={isHoverBackgroundColor}
           onHoverBackgroundColorChange={handleHoverBackgroundColorChange}
           transition={transition}
-          onTransitionChange={handleTransition}
+          onTransitionChange={handleTransitionChange}
         />
       </div>
     </section>
