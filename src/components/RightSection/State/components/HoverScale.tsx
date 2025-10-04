@@ -4,7 +4,7 @@ export const HoverScale = ({
   hoverScale,
   onHoverScaleChange,
 }: {
-  hoverScale: string;
+  hoverScale: number;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (

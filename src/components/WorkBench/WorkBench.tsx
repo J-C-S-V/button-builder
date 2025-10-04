@@ -182,52 +182,52 @@ export const WorkBench = () => {
 
       <div className={styles["workbench__right"]}>
         <Font
-          onFontSizeChange={handleFontSizeChange}
           fontSize={fontSize}
+          onFontSizeChange={handleFontSizeChange}
           fontWeight={fontWeight}
           onFontWeightChange={handleFontWeightChange}
-          onInnerTextChange={handleInnerTextChange}
           innerText={innerText}
+          onInnerTextChange={handleInnerTextChange}
         />
         <Box
-          onBorderRadiusChange={handleBorderRadiusChange}
           borderRadius={borderRadius}
-          onChangeBorderWidth={handleBorderWidthChange}
-          onPaddingYChange={handlePaddingYChange}
-          onPaddingXChange={handlePaddingXChange}
+          onBorderRadiusChange={handleBorderRadiusChange}
           borderWidth={borderWidth}
+          onChangeBorderWidth={handleBorderWidthChange}
           paddingY={paddingY}
+          onPaddingYChange={handlePaddingYChange}
           paddingX={paddingX}
+          onPaddingXChange={handlePaddingXChange}
           boxShadowY={boxShadowY}
-          boxShadowX={boxShadowX}
-          boxShadowBlur={boxShadowBlur}
-          boxShadowColor={boxShadowColor}
-          boxShadowSpread={boxShadowSpread}
           onBoxShadowYChange={handleBoxShadowYChange}
+          boxShadowX={boxShadowX}
           onBoxShadowXChange={handleBoxShadowXChange}
+          boxShadowBlur={boxShadowBlur}
           onBoxShadowBlurChange={handleBoxShadowBlurChange}
+          boxShadowColor={boxShadowColor}
           onBoxShadowColorChange={handleBoxShadowColorChange}
+          boxShadowSpread={boxShadowSpread}
           onBoxShadowSpreadChange={handleBoxShadowSpreadChange}
         />
         <Color
-          onFontColorChange={handleFontColorChange}
           fontColor={fontColor}
-          onBorderColorChange={handleBorderColorChange}
-          borderColor={borderColor}
-          onBackgroundColorChange={handleBackgroundColorChange}
+          onFontColorChange={handleFontColorChange}
           backgroundColor={backgroundColor}
+          onBackgroundColorChange={handleBackgroundColorChange}
+          borderColor={borderColor}
+          onBorderColorChange={handleBorderColorChange}
         />
         <State
-          onHoverScaleChange={handleHoverScaleChange}
-          onHoverBrightnessChange={handleHoverBrightnessChange}
-          hoverScale={hoverScale}
-          hoverBrightness={hoverBrightness}
           hoverColor={hoverColor}
           onHoverColorChange={handleHoverColorChange}
           hoverBackgroundColor={hoverBackgroundColor}
           onHoverBackgroundColorChange={handleHoverBackgroundColorChange}
           transition={transition}
           onTransitionChange={handleTransitionChange}
+          hoverBrightness={hoverBrightness}
+          onHoverBrightnessChange={handleHoverBrightnessChange}
+          hoverScale={hoverScale}
+          onHoverScaleChange={handleHoverScaleChange}
         />
       </div>
     </section>

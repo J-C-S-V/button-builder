@@ -4,7 +4,7 @@ export const HoverBrightness = ({
   hoverBrightness,
   onHoverBrightnessChange,
 }: {
-  hoverBrightness: string;
+  hoverBrightness: number;
   onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (

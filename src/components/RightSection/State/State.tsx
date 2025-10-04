@@ -20,9 +20,9 @@ export const State = ({
 }: {
   transition: number;
   onTransitionChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  hoverBrightness: string;
+  hoverBrightness: number;
   onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  hoverScale: string;
+  hoverScale: number;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   hoverColor: string;
   onHoverColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
