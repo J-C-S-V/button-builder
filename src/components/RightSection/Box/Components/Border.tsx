@@ -1,11 +1,11 @@
 import styles from "./Border.module.css";
 
 export const Border = ({
-  onBorderChange,
-  border,
+  onBorderWidthChange,
+  borderWidth,
 }: {
-  onBorderChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  border: number;
+  onBorderWidthChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  borderWidth: number;
 }) => {
   return (
     <div className={styles["border"]}>
@@ -17,13 +17,13 @@ export const Border = ({
           className={styles["border__input"]}
           type="range"
           id="border"
-          onChange={onBorderChange}
-          value={border}
+          onChange={onBorderWidthChange}
+          value={borderWidth}
           min={0}
           max={50}
         />
         <div className={styles["border__span-container"]}>
-          <span className={styles["border__span"]}>{border}px</span>
+          <span className={styles["border__span"]}>{borderWidth}px</span>
         </div>
       </div>
     </div>

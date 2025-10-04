@@ -6,10 +6,10 @@ import { BorderRadius } from "./Components/BorderRadius";
 import { BoxShadow } from "./Components/BoxShadow";
 
 export const Box = ({
-  onChangeBorder,
+  onChangeBorderWidth,
   onPaddingYChange,
   onPaddingXChange,
-  border,
+  borderWidth,
   paddingY,
   paddingX,
   borderRadius,
@@ -25,10 +25,10 @@ export const Box = ({
   onBoxShadowColorChange,
   onBoxShadowSpreadChange,
 }: {
-  onChangeBorder: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeBorderWidth: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onPaddingYChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onPaddingXChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  border: number;
+  borderWidth: number;
   paddingY: number;
   paddingX: number;
   borderRadius: number;
@@ -59,7 +59,7 @@ export const Box = ({
           onPaddingYChange={onPaddingYChange}
           onPaddingXChange={onPaddingXChange}
         />
-        <Border border={border} onBorderChange={onChangeBorder} />
+        <Border borderWidth={borderWidth} onBorderWidthChange={onChangeBorderWidth} />
         <BorderRadius borderRadius={borderRadius} onBorderRadiusChange={onBorderRadiusChange} />
         <BoxShadow
           boxShadowY={boxShadowY}

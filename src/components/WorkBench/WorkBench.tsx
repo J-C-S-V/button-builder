@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Font } from "../RightSection/Font/Font";
+import { LeftSection } from "../LeftSection/LeftSection";
 import { Button } from "../MidSection/Button/Button";
 import { Languages } from "../MidSection/Languages/Languages";
-import { LeftSection } from "../LeftSection/LeftSection";
 import { Box } from "../RightSection/Box/Box";
 import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
+import { Font } from "../RightSection/Font/Font";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
@@ -17,7 +17,7 @@ export const WorkBench = () => {
   const [fontWeight, setFontWeight] = useState(600);
   const [fontSize, setFontSize] = useState(28);
   const [fontColor, setFontColor] = useState("#ffffff");
-  const [border, setBorder] = useState(2);
+  const [borderWidth, setBorderWidth] = useState(2);
   const [borderColor, setBorderColor] = useState("#ffffff");
   const [boxShadowX, setBoxShadowX] = useState(-7);
   const [boxShadowY, setBoxShadowY] = useState(7);
@@ -38,7 +38,7 @@ export const WorkBench = () => {
     // setFontWeight(stl.fontWeight);
     setFontSize(stl.fontSize);
     // setFontColor(stl.fontColor);
-    // setBorder(stl.border);
+    // setBorderWidth(stl.borderWidth);
     // setBorderColor(stl.borderColor);
     // setBoxShadowX(stl.boxShadowX);
     // setBoxShadowY(stl.boxShadowY);
@@ -83,8 +83,8 @@ export const WorkBench = () => {
     setBorderRadius(Number(e.target.value));
   };
 
-  const handleBorderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setBorder(Number(e.target.value));
+  const handleBorderWidthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBorderWidth(Number(e.target.value));
   };
 
   const handleBorderColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -135,7 +135,7 @@ export const WorkBench = () => {
 
       <div className={styles["workbench__middle"]}>
         <Button
-          border={border}
+          borderWidth={borderWidth}
           borderColor={borderColor}
           borderRadius={borderRadius}
           backgroundColor={backgroundColor}
@@ -157,7 +157,7 @@ export const WorkBench = () => {
           transition={transition}
         />
         <Languages
-          border={border}
+          borderWidth={borderWidth}
           borderColor={borderColor}
           borderRadius={borderRadius}
           backgroundColor={backgroundColor}
@@ -192,10 +192,10 @@ export const WorkBench = () => {
         <Box
           onBorderRadiusChange={handleBorderRadiusChange}
           borderRadius={borderRadius}
-          onChangeBorder={handleBorderChange}
+          onChangeBorderWidth={handleBorderWidthChange}
           onPaddingYChange={handlePaddingYChange}
           onPaddingXChange={handlePaddingXChange}
-          border={border}
+          borderWidth={borderWidth}
           paddingY={paddingY}
           paddingX={paddingX}
           boxShadowY={boxShadowY}

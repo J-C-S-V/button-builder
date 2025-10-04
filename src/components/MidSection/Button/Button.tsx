@@ -11,7 +11,7 @@ export const Button = ({
   fontWeight,
   fontSize,
   fontColor,
-  border,
+  borderWidth,
   borderColor,
   boxShadowY,
   boxShadowX,
@@ -32,7 +32,7 @@ export const Button = ({
   fontWeight: number;
   fontSize: number;
   fontColor: string;
-  border: number;
+  borderWidth: number;
   borderColor: string;
   boxShadowY: number;
   boxShadowX: number;
@@ -55,7 +55,7 @@ export const Button = ({
     fontWeight: fontWeight,
     fontSize: fontSize,
     color: isHoverColor,
-    border: `${border}px solid ${borderColor}`,
+    border: `${borderWidth}px solid ${borderColor}`,
     boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
     transition: `all ${transition}s ease-in-out`,
   };
@@ -74,7 +74,7 @@ export const Button = ({
                 fontWeight: fontWeight,
                 fontSize: fontSize,
                 color: fontColor,
-                border: `${border}px solid ${borderColor}`,
+                border: `${borderWidth}px solid ${borderColor}`,
                 boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
                 transition: `all ${transition}s ease-in-out`,
               }

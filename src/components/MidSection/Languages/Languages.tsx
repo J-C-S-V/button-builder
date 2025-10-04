@@ -3,7 +3,7 @@ import { Footer } from "../../Footer";
 import styles from "./Languages.module.css";
 
 export const Languages = ({
-  border,
+  borderWidth,
   borderColor,
   borderRadius,
   backgroundColor,
@@ -20,7 +20,7 @@ export const Languages = ({
   boxShadowSpread,
   transition,
 }: {
-  border: number;
+  borderWidth: number;
   borderColor: string;
   borderRadius: number;
   backgroundColor: string;
@@ -62,7 +62,7 @@ export const Languages = ({
   font-weight: ${fontWeight};
   font-size: ${fontSize}px;
   color: ${fontColor};
-  border: ${border}px solid ${borderColor};
+  border: ${borderWidth}px solid ${borderColor};
   box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};
   transition: all ${transition}s ease-in-out;
 }`
