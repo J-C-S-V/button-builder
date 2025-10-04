@@ -1,7 +1,7 @@
 import { buttonsStyle } from "../../data/buttonsStyle";
 import styles from "./LeftSection.module.css";
 
-export const LeftSection = ({ onClickButton }: { onClickButton: (e: any) => void }) => {
+export const LeftSection = ({ onClickButton }: { onClickButton: (e: React.MouseEvent) => void }) => {
   return (
     <div className={styles["left-section"]}>
       <button onClick={() => onClickButton(buttonsStyle[0].style)} style={buttonsStyle[0].style}>

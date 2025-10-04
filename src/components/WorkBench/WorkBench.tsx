@@ -16,7 +16,7 @@ export const WorkBench = () => {
   const [paddingX, setPaddingX] = useState(40);
   const [fontWeight, setFontWeight] = useState(600);
   const [fontSize, setFontSize] = useState(28);
-  const [fontColor, setFontColor] = useState("#ffffff");
+  const [fontColor, setFontColor] = useState("ffffff");
   const [borderWidth, setBorderWidth] = useState(2);
   const [borderColor, setBorderColor] = useState("#ffffff");
   const [boxShadowX, setBoxShadowX] = useState(-7);
@@ -29,23 +29,6 @@ export const WorkBench = () => {
   const [hoverColor, setHoverColor] = useState("#ffffff");
   const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#000000");
   const [transition, setTransition] = useState(0.1);
-
-  const handleClickButton = (stl: any) => {
-    setbackgroundColor(stl.backgroundColor);
-    // setBorderRadius(stl.borderRadius);
-    // setPaddingY(stl.paddingY);
-    // setPaddingX(stl.paddingX);
-    // setFontWeight(stl.fontWeight);
-    setFontSize(stl.fontSize);
-    // setFontColor(stl.fontColor);
-    // setBorderWidth(stl.borderWidth);
-    // setBorderColor(stl.borderColor);
-    // setBoxShadowX(stl.boxShadowX);
-    // setBoxShadowY(stl.boxShadowY);
-    // setBoxShadowBlur(stl.boxShadowBlur);
-    // setBoxShadowSpread(stl.boxShadowSpread);
-    // setBoxShadowColor(stl.boxShadowColor);
-  };
 
   const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTransition(Number(e.target.value));
@@ -125,6 +108,24 @@ export const WorkBench = () => {
 
   const handleHoverBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setHoverBackgroundColor(e.target.value);
+  };
+
+  const handleClickButton = (style: any) => {
+    setbackgroundColor(style.backgroundColor);
+    setFontSize(style.fontSize);
+
+    // setBorderRadius(stl.borderRadius);
+    // setPaddingY(stl.paddingY);
+    // setPaddingX(stl.paddingX);
+    // setFontWeight(stl.fontWeight);
+    // setFontColor(stl.fontColor);
+    // setBorderWidth(stl.borderWidth);
+    // setBorderColor(stl.borderColor);
+    // setBoxShadowX(stl.boxShadowX);
+    // setBoxShadowY(stl.boxShadowY);
+    // setBoxShadowBlur(stl.boxShadowBlur);
+    // setBoxShadowSpread(stl.boxShadowSpread);
+    // setBoxShadowColor(stl.boxShadowColor);
   };
 
   return (

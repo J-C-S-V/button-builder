@@ -7,6 +7,7 @@ export const BackgroundColor = ({
   onBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   backgroundColor: string;
 }) => {
+  const newBackgroundColor = backgroundColor.slice(1, backgroundColor.length);
   return (
     <div className={styles["background-color"]}>
       <label htmlFor="background" className={styles["background-color__label"]}>
@@ -22,7 +23,7 @@ export const BackgroundColor = ({
         <input
           type="text"
           className={styles["background-color__input-text"]}
-          value={backgroundColor}
+          value={newBackgroundColor}
           onChange={onBackgroundColorChange}
         />
       </div>
