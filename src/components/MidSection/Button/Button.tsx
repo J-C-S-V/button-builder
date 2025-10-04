@@ -18,10 +18,10 @@ export const Button = ({
   boxShadowBlur,
   boxShadowColor,
   boxShadowSpread,
-  isHoverBrightness,
-  isHoverScale,
-  isHoverColor,
-  isHoverBackgroundColor,
+  hoverBrightness,
+  hoverScale,
+  hoverColor,
+  hoverBackgroundColor,
   transition,
 }: {
   backgroundColor: string;
@@ -39,22 +39,22 @@ export const Button = ({
   boxShadowBlur: number;
   boxShadowColor: string;
   boxShadowSpread: number;
-  isHoverBrightness: number;
-  isHoverScale: number;
-  isHoverColor: string;
-  isHoverBackgroundColor: string;
+  hoverBrightness: number;
+  hoverScale: number;
+  hoverColor: string;
+  hoverBackgroundColor: string;
   transition: number;
 }) => {
   const [isHover, setIsHover] = useState(false);
   const hoverStyle = {
-    filter: `brightness(${isHoverBrightness})`,
-    transform: `scale(${isHoverScale})`,
-    backgroundColor: isHoverBackgroundColor,
+    filter: `brightness(${hoverBrightness})`,
+    transform: `scale(${hoverScale})`,
+    backgroundColor: hoverBackgroundColor,
     borderRadius: `${borderRadius}px`,
     padding: `${paddingY}px ${paddingX}px`,
     fontWeight: fontWeight,
     fontSize: fontSize,
-    color: isHoverColor,
+    color: hoverColor,
     border: `${borderWidth}px solid ${borderColor}`,
     boxShadow: `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}`,
     transition: `all ${transition}s ease-in-out`,

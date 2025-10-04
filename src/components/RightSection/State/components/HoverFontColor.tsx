@@ -1,13 +1,13 @@
 import styles from "./HoverFontColor.module.css";
 
 export const HoverFontColor = ({
-  isHoverColor,
+  hoverColor,
   onHoverColorChange,
 }: {
-  isHoverColor: string;
+  hoverColor: string;
   onHoverColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
-  const newHoverColor = isHoverColor.slice(1, isHoverColor.length);
+  const newHoverColor = hoverColor.slice(1, hoverColor.length);
 
   return (
     <div className={styles["hover-font-color"]}>
@@ -19,7 +19,7 @@ export const HoverFontColor = ({
           className={styles["hover-font-color__input-color"]}
           type="color"
           id="fontColor"
-          value={isHoverColor}
+          value={hoverColor}
           onChange={onHoverColorChange}
         />
         <input

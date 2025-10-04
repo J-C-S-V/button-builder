@@ -9,24 +9,24 @@ import styles from "./State.module.css";
 export const State = ({
   transition,
   onTransitionChange,
-  isHoverBrightness,
+  hoverBrightness,
   onHoverBrightnessChange,
-  isHoverColor,
+  hoverColor,
   onHoverColorChange,
-  isHoverBackgroundColor,
+  hoverBackgroundColor,
   onHoverBackgroundColorChange,
-  isHoverScale,
+  hoverScale,
   onHoverScaleChange,
 }: {
   transition: number;
   onTransitionChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isHoverBrightness: string;
+  hoverBrightness: string;
   onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isHoverScale: string;
+  hoverScale: string;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isHoverColor: string;
+  hoverColor: string;
   onHoverColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isHoverBackgroundColor: string;
+  hoverBackgroundColor: string;
   onHoverBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   const [showState, setShowState] = useState(false);
@@ -42,11 +42,11 @@ export const State = ({
         )}
       </h2>
       <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
-        <HoverScale isHoverScale={isHoverScale} onHoverScaleChange={onHoverScaleChange} />
-        <HoverBrightness isHoverBrightness={isHoverBrightness} onHoverBrightnessChange={onHoverBrightnessChange} />
-        <HoverFontColor isHoverColor={isHoverColor} onHoverColorChange={onHoverColorChange} />
+        <HoverScale hoverScale={hoverScale} onHoverScaleChange={onHoverScaleChange} />
+        <HoverBrightness hoverBrightness={hoverBrightness} onHoverBrightnessChange={onHoverBrightnessChange} />
+        <HoverFontColor hoverColor={hoverColor} onHoverColorChange={onHoverColorChange} />
         <HoverBackgroundColor
-          isHoverBackgroundColor={isHoverBackgroundColor}
+          hoverBackgroundColor={hoverBackgroundColor}
           onHoverBackgroundColorChange={onHoverBackgroundColorChange}
         />
         <HoverTransition transition={transition} onTransitionChange={onTransitionChange} />

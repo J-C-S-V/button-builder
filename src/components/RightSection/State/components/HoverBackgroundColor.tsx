@@ -1,13 +1,13 @@
 import styles from "./HoverBackgroundColor.module.css";
 
 export const HoverBackgroundColor = ({
-  isHoverBackgroundColor,
+  hoverBackgroundColor,
   onHoverBackgroundColorChange,
 }: {
-  isHoverBackgroundColor: string;
+  hoverBackgroundColor: string;
   onHoverBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
-  const newHoverBackgroundColor = isHoverBackgroundColor.slice(1, isHoverBackgroundColor.length);
+  // const newHoverBackgroundColor = hoverBackgroundColor.slice(1, hoverBackgroundColor.length);
 
   return (
     <div className={styles["hover-background-color"]}>
@@ -19,13 +19,13 @@ export const HoverBackgroundColor = ({
           className={styles["hover-background-color__input-color"]}
           type="color"
           id="backgroundColor"
-          value={isHoverBackgroundColor}
+          value={hoverBackgroundColor}
           onChange={onHoverBackgroundColorChange}
         />
         <input
           type="text"
           className={styles["hover-background-color__input-text"]}
-          value={isHoverBackgroundColor}
+          value={hoverBackgroundColor}
           onChange={onHoverBackgroundColorChange}
         />
       </div>

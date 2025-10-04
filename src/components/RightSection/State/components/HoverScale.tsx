@@ -1,10 +1,10 @@
 import styles from "./HoverScale.module.css";
 
 export const HoverScale = ({
-  isHoverScale,
+  hoverScale,
   onHoverScaleChange,
 }: {
-  isHoverScale: string;
+  hoverScale: string;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
@@ -20,11 +20,11 @@ export const HoverScale = ({
           min="0.5"
           max="2"
           step="0.01"
-          value={isHoverScale}
+          value={hoverScale}
           onChange={onHoverScaleChange}
         />
         <div className={styles["scale__span-container"]}>
-          <span className={styles["scale__span"]}>{isHoverScale}</span>
+          <span className={styles["scale__span"]}>{hoverScale}</span>
         </div>
       </div>
     </div>

@@ -19,6 +19,10 @@ export const Languages = ({
   boxShadowColor,
   boxShadowSpread,
   transition,
+  hoverBrightness,
+  hoverScale,
+  hoverColor,
+  hoverBackgroundColor,
 }: {
   borderWidth: number;
   borderColor: string;
@@ -36,6 +40,10 @@ export const Languages = ({
   boxShadowColor: string;
   boxShadowSpread: number;
   transition: number;
+  hoverBrightness: number;
+  hoverScale: number;
+  hoverColor: string;
+  hoverBackgroundColor: string;
 }) => {
   const [copied, setCopied] = useState(false);
 

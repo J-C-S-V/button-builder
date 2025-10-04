@@ -1,10 +1,10 @@
 import styles from "./HoverBrightness.module.css";
 
 export const HoverBrightness = ({
-  isHoverBrightness,
+  hoverBrightness,
   onHoverBrightnessChange,
 }: {
-  isHoverBrightness: string;
+  hoverBrightness: string;
   onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
@@ -20,11 +20,11 @@ export const HoverBrightness = ({
           min="0"
           max="10"
           step="0.1"
-          value={isHoverBrightness}
+          value={hoverBrightness}
           onChange={onHoverBrightnessChange}
         />
         <div className={styles["brightness__span-container"]}>
-          <span className={styles["brightness__span"]}>{isHoverBrightness}</span>
+          <span className={styles["brightness__span"]}>{hoverBrightness}</span>
         </div>
       </div>
     </div>
