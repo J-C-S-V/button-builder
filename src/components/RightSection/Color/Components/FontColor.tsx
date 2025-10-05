@@ -8,7 +8,6 @@ export const FontColor = ({
   onFontColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   // const newFontColor = fontColor.slice(1, fontColor.length);
-
   return (
     <div className={styles["font-color"]}>
       <label htmlFor="fontColor" className={styles["font-color__label"]}>

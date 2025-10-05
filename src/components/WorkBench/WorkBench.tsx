@@ -16,7 +16,7 @@ export const WorkBench = () => {
   const [paddingX, setPaddingX] = useState(40);
   const [fontWeight, setFontWeight] = useState(600);
   const [fontSize, setFontSize] = useState(28);
-  const [fontColor, setFontColor] = useState("ffffff");
+  const [fontColor, setFontColor] = useState("#ffffff");
   const [borderWidth, setBorderWidth] = useState(2);
   const [borderColor, setBorderColor] = useState("#ffffff");
   const [boxShadowX, setBoxShadowX] = useState(-7);
@@ -59,7 +59,7 @@ export const WorkBench = () => {
   };
 
   const handleFontColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFontColor(`${e.target.value}`);
+    setFontColor(e.target.value);
   };
 
   const handleBorderRadiusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -112,20 +112,56 @@ export const WorkBench = () => {
 
   const handleClickButton = (style: any) => {
     setbackgroundColor(style.backgroundColor);
-    setFontSize(style.fontSize);
+    setFontColor(style.color);
+    setBorderColor(style.border.split(" ")[2]);
+    setFontWeight(Number(style.fontWeight));
 
-    // setBorderRadius(stl.borderRadius);
-    // setPaddingY(stl.paddingY);
-    // setPaddingX(stl.paddingX);
-    // setFontWeight(stl.fontWeight);
-    // setFontColor(stl.fontColor);
-    // setBorderWidth(stl.borderWidth);
-    // setBorderColor(stl.borderColor);
-    // setBoxShadowX(stl.boxShadowX);
-    // setBoxShadowY(stl.boxShadowY);
-    // setBoxShadowBlur(stl.boxShadowBlur);
-    // setBoxShadowSpread(stl.boxShadowSpread);
-    // setBoxShadowColor(stl.boxShadowColor);
+    setFontSize(() => {
+      const result = style.fontSize.replace("px", "");
+      return Number(result);
+    });
+    setBorderRadius(() => {
+      const result = style.borderRadius.replace("px", "");
+      return Number(result);
+    });
+    setBorderWidth(() => {
+      const result = style.border.split(" ")[0].replace("px", "");
+      return Number(result);
+    });
+    setPaddingY(() => {
+      const result = style.padding.split(" ")[0].replace("px", "");
+      return Number(result);
+    });
+    setPaddingX(() => {
+      const result = style.padding.split(" ")[1].replace("px", "");
+      return Number(result);
+    });
+
+    setBoxShadowX(() => {
+      if (!style.boxShadow) return 0;
+      const result = style.boxShadow.split(" ")[0].replace("px", "");
+      return Number(result);
+    });
+    setBoxShadowY(() => {
+      if (!style.boxShadow) return 0;
+      const result = style.boxShadow.split(" ")[1].replace("px", "");
+      return Number(result);
+    });
+    setBoxShadowBlur(() => {
+      if (!style.boxShadow) return 0;
+      const result = style.boxShadow.split(" ")[2].replace("px", "");
+      return Number(result);
+    });
+    setBoxShadowSpread(() => {
+      if (!style.boxShadow) return 0;
+      const result = style.boxShadow.split(" ")[3].replace("px", "");
+      return Number(result);
+    });
+    setBoxShadowColor(() => {
+      if (!style.boxShadow) return "#c2c2c2";
+      const result = style.boxShadow.split(" ")[4];
+      return result;
+    });
   };
 
   return (
