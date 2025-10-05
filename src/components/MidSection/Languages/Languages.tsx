@@ -19,7 +19,7 @@ export const Languages = ({
   boxShadowColor,
   boxShadowSpread,
   transition,
-  hoverBrightness,
+  hoverOpacity,
   hoverScale,
   hoverColor,
   hoverBackgroundColor,
@@ -40,7 +40,7 @@ export const Languages = ({
   boxShadowColor: string;
   boxShadowSpread: number;
   transition: number;
-  hoverBrightness: number;
+  hoverOpacity: number;
   hoverScale: number;
   hoverColor: string;
   hoverBackgroundColor: string;

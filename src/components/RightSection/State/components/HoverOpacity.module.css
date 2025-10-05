@@ -1,4 +1,4 @@
-.brightness {
+.opacity {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -11,18 +11,18 @@
   box-shadow: -6px 6px 2px 0px var(--color-background-dark-hard);
 }
 
-.brightness__label {
+.opacity__label {
   color: var(--color-text-black-light);
 }
 
-.brightness__input-container {
+.opacity__input-container {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
 }
 
-.brightness__span {
+.opacity__span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,13 +31,13 @@
   font-size: 1.2rem;
 }
 
-.brightness__span-container {
+.opacity__span-container {
   position: relative;
   border: 3px solid var(--color-text-black-light);
   border-radius: 50%;
   padding: 2rem;
 }
 
-.brightness__input {
+.opacity__input {
   width: 100%;
 }

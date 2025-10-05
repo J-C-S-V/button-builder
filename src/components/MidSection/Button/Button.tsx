@@ -18,7 +18,7 @@ export const Button = ({
   boxShadowBlur,
   boxShadowColor,
   boxShadowSpread,
-  hoverBrightness,
+  hoverOpacity,
   hoverScale,
   hoverColor,
   hoverBackgroundColor,
@@ -39,7 +39,7 @@ export const Button = ({
   boxShadowBlur: number;
   boxShadowColor: string;
   boxShadowSpread: number;
-  hoverBrightness: number;
+  hoverOpacity: number;
   hoverScale: number;
   hoverColor: string;
   hoverBackgroundColor: string;
@@ -47,7 +47,7 @@ export const Button = ({
 }) => {
   const [isHover, setIsHover] = useState(false);
   const hoverStyle = {
-    filter: `brightness(${hoverBrightness})`,
+    opacity: hoverOpacity,
     transform: `scale(${hoverScale})`,
     backgroundColor: hoverBackgroundColor,
     borderRadius: `${borderRadius}px`,

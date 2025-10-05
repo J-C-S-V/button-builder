@@ -24,7 +24,7 @@ export const WorkBench = () => {
   const [boxShadowBlur, setBoxShadowBlur] = useState(0);
   const [boxShadowSpread, setBoxShadowSpread] = useState(0);
   const [boxShadowColor, setBoxShadowColor] = useState("#c2c2c2");
-  const [hoverBrightness, setHoverBrightness] = useState(1);
+  const [hoverOpacity, setHoverOpacity] = useState(1);
   const [hoverScale, setHoverScale] = useState(1.1);
   const [hoverColor, setHoverColor] = useState("#ffffff");
   const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#000000");
@@ -94,8 +94,8 @@ export const WorkBench = () => {
     setBoxShadowSpread(Number(e.target.value));
   };
 
-  const handleHoverBrightnessChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setHoverBrightness(Number(e.target.value));
+  const handleHoverOpacityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setHoverOpacity(Number(e.target.value));
   };
 
   const handleHoverScaleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -187,7 +187,7 @@ export const WorkBench = () => {
           boxShadowBlur={boxShadowBlur}
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
-          hoverBrightness={hoverBrightness}
+          hoverOpacity={hoverOpacity}
           hoverScale={hoverScale}
           hoverColor={hoverColor}
           hoverBackgroundColor={hoverBackgroundColor}
@@ -209,7 +209,7 @@ export const WorkBench = () => {
           boxShadowBlur={boxShadowBlur}
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
-          hoverBrightness={hoverBrightness}
+          hoverOpacity={hoverOpacity}
           hoverScale={hoverScale}
           hoverColor={hoverColor}
           hoverBackgroundColor={hoverBackgroundColor}
@@ -261,8 +261,8 @@ export const WorkBench = () => {
           onHoverBackgroundColorChange={handleHoverBackgroundColorChange}
           transition={transition}
           onTransitionChange={handleTransitionChange}
-          hoverBrightness={hoverBrightness}
-          onHoverBrightnessChange={handleHoverBrightnessChange}
+          hoverOpacity={hoverOpacity}
+          onHoverOpacityChange={handleHoverOpacityChange}
           hoverScale={hoverScale}
           onHoverScaleChange={handleHoverScaleChange}
         />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HoverBrightness } from "./components/HoverBrightness";
+import { HoverOpacity } from "./components/HoverOpacity";
 import { HoverScale } from "./components/HoverScale";
 import { HoverFontColor } from "./components/HoverFontColor";
 import { HoverBackgroundColor } from "./components/HoverBackgroundColor";
@@ -9,8 +9,8 @@ import styles from "./State.module.css";
 export const State = ({
   transition,
   onTransitionChange,
-  hoverBrightness,
-  onHoverBrightnessChange,
+  hoverOpacity,
+  onHoverOpacityChange,
   hoverColor,
   onHoverColorChange,
   hoverBackgroundColor,
@@ -20,8 +20,8 @@ export const State = ({
 }: {
   transition: number;
   onTransitionChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  hoverBrightness: number;
-  onHoverBrightnessChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  hoverOpacity: number;
+  onHoverOpacityChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   hoverScale: number;
   onHoverScaleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   hoverColor: string;
@@ -43,7 +43,7 @@ export const State = ({
       </h2>
       <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
         <HoverScale hoverScale={hoverScale} onHoverScaleChange={onHoverScaleChange} />
-        <HoverBrightness hoverBrightness={hoverBrightness} onHoverBrightnessChange={onHoverBrightnessChange} />
+        <HoverOpacity hoverOpacity={hoverOpacity} onHoverOpacityChange={onHoverOpacityChange} />
         <HoverFontColor hoverColor={hoverColor} onHoverColorChange={onHoverColorChange} />
         <HoverBackgroundColor
           hoverBackgroundColor={hoverBackgroundColor}
