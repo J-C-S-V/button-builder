@@ -36,7 +36,6 @@ export const buttonsStyle = [
       fontWeight: 500,
       borderRadius: "0",
       padding: "10px 10px",
-      letterSpacing: "0.5rem",
       color: "#202020",
       border: "3px solid #ff0000",
       fontSize: "16px",
