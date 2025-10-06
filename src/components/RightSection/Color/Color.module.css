@@ -1,8 +1,8 @@
 .color {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .color__title {
@@ -12,7 +12,12 @@
   background-color: var(--color-background-transparent-black);
   padding: 1rem 1.6rem;
   border-radius: 1rem;
-  box-shadow: 0 0 4px 3px #181818;
+  box-shadow: 0 0 4px 3px #404040;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-background-black);
+  }
 }
 
 .color__title-text {
@@ -27,6 +32,7 @@
 }
 
 .show {
-  /* max-height: 100%; */
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
