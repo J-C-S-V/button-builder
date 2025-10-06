@@ -59,16 +59,43 @@
 }
 
 .languages__copied {
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--color-background-success);
   color: var(--color-text-black);
-  padding: 0.7rem 3rem;
+  padding: 0.7rem 2rem;
   margin: 0.5rem;
   border-radius: 0.25rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   pointer-events: none;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.opacity-100 {
+  animation: opacity-100 0.1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-background-success);
+  color: var(--color-text-black);
+  padding: 0.7rem 2rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+
+@keyframes opacity-100 {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .footer {
