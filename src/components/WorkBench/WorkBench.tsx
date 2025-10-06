@@ -27,7 +27,7 @@ export const WorkBench = () => {
   const [hoverOpacity, setHoverOpacity] = useState(1);
   const [hoverScale, setHoverScale] = useState(1.1);
   const [hoverColor, setHoverColor] = useState("#ffffff");
-  const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#000000");
+  const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#cc0000");
   const [transition, setTransition] = useState(0.1);
 
   const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
