@@ -36,13 +36,3 @@
   color: var(--color-text-black-light);
   font-size: 1.4rem;
 }
-
-.border-color__input-container::before {
-  content: "#";
-  position: absolute;
-  left: 6.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--color-text-black-light);
-  font-size: 1.4rem;
-}

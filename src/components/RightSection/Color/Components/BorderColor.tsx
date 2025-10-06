@@ -7,7 +7,6 @@ export const BorderColor = ({
   onBorderColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   borderColor: string;
 }) => {
-  // const newBorderColor = borderColor.slice(1, borderColor.length);
   return (
     <div className={styles["border-color"]}>
       <label htmlFor="borderColor" className={styles["border-color__label"]}>
