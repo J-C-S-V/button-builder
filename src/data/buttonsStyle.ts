@@ -1,4 +1,6 @@
-export const buttonsStyle = [
+import type { ButtonStyleItem } from "../types/buttonStyle";
+
+export const buttonsStyle: ButtonStyleItem[] = [
   {
     id: 0,
     name: "Button 1",
