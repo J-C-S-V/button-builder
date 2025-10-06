@@ -209,10 +209,10 @@ export const WorkBench = () => {
           boxShadowBlur={boxShadowBlur}
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
-          hoverOpacity={hoverOpacity}
-          hoverScale={hoverScale}
-          hoverColor={hoverColor}
-          hoverBackgroundColor={hoverBackgroundColor}
+          // hoverOpacity={hoverOpacity}
+          // hoverScale={hoverScale}
+          // hoverColor={hoverColor}
+          // hoverBackgroundColor={hoverBackgroundColor}
           transition={transition}
         />
       </div>

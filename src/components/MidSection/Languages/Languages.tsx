@@ -19,11 +19,11 @@ export const Languages = ({
   boxShadowColor,
   boxShadowSpread,
   transition,
-  hoverOpacity,
-  hoverScale,
-  hoverColor,
-  hoverBackgroundColor,
-}: {
+}: // hoverOpacity,
+// hoverScale,
+// hoverColor,
+// hoverBackgroundColor,
+{
   borderWidth: number;
   borderColor: string;
   borderRadius: number;
@@ -40,10 +40,10 @@ export const Languages = ({
   boxShadowColor: string;
   boxShadowSpread: number;
   transition: number;
-  hoverOpacity: number;
-  hoverScale: number;
-  hoverColor: string;
-  hoverBackgroundColor: string;
+  // hoverOpacity: number;
+  // hoverScale: number;
+  // hoverColor: string;
+  // hoverBackgroundColor: string;
 }) => {
   const [copied, setCopied] = useState(false);
 

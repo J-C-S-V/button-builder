@@ -1,6 +1,5 @@
 import styles from "./Button.module.css";
 import { useState } from "react";
-import { LeftSection } from "../../LeftSection/LeftSection";
 
 export const Button = ({
   backgroundColor,
