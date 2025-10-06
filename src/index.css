@@ -27,6 +27,7 @@ html {
   --color-background-dark: #292929;
   --color-background-dark-light: #383838;
   --color-background-blue: #0160e0;
+  --color-background-success: #1de44b;
 
   /* FONT FAMILY */
   --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;

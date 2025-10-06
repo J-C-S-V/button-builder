@@ -85,11 +85,11 @@ export const Languages = ({
   };
   return (
     <div className={styles.languages}>
-      {copied && <div className={styles.languages__copied}>Copied!</div>}
-      <button onClick={handleCopyCSS} className={`${styles.languages__css} ${styles.languages__button}`}>
+      {copied && <div className={styles["languages__copied"]}>Copied!</div>}
+      <button onClick={handleCopyCSS} className={styles["languages__css"]}>
         Get CSS
       </button>
-      <button onClick={handleCopyHTML} className={`${styles.languages__html} ${styles.languages__button}`}>
+      <button onClick={handleCopyHTML} className={styles["languages__html"]}>
         Get HTML
       </button>
       <Footer />
