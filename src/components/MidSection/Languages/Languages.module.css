@@ -8,6 +8,7 @@
   gap: 3rem;
   background-color: var(--color-background-dark);
   border: 2px solid var(--color-background-white);
+  border-radius: 20px 20px 0px 0px;
 }
 
 .languages__css {

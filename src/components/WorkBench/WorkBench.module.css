@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-background-white);
+  border-radius: 20px 0px 0px 0px;
 }
 
 .workbench__right {
@@ -17,5 +18,6 @@
   background-color: var(--color-background-dark);
   padding: 2rem;
   overflow: auto;
-  border: 2px solid var(--color-background-white);
+  /* border: 2px solid var(--color-background-white); */
+  border-radius: 20px 0px 0px 0px;
 }
