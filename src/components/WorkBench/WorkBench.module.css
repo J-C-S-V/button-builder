@@ -1,0 +1,29 @@
+.workbench {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.workbench__left {
+  box-shadow: inset 0 0 4px 3px #404040;
+}
+
+.workbench__middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background-white-two);
+  border-radius: 20px 0px 0px 0px;
+}
+
+.workbench__right {
+  color: var(--color-text-white);
+  background-color: var(--color-background-dark);
+  padding: 4rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-background-transparent-black) transparent;
+  overflow-y: scroll;
+  box-shadow: inset 0 0 4px 3px #404040;
+}

@@ -1,17 +1,16 @@
-import { WorkBench } from "./components/WorkBench";
-import { Footer } from "./components/Footer";
-import "./App.css";
+// import { useContext } from "react";
+// import ThemeContext from "./context/ThemeContext";
+import { WorkBench } from "./components/WorkBench/WorkBench";
+import styles from "./App.module.css";
+// import { Profile } from "./components/Profile";
 
 function App() {
+  // const { theme, handleClickTheme } = useContext(ThemeContext);
+
   return (
-    <main className="app">
-      <h1 className="app__title">
-        <span className="app__title-span-1">Free</span>&nbsp;
-        <span className="app__title-span-2">Button</span>&nbsp;
-        <span className="app__title-span-3">Builder</span>
-      </h1>
+    // <main data-theme={theme} className={styles.app}>
+    <main className={styles.app}>
       <WorkBench />
-      <Footer />
     </main>
   );
 }

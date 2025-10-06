@@ -1,3 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* TEXT COLOR */
+  --color-purple: #a5158c;
+  --color-background-cyan-light: #60daff45;
+  --color-text-black: #242424;
+  --color-text-black-light: #767676;
+  --color-text-white: #fff;
+
+  /* BACKGROUND COLOR */
+  --color-background-red: #ff0000;
+  --color-background-white: #ffffff;
+  --color-background-white-two: #f6f6f6;
+  --color-background-gray: #c2c2c2;
+  --color-background-gray-light: #e8e8e8;
+  --color-background-dark-hard: #101010;
+  --color-background-dark: #292929;
+  --color-background-dark-light: #383838;
+  --color-background-blue: #0160e0;
+  --color-background-success: #1de44b;
+  --color-background-transparent-black: #5a5a5a4e;
+
+  /* FONT FAMILY */
+  --font-monserrat: "Montserrat", sans-serif;
+  /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+}
+
+[data-theme="dark"] {
+  /* TEXT COLOR */
+  --color-purple: #a5158c;
+  --color-text-black: #fff;
+  --color-text-white: #fff;
+
+  /* BACKGROUND COLOR */
+  --color-background-red: #ff0000;
+  --color-background-white: #292929;
+  --color-background-gray: #c2c2c2;
+  --color-background-gray-light: #e8e8e8;
+  --color-background-dark: #292929;
+  --color-background-cyan-light: #771065;
+  --color-background-blue: #0160e0;
+  /* FONNT FAMILY*/
+  /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  --font-monserrat: "Montserrat", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -10,35 +57,27 @@ html {
   font-size: 62.5%;
 }
 
-:root {
-  --color-background-red: #ff0000;
-  --color-violet: #410445;
-  --color-purple: #a5158c;
-  --color-cyan-light: #60daff45;
-  --color-pink: #ff2df1;
-  --color-yellow: #f6dc43;
-  --color-text-black: #242424;
-  --color-text-white: #fff;
-  --font-system-ui: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
 body {
-  height: 100dvh;
-  font-family: var(--font-system-ui);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: var(--font-monserrat);
 }
 
 textarea {
   resize: none;
   border-radius: 5px;
   padding: 4px;
+  color: var(--color-text-black);
 }
 
-@media screen and (max-width: 1440px) {
-  body {
-    height: auto;
-    padding: 5rem;
-  }
+li {
+  list-style: none;
+}
+
+input[type="range"] {
+  accent-color: var(--color-background-blue);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-background-gray);
 }

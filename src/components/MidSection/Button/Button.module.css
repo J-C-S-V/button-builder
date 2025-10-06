@@ -1,0 +1,13 @@
+.workbench__button {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-text-white);
+}
+
+.workbench__button--anchor:hover {
+  cursor: pointer;
+  transform: skewX(20deg);
+}

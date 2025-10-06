@@ -145,6 +145,6 @@ I would like to thank Reaper for providing the audio engine for this project ğŸš
 
 ## ğŸ“ License <a name="license"></a>
 
-This project is [MIT](https://github.com/J-C-S-V/button-builder/blob/main/LICENSE)licensed.
+This project is [MIT](https://github.com/J-C-S-V/button-builder/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

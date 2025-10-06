@@ -1,0 +1,38 @@
+.background-color {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid var(--color-text-black-light);
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  min-height: 11rem;
+  box-shadow: -6px 6px 2px 0px var(--color-background-dark-hard);
+}
+
+.background-color__label {
+  color: var(--color-text-black-light);
+}
+
+.background-color__input-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.background-color__input-color {
+  width: 4rem;
+  height: 4rem;
+}
+
+.background-color__input-text {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding-left: 3rem;
+  color: var(--color-text-black-light);
+  font-size: 1.4rem;
+}
