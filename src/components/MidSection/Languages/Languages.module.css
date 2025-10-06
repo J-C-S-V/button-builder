@@ -7,8 +7,8 @@
   align-items: center;
   gap: 3rem;
   background-color: var(--color-background-dark);
-  border: 2px solid var(--color-background-white);
-  border-radius: 20px 20px 0px 0px;
+  /* border: 2px solid var(--color-background-white); */
+  box-shadow: 0px 6px 4px 3px #000000;
 }
 
 .languages__css {
@@ -21,6 +21,7 @@
   font-size: 2rem;
   color: var(--color-text-black);
   border: none;
+  box-shadow: 0 0 4px 3px #181818;
   transition: all 0.3s ease-in-out;
   transition: border-radius 0.3s ease-in-out;
 }
@@ -35,7 +36,7 @@
   font-size: 2rem;
   color: var(--color-text-black);
   border: none;
-  box-shadow: 0 0 0 0 #c8a2ff;
+  box-shadow: 0 0 4px 3px #181818;
   transition: all 0.3s ease-in-out;
   transition: border-radius 0.3s ease-in-out;
 }

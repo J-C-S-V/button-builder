@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  background-color: var(--color-background-transparent-black);
+  padding: 1rem 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px 3px #181818;
 }
 
 .font__title-text {

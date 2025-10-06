@@ -216,7 +216,6 @@ export const WorkBench = () => {
           transition={transition}
         />
       </div>
-
       <div className={styles["workbench__right"]}>
         <Font
           fontSize={fontSize}

@@ -8,5 +8,5 @@
   height: 100%;
   background-color: var(--color-background-dark);
   /* border: 2px solid var(--color-background-white); */
-  border-radius: 0px 20px 0px 0px;
+  box-shadow: 0 0 4px 3px #181818;
 }

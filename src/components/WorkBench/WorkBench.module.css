@@ -16,8 +16,9 @@
 .workbench__right {
   color: var(--color-text-white);
   background-color: var(--color-background-dark);
-  padding: 2rem;
+  padding: 4rem;
   overflow: auto;
-  /* border: 2px solid var(--color-background-white); */
-  border-radius: 20px 0px 0px 0px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-background-transparent-black) transparent;
+  overflow-y: scroll;
 }
