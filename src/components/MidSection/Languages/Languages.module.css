@@ -7,8 +7,6 @@
   align-items: center;
   gap: 3rem;
   background-color: var(--color-background-dark);
-  /* border: 2px solid var(--color-background-white); */
-  box-shadow: inset 0 0 4px 3px #404040;
 }
 
 .languages__css {

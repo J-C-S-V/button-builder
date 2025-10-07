@@ -7,8 +7,6 @@ export const HoverFontColor = ({
   hoverColor: string;
   onHoverColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
-  const newHoverColor = hoverColor.slice(1, hoverColor.length);
-
   return (
     <div className={styles["hover-font-color"]}>
       <label htmlFor="fontColor" className={styles["hover-font-color__label"]}>
@@ -22,12 +20,7 @@ export const HoverFontColor = ({
           value={hoverColor}
           onChange={onHoverColorChange}
         />
-        <input
-          type="text"
-          className={styles["hover-font-color__input-text"]}
-          value={newHoverColor}
-          onChange={onHoverColorChange}
-        />
+        <input type="text" className={styles["hover-font-color__input-text"]} value={hoverColor} onChange={onHoverColorChange} />
       </div>
     </div>
   );
