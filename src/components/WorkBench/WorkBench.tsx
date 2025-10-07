@@ -169,7 +169,6 @@ export const WorkBench = () => {
       <div className={styles["workbench__left"]}>
         <LeftSection onClickButton={handleClickButton} />
       </div>
-
       <div className={styles["workbench__middle"]}>
         <Button
           borderWidth={borderWidth}
