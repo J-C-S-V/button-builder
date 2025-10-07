@@ -58,6 +58,7 @@
   position: absolute;
   top: 2rem;
   right: 1rem;
+  word-spacing: 1.6rem;
   color: var(--color-text-white);
   font-size: 16px;
 }
