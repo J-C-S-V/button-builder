@@ -83,3 +83,7 @@ hr {
   height: 1px;
   background-color: var(--color-background-gray);
 }
+
+svg:hover {
+  fill: var(--color-background-gray);
+}

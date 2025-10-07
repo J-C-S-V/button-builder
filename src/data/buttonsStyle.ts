@@ -5,21 +5,6 @@ export const buttonsStyle: ButtonStyleItem[] = [
     id: 0,
     name: "Button 1",
     style: {
-      backgroundColor: "#ff0000",
-      borderRadius: "0",
-      padding: "12px 20px",
-      fontWeight: 600,
-      fontSize: "17px",
-      color: "#ffffff",
-      border: "2px solid #ffffff",
-      boxShadow: "-7px 7px 0px 0px #ff0000",
-      cursor: "pointer",
-    },
-  },
-  {
-    id: 1,
-    name: "Button 2",
-    style: {
       fontWeight: 500,
       color: "#ffffff",
       backgroundColor: "#0d1127",
@@ -32,8 +17,8 @@ export const buttonsStyle: ButtonStyleItem[] = [
     },
   },
   {
-    id: 2,
-    name: "Button 3",
+    id: 1,
+    name: "Button 2",
     style: {
       fontSize: "16px",
       backgroundColor: "#ffffff",
@@ -46,8 +31,8 @@ export const buttonsStyle: ButtonStyleItem[] = [
     },
   },
   {
-    id: 3,
-    name: "Button 4",
+    id: 2,
+    name: "Button 3",
     style: {
       cursor: "pointer",
       backgroundColor: "#ff0000",
@@ -61,23 +46,8 @@ export const buttonsStyle: ButtonStyleItem[] = [
     },
   },
   {
-    id: 4,
-    name: "Button 5",
-    style: {
-      cursor: "pointer",
-      backgroundColor: "#99008c",
-      borderRadius: "50px",
-      padding: "10px 20px",
-      fontWeight: 900,
-      fontSize: "16px",
-      color: "#ffffff",
-      border: "4px solid #ffffff",
-      boxShadow: "-2px 2px 7px 0px #c2c2c2",
-    },
-  },
-  {
-    id: 5,
-    name: "Button 6",
+    id: 3,
+    name: "Button 4",
     style: {
       cursor: "pointer",
       backgroundColor: "#ffffff",
@@ -91,8 +61,8 @@ export const buttonsStyle: ButtonStyleItem[] = [
     },
   },
   {
-    id: 6,
-    name: "Button 7",
+    id: 4,
+    name: "Button 5",
     style: {
       cursor: "pointer",
       backgroundColor: "#00ff2a",
@@ -106,8 +76,8 @@ export const buttonsStyle: ButtonStyleItem[] = [
     },
   },
   {
-    id: 7,
-    name: "Button 8",
+    id: 5,
+    name: "Button 6",
     style: {
       cursor: "pointer",
       backgroundColor: "#d4ff00",
