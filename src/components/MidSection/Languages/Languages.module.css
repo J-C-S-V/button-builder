@@ -12,8 +12,9 @@
 .languages__css {
   width: 16rem;
   height: 8rem;
-  background: radial-gradient(at center, #9f71ce, #663399);
-  border-radius: 2rem 1rem 2rem 1rem;
+  background-color: transparent;
+
+  border-radius: 2rem;
   cursor: pointer;
   font-weight: 900;
   font-size: 2rem;
@@ -22,13 +23,18 @@
   box-shadow: 0 0 2px 2px #404040;
   transition: all 0.3s ease-in-out;
   transition: border-radius 0.1s ease-in-out;
+  &:hover {
+    border-radius: 1rem;
+    filter: brightness(90%);
+    background: radial-gradient(at center, #9f71ce, #663399);
+  }
 }
 
 .languages__html {
   width: 16rem;
   height: 8rem;
-  background: radial-gradient(at center, #eb7e54, #e34c26);
-  border-radius: 1rem 2rem 1rem 2rem;
+  border-radius: 2rem;
+  background-color: transparent;
   cursor: pointer;
   font-weight: 900;
   font-size: 2rem;
@@ -37,21 +43,16 @@
   box-shadow: 0 0 4px 3px #404040;
   transition: all 0.3s ease-in-out;
   transition: border-radius 0.1s ease-in-out;
+  &:hover {
+    border-radius: 1rem;
+    filter: brightness(90%);
+    background: radial-gradient(at center, #eb7e54, #e34c26);
+  }
 }
 
 .languages__html:active,
 .languages__css:active {
   transform: scale(0.95);
-}
-
-.languages__css:hover {
-  border-radius: 2rem 2rem 2rem 2rem;
-  filter: brightness(90%);
-}
-
-.languages__html:hover {
-  border-radius: 2rem 2rem 2rem 2rem;
-  filter: brightness(90%);
 }
 
 .languages__title {

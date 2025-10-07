@@ -192,6 +192,7 @@ export const WorkBench = () => {
           hoverBackgroundColor={hoverBackgroundColor}
           transition={transition}
         />
+        <hr />
         <Languages
           borderWidth={borderWidth}
           borderColor={borderColor}
