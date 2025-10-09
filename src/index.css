@@ -2,8 +2,6 @@
 
 :root {
   /* TEXT COLOR */
-  --color-purple: #a5158c;
-  --color-background-cyan-light: #60daff45;
   --color-text-black: #242424;
   --color-text-black-light: #767676;
   --color-text-white: #ffffff;
@@ -12,13 +10,10 @@
   /* BACKGROUND COLOR */
   --color-background-red: #ff0000;
   --color-background-white: #ffffff;
-  --color-background-white-two: #f6f6f6;
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
-  --color-background-dark-hard: #101010;
-  --color-background-dark: #101010;
   --color-background-black: #000000;
-  --color-background-dark-light: #383838;
+  --color-background-dark: #101010;
   --color-background-blue: #0160e0;
   --color-background-css: #663399;
   --color-background-html: #e34c26;
@@ -27,12 +22,10 @@
 
   /* FONT FAMILY */
   --font-monserrat: "Montserrat", sans-serif;
-  /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */
 }
 
 [data-theme="dark"] {
   /* TEXT COLOR */
-  --color-purple: #a5158c;
   --color-text-black: #fff;
   --color-text-white: #fff;
 
@@ -42,7 +35,6 @@
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
   --color-background-dark: #292929;
-  --color-background-cyan-light: #771065;
   --color-background-blue: #0160e0;
   /* FONNT FAMILY*/
   /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */

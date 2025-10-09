@@ -15,5 +15,5 @@
 }
 
 .footer__tooltip:hover {
-  fill: #ff0000;
+  fill: var(--color-background-red);
 }
