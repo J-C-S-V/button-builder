@@ -167,6 +167,7 @@ export const WorkBench = () => {
   return (
     <section className={styles["workbench"]}>
       <div className={styles["workbench__left"]}>
+        <h2>Buttons</h2>
         <LeftSection onClickButton={handleClickButton} />
       </div>
       <div className={styles["workbench__middle"]}>

@@ -13,12 +13,12 @@
   width: 16rem;
   height: 8rem;
   background-color: transparent;
-
   border-radius: 2rem;
   cursor: pointer;
   font-weight: 900;
   font-size: 2rem;
   color: var(--color-text-black);
+  -webkit-text-stroke: 1px #663399;
   border: none;
   box-shadow: 0 0 2px 2px #404040;
   transition: all 0.3s ease-in-out;
@@ -39,6 +39,7 @@
   font-weight: 900;
   font-size: 2rem;
   color: var(--color-text-black);
+  -webkit-text-stroke: 1px #e34c26;
   border: none;
   box-shadow: 0 0 4px 3px #404040;
   transition: all 0.3s ease-in-out;

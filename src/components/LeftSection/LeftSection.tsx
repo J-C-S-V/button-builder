@@ -7,9 +7,11 @@ export const LeftSection = ({ onClickButton }: { onClickButton: (style: CSSPrope
     <div className={styles["left-section"]}>
       {buttonsStyle.map((element) => {
         return (
-          <button key={element.id} onClick={() => onClickButton(element.style)} style={element.style}>
-            Click me!
-          </button>
+          <div className={styles["button__container"]}>
+            <button key={element.id} onClick={() => onClickButton(element.style)} style={element.style}>
+              Click me!
+            </button>
+          </div>
         );
       })}
     </div>

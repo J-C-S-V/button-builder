@@ -8,7 +8,7 @@ export const buttonsStyle: ButtonStyleItem[] = [
       fontWeight: 500,
       color: "#ffffff",
       backgroundColor: "#0d1127",
-      padding: "10px 30px",
+      padding: "10px 20px",
       borderRadius: "50px",
       border: "5px solid #5978f3",
       fontSize: "16px",
@@ -87,7 +87,7 @@ export const buttonsStyle: ButtonStyleItem[] = [
       fontSize: "16px",
       color: "#121212",
       border: "5px solid #ffffff",
-      boxShadow: "0px 0px 14px 6px #d4ff00",
+      boxShadow: "0px 0px 8px 2px #d4ff00",
     },
   },
 ];

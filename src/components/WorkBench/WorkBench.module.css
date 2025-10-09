@@ -5,6 +5,12 @@
   height: 100%;
 }
 
+.workbench__left {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-black);
+}
+
 .workbench__middle {
   /* display: flex;
   flex-direction: column;
