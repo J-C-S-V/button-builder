@@ -3,10 +3,9 @@
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--color-text-black);
-  /* padding: 10rem; */
   font-family: var(--font-monserrat);
   background-color: var(--color-background-white);
   height: 100dvh;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  border: 1px dashed black;
+  border: 1px dashed var(--color-background-black);
 }

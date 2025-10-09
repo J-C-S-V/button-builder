@@ -27,15 +27,15 @@
 [data-theme="dark"] {
   /* TEXT COLOR */
   --color-text-black: #fff;
-  --color-text-white: #fff;
+  --color-text-white: #181717;
 
   /* BACKGROUND COLOR */
   --color-background-red: #ff0000;
-  --color-background-white: #292929;
+  --color-background-white: #e0dcdc;
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
-  --color-background-dark: #292929;
-  --color-background-blue: #0160e0;
+  --color-background-dark: #e0e0e0;
+  --color-background-black: #ffffff;
   /* FONNT FAMILY*/
   /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   --font-monserrat: "Montserrat", sans-serif;

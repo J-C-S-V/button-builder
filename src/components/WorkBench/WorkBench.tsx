@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useContext } from "react";
+
 import { LeftSection } from "../LeftSection/LeftSection";
 import { Button } from "../MidSection/Button/Button";
 import { Languages } from "../MidSection/Languages/Languages";
@@ -7,6 +9,7 @@ import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
 import { Font } from "../RightSection/Font/Font";
 import styles from "./WorkBench.module.css";
+import ThemeContext from "../../context/ThemeContext";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -29,6 +32,8 @@ export const WorkBench = () => {
   const [hoverColor, setHoverColor] = useState("#ffffff");
   const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#cc0000");
   const [transition, setTransition] = useState(0.1);
+
+  const { handleClickTheme } = useContext(ThemeContext);
 
   const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTransition(Number(e.target.value));
@@ -167,7 +172,7 @@ export const WorkBench = () => {
   return (
     <section className={styles["workbench"]}>
       <div className={styles["workbench__left"]}>
-        <h2>Buttons</h2>
+        <h2 onClick={handleClickTheme}>Buttons</h2>
         <LeftSection onClickButton={handleClickButton} />
       </div>
       <div className={styles["workbench__middle"]}>
