@@ -6,7 +6,7 @@
   --color-background-cyan-light: #60daff45;
   --color-text-black: #242424;
   --color-text-black-light: #767676;
-  --color-text-white: #fff;
+  --color-text-white: #ffffff;
   --color-text-red: #ff0000;
 
   /* BACKGROUND COLOR */
@@ -20,6 +20,8 @@
   --color-background-black: #000000;
   --color-background-dark-light: #383838;
   --color-background-blue: #0160e0;
+  --color-background-css: #663399;
+  --color-background-html: #e34c26;
   --color-background-success: #1de44b;
   --color-background-transparent-black: #5a5a5a4e;
 
