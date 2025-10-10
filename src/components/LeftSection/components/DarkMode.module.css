@@ -1,0 +1,15 @@
+.dark-mode {
+  position: relative;
+  width: 8rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+}
+.dark-mode__sun {
+  position: absolute;
+  left: 0;
+}
+.dark-mode__moon {
+  position: absolute;
+  right: 0;
+}
