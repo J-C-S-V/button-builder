@@ -24,7 +24,7 @@
   --font-monserrat: "Montserrat", sans-serif;
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   /* TEXT COLOR */
   --color-text-black: #fff;
   --color-text-white: #181717;

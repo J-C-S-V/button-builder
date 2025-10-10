@@ -4,13 +4,13 @@ import { SunIcon, MoonIcon } from "../../../../public/assets/svg/Icons";
 import styles from "./DarkMode.module.css";
 
 export const DarkMode = () => {
-  const { handleClickTheme, theme, right } = useContext(ThemeContext);
+  const { handleClickTheme, theme } = useContext(ThemeContext);
 
   return (
     <div className={styles["dark-mode"]} onClick={handleClickTheme}>
-      <SunIcon />
+      <SunIcon theme={theme} />
       <div className={styles["dark-mode__icon-bg"]}>
-        <div className={styles["dark-mode__icon-circle"]}></div>
+        <div className={`${styles["dark-mode__icon-circle"]} ${theme === "dark" ? styles["right"] : ""}`}></div>
       </div>
       <MoonIcon />
     </div>
