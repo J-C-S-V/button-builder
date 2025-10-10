@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { type ReactNode } from "react";
 
-const ThemeContext = createContext();
+const ThemeContext = createContext(null);
 
 interface ThemeProviderProps {
   children: ReactNode;

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useContext } from "react";
-
 import { LeftSection } from "../LeftSection/LeftSection";
 import { Button } from "../MidSection/Button/Button";
 import { Languages } from "../MidSection/Languages/Languages";
@@ -8,10 +6,12 @@ import { Box } from "../RightSection/Box/Box";
 import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
 import { Font } from "../RightSection/Font/Font";
-import styles from "./WorkBench.module.css";
+import { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
+import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
+  const { handleClickTheme } = useContext(ThemeContext);
   const [innerText, setInnerText] = useState("Click me!");
   const [backgroundColor, setbackgroundColor] = useState("#ff0000");
   const [borderRadius, setBorderRadius] = useState(12);
@@ -32,8 +32,6 @@ export const WorkBench = () => {
   const [hoverColor, setHoverColor] = useState("#ffffff");
   const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#cc0000");
   const [transition, setTransition] = useState(0.1);
-
-  const { handleClickTheme } = useContext(ThemeContext);
 
   const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTransition(Number(e.target.value));
