@@ -35,3 +35,20 @@
 .button__container:nth-child(6) {
   border-radius: 0 0 10px 0;
 }
+
+.languages__title {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  word-spacing: 1rem;
+  color: var(--color-text-white);
+  font-size: 16px;
+}
+
+.languages__title-span {
+  color: var(--color-text-white);
+  background-color: var(--color-background-red);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+}

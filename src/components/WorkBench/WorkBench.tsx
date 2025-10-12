@@ -6,12 +6,9 @@ import { Box } from "../RightSection/Box/Box";
 import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
 import { Font } from "../RightSection/Font/Font";
-import { useContext } from "react";
-import ThemeContext from "../../context/ThemeContext";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
-  const { handleClickTheme } = useContext(ThemeContext);
   const [innerText, setInnerText] = useState("Click me!");
   const [backgroundColor, setbackgroundColor] = useState("#ff0000");
   const [borderRadius, setBorderRadius] = useState(12);
@@ -170,7 +167,6 @@ export const WorkBench = () => {
   return (
     <section className={styles["workbench"]}>
       <div className={styles["workbench__left"]}>
-        <h2 onClick={handleClickTheme}>Buttons</h2>
         <LeftSection onClickButton={handleClickButton} />
       </div>
       <div className={styles["workbench__middle"]}>

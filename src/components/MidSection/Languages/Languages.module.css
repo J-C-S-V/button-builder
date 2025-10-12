@@ -56,23 +56,6 @@
   transform: scale(0.95);
 }
 
-.languages__title {
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  word-spacing: 1rem;
-  color: var(--color-text-white);
-  font-size: 16px;
-}
-
-.languages__title-span {
-  color: var(--color-text-white);
-  background-color: var(--color-background-red);
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.5rem;
-  font-style: italic;
-}
-
 .languages__copied {
   opacity: 0;
   position: absolute;
