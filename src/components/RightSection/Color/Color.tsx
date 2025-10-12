@@ -31,7 +31,7 @@ export const Color = ({
           <span className={styles["color__title-text"]}>+</span>
         )}
       </h2>
-      <div className={`${showColor ? styles["show"] : styles["color__content"]}`}>
+      <div className={`${styles["color__content"]} ${showColor ? styles["show"] : ""}`}>
         <FontColor fontColor={fontColor} onFontColorChange={onFontColorChange} />
         <BorderColor borderColor={borderColor} onBorderColorChange={onBorderColorChange} />
         <BackgroundColor backgroundColor={backgroundColor} onBackgroundColorChange={onBackgroundColorChange} />

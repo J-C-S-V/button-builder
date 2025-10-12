@@ -27,7 +27,7 @@ export const Font = ({
         <span className={styles["font__title-text"]}>Font</span>
         {showFont ? <span className={styles["font__title-text"]}>–</span> : <span className={styles["font__title-text"]}>+</span>}
       </h2>
-      <div className={`${showFont ? styles["show"] : styles["font__content"]}`}>
+      <div className={`${styles["font__content"]} ${showFont ? styles["show"] : ""}`}>
         <FontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
         <FontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
         <InnerText innerText={innerText} onTextChange={onInnerTextChange} />

@@ -52,7 +52,7 @@ export const Box = ({
         <span className={styles["box__title-text"]}>Box</span>
         {showBox ? <span className={styles["box__title-text"]}>–</span> : <span className={styles["box__title-text"]}>+</span>}
       </h2>
-      <div className={`${showBox ? styles["show"] : styles["box__content"]}`}>
+      <div className={`${styles["box__content"]} ${showBox ? styles["show"] : ""}`}>
         <Padding
           paddingY={paddingY}
           paddingX={paddingX}

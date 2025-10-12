@@ -1,7 +1,7 @@
 .state {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
@@ -24,14 +24,11 @@
 }
 
 .state__content {
-  /* max-height: 0; */
-  display: none;
-  /* overflow: hidden; */
-  /* overflow: auto; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .show {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  max-height: 80rem;
 }

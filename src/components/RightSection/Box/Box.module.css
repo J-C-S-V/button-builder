@@ -1,7 +1,7 @@
 .box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .box__content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .show {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  max-height: 80rem;
 }
