@@ -9,7 +9,7 @@ export const LeftSection = ({ onClickButton }: { onClickButton: (style: CSSPrope
       <div className={styles["left-section__header"]}>
         <h1 className={styles["languages__title"]}>
           <span className={styles["languages__title-span"]}>F</span>ree <span className={styles["languages__title-span"]}>B</span>
-          utton <span className={styles["languages__title-span"]}>M</span>aker
+          utton <span className={styles["languages__title-span"]}>B</span>uilder
         </h1>
         <DarkMode />
       </div>

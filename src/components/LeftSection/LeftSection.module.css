@@ -46,7 +46,7 @@
 }
 
 .languages__title-span {
-  color: var(--color-text-white);
+  color: #ffffff;
   background-color: var(--color-background-red);
   padding: 0.2rem 0.5rem;
   border-radius: 0.5rem;
