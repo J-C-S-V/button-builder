@@ -9,20 +9,13 @@
   display: flex;
   flex-direction: column;
   background-color: var(--color-background-black);
-}
-
-.workbench__middle {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--color-background-black);
-  border-radius: 20px 0px 0px 0px; */
+  padding: 4rem 2rem 2rem 2rem;
 }
 
 .workbench__right {
   color: var(--color-text-white);
   background-color: var(--color-background-black);
-  padding: 4rem;
+  padding: 4rem 2rem 2rem 2rem;
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-background-transparent-black) transparent;

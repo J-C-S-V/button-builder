@@ -8,11 +8,11 @@ export const DarkMode = () => {
 
   return (
     <div className={styles["dark-mode"]} onClick={handleClickTheme}>
-      <SunIcon theme={theme} />
+      <MoonIcon theme={theme} />
       <div className={styles["dark-mode__icon-bg"]}>
-        <div className={`${styles["dark-mode__icon-circle"]} ${theme === "dark" ? styles["right"] : ""}`}></div>
+        <div className={`${styles["dark-mode__icon-circle"]} ${theme === "dark" ? "" : styles["right"]}`}></div>
       </div>
-      <MoonIcon />
+      <SunIcon theme={theme} />
     </div>
   );
 };
