@@ -13,6 +13,13 @@
   height: 100%;
 }
 
+.button__item {
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 .left-section__buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,6 +28,7 @@
   align-content: stretch;
   height: 50%;
   margin-top: auto;
+  min-width: 28rem;
 }
 
 .button__container:nth-child(1) {
@@ -42,7 +50,7 @@
 .languages__title {
   word-spacing: 1rem;
   color: var(--color-text-white);
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .languages__title-span {
@@ -57,9 +65,19 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
   height: 30%;
 }
 .left-section__subtitle {
   font-size: 4rem;
-  background-color: var(--color-text-white);
+  color: var(--color-text-white);
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .left-section__subtitle {
+    font-size: 3rem;
+  }
 }

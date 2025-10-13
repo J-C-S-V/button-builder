@@ -84,7 +84,7 @@ export const Languages = ({
       });
   };
   return (
-    <div className={styles.languages}>
+    <div className={styles["languages"]}>
       <div className={`${copied ? styles["opacity-100"] : styles["languages__copied"]}`}>Copied!</div>
       <button onClick={handleCopyCSS} className={styles["languages__css"]}>
         Get CSS

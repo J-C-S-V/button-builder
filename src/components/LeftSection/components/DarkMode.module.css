@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 0.5rem;
-  max-width: 12rem;
+  padding-top: 0.4rem;
 }
 
 .dark-mode__icon-bg {

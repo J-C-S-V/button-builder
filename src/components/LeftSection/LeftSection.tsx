@@ -13,12 +13,19 @@ export const LeftSection = ({ onClickButton }: { onClickButton: (style: CSSPrope
         </h1>
         <DarkMode />
       </div>
-      <h2 className={styles["left-section__subtitle"]}>Choose a button</h2>
+      <h2 className={styles["left-section__subtitle"]}>
+        Choose a <span className={styles["languages__title-span"]}>B</span>utton
+      </h2>
       <div className={styles["left-section__buttons"]}>
         {buttonsStyle.map((element) => {
           return (
             <div className={styles["button__container"]}>
-              <button key={element.id} onClick={() => onClickButton(element.style)} style={element.style}>
+              <button
+                className={styles["button__item"]}
+                key={element.id}
+                onClick={() => onClickButton(element.style)}
+                style={element.style}
+              >
                 Click me!
               </button>
             </div>

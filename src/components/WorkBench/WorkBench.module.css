@@ -20,4 +20,5 @@
   scrollbar-width: thin;
   scrollbar-color: var(--color-background-transparent-black) transparent;
   overflow-y: scroll;
+  min-width: 28rem;
 }
