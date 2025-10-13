@@ -19,11 +19,11 @@ export const Languages = ({
   boxShadowColor,
   boxShadowSpread,
   transition,
-}: // hoverOpacity,
-// hoverScale,
-// hoverColor,
-// hoverBackgroundColor,
-{
+  hoverScale,
+  hoverOpacity,
+  hoverBackgroundColor,
+  hoverColor,
+}: {
   borderWidth: number;
   borderColor: string;
   borderRadius: number;
@@ -40,10 +40,10 @@ export const Languages = ({
   boxShadowColor: string;
   boxShadowSpread: number;
   transition: number;
-  // hoverOpacity: number;
-  // hoverScale: number;
-  // hoverColor: string;
-  // hoverBackgroundColor: string;
+  hoverOpacity: number;
+  hoverScale: number;
+  hoverColor: string;
+  hoverBackgroundColor: string;
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -64,6 +64,7 @@ export const Languages = ({
       .writeText(
         `.button {
   cursor: pointer;
+  display: inline-block;
   background-color: ${backgroundColor};
   border-radius: ${borderRadius}px;
   padding: ${paddingY}px ${paddingX}px;
@@ -73,6 +74,13 @@ export const Languages = ({
   border: ${borderWidth}px solid ${borderColor};
   box-shadow: ${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor};
   transition: all ${transition}s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(${hoverScale});
+  opacity: ${hoverOpacity};
+  background-color: ${hoverBackgroundColor};
+  color: ${hoverColor};
 }`
       )
       .then(() => {
