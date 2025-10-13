@@ -41,7 +41,7 @@ export const State = ({
           <span className={styles["state__title-text"]}>+</span>
         )}
       </h2>
-      <div className={`${showState ? styles["show"] : styles["state__content"]}`}>
+      <div className={`${styles["state__content"]} ${showState ? styles["show"] : ""}`}>
         <HoverScale hoverScale={hoverScale} onHoverScaleChange={onHoverScaleChange} />
         <HoverOpacity hoverOpacity={hoverOpacity} onHoverOpacityChange={onHoverOpacityChange} />
         <HoverFontColor hoverColor={hoverColor} onHoverColorChange={onHoverColorChange} />

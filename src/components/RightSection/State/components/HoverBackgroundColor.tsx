@@ -7,8 +7,6 @@ export const HoverBackgroundColor = ({
   hoverBackgroundColor: string;
   onHoverBackgroundColorChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
-  // const newHoverBackgroundColor = hoverBackgroundColor.slice(1, hoverBackgroundColor.length);
-
   return (
     <div className={styles["hover-background-color"]}>
       <label htmlFor="backgroundColor" className={styles["hover-background-color__label"]}>

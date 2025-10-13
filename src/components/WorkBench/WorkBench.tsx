@@ -169,7 +169,6 @@ export const WorkBench = () => {
       <div className={styles["workbench__left"]}>
         <LeftSection onClickButton={handleClickButton} />
       </div>
-
       <div className={styles["workbench__middle"]}>
         <Button
           borderWidth={borderWidth}
@@ -193,6 +192,7 @@ export const WorkBench = () => {
           hoverBackgroundColor={hoverBackgroundColor}
           transition={transition}
         />
+        <hr />
         <Languages
           borderWidth={borderWidth}
           borderColor={borderColor}
@@ -209,10 +209,10 @@ export const WorkBench = () => {
           boxShadowBlur={boxShadowBlur}
           boxShadowColor={boxShadowColor}
           boxShadowSpread={boxShadowSpread}
-          // hoverOpacity={hoverOpacity}
-          // hoverScale={hoverScale}
-          // hoverColor={hoverColor}
-          // hoverBackgroundColor={hoverBackgroundColor}
+          hoverOpacity={hoverOpacity}
+          hoverScale={hoverScale}
+          hoverColor={hoverColor}
+          hoverBackgroundColor={hoverBackgroundColor}
           transition={transition}
         />
       </div>

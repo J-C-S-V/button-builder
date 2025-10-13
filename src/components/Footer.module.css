@@ -13,3 +13,7 @@
   cursor: pointer;
   fill: var(--color-background-white);
 }
+
+.footer__tooltip:hover {
+  fill: var(--color-background-red);
+}

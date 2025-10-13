@@ -2,44 +2,42 @@
 
 :root {
   /* TEXT COLOR */
-  --color-purple: #a5158c;
-  --color-background-cyan-light: #60daff45;
   --color-text-black: #242424;
   --color-text-black-light: #767676;
-  --color-text-white: #fff;
+  --color-text-white: #ffffff;
+  --color-text-red: #ff0000;
 
   /* BACKGROUND COLOR */
   --color-background-red: #ff0000;
   --color-background-white: #ffffff;
-  --color-background-white-two: #f6f6f6;
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
-  --color-background-dark-hard: #101010;
-  --color-background-dark: #292929;
-  --color-background-dark-light: #383838;
+  --color-background-black: #000000;
+  --color-background-dark: #101010;
   --color-background-blue: #0160e0;
+  --color-background-css: #663399;
+  --color-background-html: #e34c26;
   --color-background-success: #1de44b;
   --color-background-transparent-black: #5a5a5a4e;
 
   /* FONT FAMILY */
   --font-monserrat: "Montserrat", sans-serif;
-  /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   /* TEXT COLOR */
-  --color-purple: #a5158c;
-  --color-text-black: #fff;
-  --color-text-white: #fff;
+  --color-text-black: #ffffff;
+  --color-text-white: #181717;
 
   /* BACKGROUND COLOR */
   --color-background-red: #ff0000;
-  --color-background-white: #292929;
+  --color-background-white: #e0dcdc;
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
-  --color-background-dark: #292929;
-  --color-background-cyan-light: #771065;
-  --color-background-blue: #0160e0;
+  --color-background-dark: #ffffff;
+  --color-background-black: #e0e0e0;
+  --color-background-transparent-black: #ffffff;
+
   /* FONNT FAMILY*/
   /* --font-monserrat: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   --font-monserrat: "Montserrat", sans-serif;
@@ -51,6 +49,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -59,13 +58,6 @@ html {
 
 body {
   font-family: var(--font-monserrat);
-}
-
-textarea {
-  resize: none;
-  border-radius: 5px;
-  padding: 4px;
-  color: var(--color-text-black);
 }
 
 li {
@@ -80,4 +72,9 @@ hr {
   border: none;
   height: 1px;
   background-color: var(--color-background-gray);
+}
+
+svg:hover {
+  fill: var(--color-background-gray);
+  transform: scale(0.9);
 }
