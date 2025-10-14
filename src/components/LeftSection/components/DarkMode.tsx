@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ThemeContext from "../../../context/ThemeContext";
-import { SunIcon, MoonIcon } from "../../../../public/assets/svg/Icons";
+import { SunIcon, MoonIcon } from "../../../assets/Icons";
 import styles from "./DarkMode.module.css";
 
 export const DarkMode = () => {
