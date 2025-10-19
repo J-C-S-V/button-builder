@@ -6,7 +6,7 @@ export const Profile = () => {
   const [user, setUser] = useState<string | null>(null);
 
   const handleClickSignUp = () => {
-    createUserWithEmailAndPassword(auth, "testProfile@test.com", "test123**//lksjdkfj")
+    createUserWithEmailAndPassword(auth, "new@test.com", "test12*//lksjdkfj")
       .then((response) => {
         const user = response.user;
         console.log(user);
@@ -18,7 +18,7 @@ export const Profile = () => {
   };
 
   const handleClickSignIn = () => {
-    signInWithEmailAndPassword(auth, "testProfile@test.com", "test123**//lksjdkfj")
+    signInWithEmailAndPassword(auth, "jota@test.com", "test123**//lksjdkfj")
       .then((response) => {
         const user = response.user;
         console.log(user);

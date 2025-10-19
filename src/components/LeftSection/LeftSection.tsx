@@ -1,6 +1,7 @@
 import { buttonsStyle } from "../../data/buttonsStyle";
 import type { CSSProperties } from "react";
 import { DarkMode } from "./components/DarkMode";
+import { Profile } from '../Profile'
 import styles from "./LeftSection.module.css";
 
 export const LeftSection = ({ onClickButton }: { onClickButton: (style: CSSProperties) => void }) => {
@@ -13,6 +14,7 @@ export const LeftSection = ({ onClickButton }: { onClickButton: (style: CSSPrope
         </h1>
         <DarkMode />
       </div>
+      <Profile />
       <h2 className={styles["left-section__subtitle"]}>
         Choose a <span className={styles["languages__title-span"]}>B</span>utton
       </h2>
