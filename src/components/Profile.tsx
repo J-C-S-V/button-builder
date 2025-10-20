@@ -60,7 +60,7 @@ export const Profile = () => {
         <label htmlFor="email" className={styles['form__label']}>Email: </label>
         <input type="email" name="email" id="email" />
         <label htmlFor="password" className={styles['form__label']}>Password: </label>
-        <input type="password" name="" />
+        <input type="password" name="password" id="password" />
         <button className={styles['form__signup']} onClick={handleClickSignUp}>Sign Up</button>
       </form>
     </>

@@ -3,3 +3,9 @@ ignoredBuiltDependencies:
   - '@swc/core'
   - esbuild
   - protobufjs
+
+minimumReleaseAge: 4320
+
+# minimumReleaseAgeExclude:
+# - react
+# - react-dom
