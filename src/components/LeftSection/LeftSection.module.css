@@ -68,7 +68,6 @@
   align-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
-  height: 30%;
 }
 .left-section__subtitle {
   font-size: 4rem;
