@@ -38,7 +38,9 @@ export const WorkBench = () => {
     setInnerText(e.target.value);
   };
 
-  const handleBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBackgroundColorChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setbackgroundColor(e.target.value);
   };
 
@@ -82,15 +84,21 @@ export const WorkBench = () => {
     setBoxShadowX(Number(e.target.value));
   };
 
-  const handleBoxShadowBlurChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBoxShadowBlurChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setBoxShadowBlur(Number(e.target.value));
   };
 
-  const handleBoxShadowColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBoxShadowColorChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setBoxShadowColor(e.target.value);
   };
 
-  const handleBoxShadowSpreadChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBoxShadowSpreadChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setBoxShadowSpread(Number(e.target.value));
   };
 
@@ -106,7 +114,9 @@ export const WorkBench = () => {
     setHoverColor(e.target.value);
   };
 
-  const handleHoverBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleHoverBackgroundColorChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setHoverBackgroundColor(e.target.value);
   };
 

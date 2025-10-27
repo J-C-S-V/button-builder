@@ -1,0 +1,13 @@
+.languages__title {
+  word-spacing: 1rem;
+  color: var(--color-text-white);
+  font-size: 1.8rem;
+}
+
+.languages__title-span {
+  color: #ffffff;
+  background-color: var(--color-background-red);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+}
