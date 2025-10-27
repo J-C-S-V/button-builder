@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { auth } from "../lib/firebase";
+import { auth } from "../../../lib/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
 import { useForm } from "react-hook-form";
-import { FormData } from "../types/form";
+import { FormData } from "../../../types/form";
 import styles from "./ModalRegister.module.css";
 
 export const ModalRegister = () => {

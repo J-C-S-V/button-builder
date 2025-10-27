@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Footer } from "../../Footer";
+import { Footer } from "../footer/Footer";
 import styles from "./Languages.module.css";
 
 export const Languages = ({
@@ -93,7 +93,13 @@ export const Languages = ({
   };
   return (
     <div className={styles["languages"]}>
-      <div className={`${copied ? styles["opacity-100"] : styles["languages__copied"]}`}>Copied!</div>
+      <div
+        className={`${
+          copied ? styles["opacity-100"] : styles["languages__copied"]
+        }`}
+      >
+        Copied!
+      </div>
       <button onClick={handleCopyCSS} className={styles["languages__css"]}>
         Get CSS
       </button>

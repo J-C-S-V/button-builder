@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { LeftSection } from "../LeftSection/LeftSection";
 import { Button } from "../MidSection/Button/Button";
 import { Languages } from "../MidSection/Languages/Languages";
 import { Box } from "../RightSection/Box/Box";
 import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
 import { Font } from "../RightSection/Font/Font";
+import { Title } from "../LeftSection/Header/Title";
+import { DarkMode } from "../LeftSection/Header/DarkMode";
+import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
+import { Profile } from "../LeftSection/Profile/Profile";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
@@ -177,7 +180,14 @@ export const WorkBench = () => {
   return (
     <section className={styles["workbench"]}>
       <div className={styles["workbench__left"]}>
-        <LeftSection onClickButton={handleClickButton} />
+        <div className={styles["left-section__header"]}>
+          <div className={styles["left-section__title-darkmode"]}>
+            <Title />
+            <DarkMode />
+          </div>
+          <Profile />
+        </div>
+        <ButtonGroup onClickButton={handleClickButton} />
       </div>
       <div className={styles["workbench__middle"]}>
         <Button
