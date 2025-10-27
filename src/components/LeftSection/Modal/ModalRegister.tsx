@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { FormData } from "../../../types/form";
 import styles from "./ModalRegister.module.css";
 
-export const ModalRegister = () => {
+export const ModalRegister = ({ onModalShow }: { onModalShow: boolean }) => {
   const [user, setUser] = useState<string | null>(null);
   const {
     register,
@@ -34,6 +34,8 @@ export const ModalRegister = () => {
         console.error("Error creating user: ", error);
       });
   };
+
+  console.log(onModalShow);
 
   // const handleClickSignIn = () => {
   //   signInWithEmailAndPassword(auth, "jota@test.com", "test123**//lksjdkfj")
@@ -72,7 +74,12 @@ export const ModalRegister = () => {
     //   )}
     // </div>
     <>
-      <form onSubmit={onSubmit} className={styles["form"]}>
+      <form
+        onSubmit={onSubmit}
+        className={`${styles["form"]} ${
+          onModalShow ? styles["show-modal"] : ""
+        }`}
+      >
         <div className={styles["form__input-wrapper"]}>
           <label htmlFor="email" className={styles["form__label"]}>
             Email:
@@ -167,16 +174,15 @@ export const ModalRegister = () => {
               : "I"}
           </span>
         </div>
+        <button className={styles["form__button"]} onClick={handleClickSignUp}>
+          Sign Up
+        </button>
+        <button className={styles["form__button"]} onClick={handleClickSignUp}>
+          Sign In
+        </button>
 
         {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
       </form>
-
-      <button className={styles["form__signup"]} onClick={handleClickSignUp}>
-        Sign Up
-      </button>
-      <button className={styles["form__signup"]} onClick={handleClickSignUp}>
-        Sign In
-      </button>
     </>
   );
 };

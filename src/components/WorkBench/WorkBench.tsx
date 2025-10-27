@@ -10,6 +10,7 @@ import { DarkMode } from "../LeftSection/Header/DarkMode";
 import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
 import { Profile } from "../LeftSection/Profile/Profile";
 import styles from "./WorkBench.module.css";
+import { ModalRegister } from "../LeftSection/Modal/ModalRegister";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -32,6 +33,11 @@ export const WorkBench = () => {
   const [hoverColor, setHoverColor] = useState("#ffffff");
   const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#cc0000");
   const [transition, setTransition] = useState(0.1);
+  const [modal, setModal] = useState(false);
+
+  const handleSignClick = () => {
+    setModal(true);
+  };
 
   const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTransition(Number(e.target.value));
@@ -179,13 +185,14 @@ export const WorkBench = () => {
 
   return (
     <section className={styles["workbench"]}>
+      <ModalRegister onModalShow={modal} />
       <div className={styles["workbench__left"]}>
         <div className={styles["left-section__header"]}>
           <div className={styles["left-section__title-darkmode"]}>
             <Title />
             <DarkMode />
           </div>
-          <Profile />
+          <Profile onSignClick={handleSignClick} />
         </div>
         <ButtonGroup onClickButton={handleClickButton} />
       </div>
