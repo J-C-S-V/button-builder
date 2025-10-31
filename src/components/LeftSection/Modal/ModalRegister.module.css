@@ -49,6 +49,12 @@
   height: 100%;
 }
 
+.form__close {
+  position: absolute;
+  right: 0;
+  top: 10;
+}
+
 .form__button {
   border: 1px solid transparent;
   background-color: var(--color-background-white);
