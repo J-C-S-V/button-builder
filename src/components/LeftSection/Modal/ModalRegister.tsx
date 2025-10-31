@@ -80,6 +80,7 @@ export const ModalRegister = ({ onModalShow }: { onModalShow: boolean }) => {
           onModalShow ? styles["show-modal"] : ""
         }`}
       >
+        <div className={styles["form__close"]}>X</div>
         <div className={styles["form__input-wrapper"]}>
           <label htmlFor="email" className={styles["form__label"]}>
             Email:
