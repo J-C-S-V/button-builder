@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: olivedrab;
+  background: rgb(35, 65, 142);
   z-index: 2;
   display: flex;
   flex-direction: column;
