@@ -10,7 +10,7 @@ import { DarkMode } from "../LeftSection/Header/DarkMode";
 import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
 import { Profile } from "../LeftSection/Profile/Profile";
 import styles from "./WorkBench.module.css";
-// import { ModalRegister } from "../LeftSection/Modal/ModalRegister";
+import { ModalRegister } from "../LeftSection/Modal/ModalRegister";
 
 export const WorkBench = () => {
   const [innerText, setInnerText] = useState("Click me!");
@@ -185,7 +185,7 @@ export const WorkBench = () => {
 
   return (
     <section className={styles["workbench"]}>
-      {/* <ModalRegister onModalShow={modal} /> */}
+      <ModalRegister onModalShow={modal} />
       <div className={styles["workbench__left"]}>
         <div className={styles["left-section__header"]}>
           <div className={styles["left-section__title-darkmode"]}>
