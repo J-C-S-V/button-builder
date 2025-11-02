@@ -10,11 +10,15 @@ import { FormData } from "../../../types/form";
 import styles from "./ModalRegister.module.css";
 
 export const ModalRegister = ({
-  isModal,
-  onModalShow,
+  isModalSignUp,
+  isModalSignIn,
+  onModalShowSignUp,
+  onModalShowSignIn,
 }: {
-  isModal: boolean;
-  onModalShow: () => void;
+  isModalSignUp: boolean;
+  isModalSignIn: boolean;
+  onModalShowSignUp: () => void;
+  onModalShowSignIn: () => void;
 }) => {
   const [user, setUser] = useState<string | null>(null);
 
@@ -40,17 +44,17 @@ export const ModalRegister = ({
       });
   };
 
-  // const handleClickSignIn = () => {
-  //   signInWithEmailAndPassword(auth, "jota@test.com", "test123**//lksjdkfj")
-  //     .then((response) => {
-  //       const user = response.user;
-  //       console.log(user);
-  //       setUser(user.email);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error signing in: ", error);
-  //     });
-  // };
+  const handleClickSignIn = () => {
+    signInWithEmailAndPassword(auth, "jota@test.com", "test123**//lksjdkfj")
+      .then((response) => {
+        const user = response.user;
+        console.log(user);
+        setUser(user.email);
+      })
+      .catch((error) => {
+        console.error("Error signing in: ", error);
+      });
+  };
 
   // const handleClickSignOut = () => {
   //   signOut(auth)
@@ -79,11 +83,30 @@ export const ModalRegister = ({
     <>
       <form
         onSubmit={onSubmit}
-        className={`${styles["form"]} ${isModal ? styles["show-modal"] : ""}`}
+        className={`${styles["form"]} ${
+          isModalSignIn || isModalSignUp ? styles["show-modal"] : ""
+        }`}
       >
-        <button onClick={onModalShow} className={styles["form__close"]}>
-          X
-        </button>
+        {isModalSignUp && (
+          <button
+            onClick={() => {
+              onModalShowSignUp();
+            }}
+            className={styles["form__close"]}
+          >
+            X
+          </button>
+        )}
+        {isModalSignIn && (
+          <button
+            onClick={() => {
+              onModalShowSignIn();
+            }}
+            className={styles["form__close"]}
+          >
+            X
+          </button>
+        )}
         <div className={styles["form__input-wrapper"]}>
           <label htmlFor="email" className={styles["form__label"]}>
             Email:
@@ -178,12 +201,22 @@ export const ModalRegister = ({
               : "I"}
           </span>
         </div>
-        <button className={styles["form__button"]} onClick={handleClickSignUp}>
-          Sign Up
-        </button>
-        <button className={styles["form__button"]} onClick={handleClickSignUp}>
-          Sign In
-        </button>
+        {isModalSignUp && (
+          <button
+            className={styles["form__button"]}
+            onClick={handleClickSignUp}
+          >
+            Sign Up
+          </button>
+        )}
+        {isModalSignIn && (
+          <button
+            className={styles["form__button"]}
+            onClick={handleClickSignIn}
+          >
+            Sign In
+          </button>
+        )}
 
         {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
       </form>

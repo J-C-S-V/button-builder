@@ -1,34 +1,36 @@
 .form {
   position: absolute;
-  width: 100%;
-  height: 100%;
   background: rgb(35, 65, 142);
-  z-index: 2;
+  z-index: -1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
   width: 0;
   height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  padding: 20rem 0;
 }
 
 .form__label {
   color: var(--color-text-white);
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
 }
 
 .form__input-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  text-align: left;
 }
 
 .form__input {
   border-radius: 0.3rem;
   border: none;
-  padding: 0.2rem 0.4rem;
+  padding: 1rem 2rem;
+  min-width: 32rem;
 }
 
 .error {
@@ -38,6 +40,7 @@
   font-weight: 500;
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
+  margin-top: 0.6rem;
 }
 
 .error.show {
@@ -47,12 +50,26 @@
 .show-modal {
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 
 .form__close {
   position: absolute;
-  right: 0;
-  top: 10;
+  right: 16rem;
+  top: 8rem;
+  background-color: var(--color-background-white);
+  opacity: 0.6;
+  border-radius: 50%;
+  border-color: transparent;
+  font-size: 2rem;
+  width: 5rem;
+  height: 5rem;
+  color: var(--color-text-black);
+  border-radius: 0.4rem;
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
 }
 
 .form__button {
@@ -61,6 +78,7 @@
   color: var(--color-background-black);
   border-radius: 0.4rem;
   padding: 0.6rem 2rem;
+  min-width: 32rem;
   &:hover {
     cursor: pointer;
     border: 1px solid var(--color-background-white);
