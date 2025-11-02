@@ -33,10 +33,10 @@ export const WorkBench = () => {
   const [hoverColor, setHoverColor] = useState("#ffffff");
   const [hoverBackgroundColor, setHoverBackgroundColor] = useState("#cc0000");
   const [transition, setTransition] = useState(0.1);
-  const [modal, setModal] = useState(false);
+  const [isModal, setIsModal] = useState(false);
 
-  const handleSignClick = () => {
-    setModal(true);
+  const handleShowModal = () => {
+    setIsModal(!isModal);
   };
 
   const handleTransitionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -185,14 +185,14 @@ export const WorkBench = () => {
 
   return (
     <section className={styles["workbench"]}>
-      <ModalRegister onModalShow={modal} />
+      <ModalRegister onModalShow={handleShowModal} isModal={isModal} />
       <div className={styles["workbench__left"]}>
         <div className={styles["left-section__header"]}>
           <div className={styles["left-section__title-darkmode"]}>
             <Title />
             <DarkMode />
           </div>
-          <Profile onSignClick={handleSignClick} />
+          <Profile onSignClick={handleShowModal} />
         </div>
         <ButtonGroup onClickButton={handleClickButton} />
       </div>

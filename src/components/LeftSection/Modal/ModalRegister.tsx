@@ -9,16 +9,21 @@ import { useForm } from "react-hook-form";
 import { FormData } from "../../../types/form";
 import styles from "./ModalRegister.module.css";
 
-export const ModalRegister = ({ onModalShow }: { onModalShow: boolean }) => {
+export const ModalRegister = ({
+  isModal,
+  onModalShow,
+}: {
+  isModal: boolean;
+  onModalShow: () => void;
+}) => {
   const [user, setUser] = useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     watch,
   } = useForm<FormData>();
-  // const newItem = register('registerName');
-  // console.log(newItem)
   const onSubmit = handleSubmit((data) => {
     console.log(data);
   });
@@ -34,8 +39,6 @@ export const ModalRegister = ({ onModalShow }: { onModalShow: boolean }) => {
         console.error("Error creating user: ", error);
       });
   };
-
-  console.log(onModalShow);
 
   // const handleClickSignIn = () => {
   //   signInWithEmailAndPassword(auth, "jota@test.com", "test123**//lksjdkfj")
@@ -76,11 +79,11 @@ export const ModalRegister = ({ onModalShow }: { onModalShow: boolean }) => {
     <>
       <form
         onSubmit={onSubmit}
-        className={`${styles["form"]} ${
-          onModalShow ? styles["show-modal"] : ""
-        }`}
+        className={`${styles["form"]} ${isModal ? styles["show-modal"] : ""}`}
       >
-        <button className={styles["form__close"]}>X</button>
+        <button onClick={onModalShow} className={styles["form__close"]}>
+          X
+        </button>
         <div className={styles["form__input-wrapper"]}>
           <label htmlFor="email" className={styles["form__label"]}>
             Email:
