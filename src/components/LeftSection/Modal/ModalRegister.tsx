@@ -20,41 +20,34 @@ export const ModalRegister = ({
   onModalShowSignUp: () => void;
   onModalShowSignIn: () => void;
 }) => {
-  const [user, setUser] = useState<string | null>(null);
-
   const {
     register,
     handleSubmit,
     formState: { errors },
     watch,
   } = useForm<FormData>();
-  const onSubmit = handleSubmit((data) => {
-    console.log(data);
+
+  const onSubmit = handleSubmit(async (data) => {
+    try {
+      if (isModalSignUp) {
+        const response = await createUserWithEmailAndPassword(
+          auth,
+          data.email,
+          data.password
+        );
+        console.log("User created:", response.user);
+      } else if (isModalSignIn) {
+        const response = await signInWithEmailAndPassword(
+          auth,
+          data.email,
+          data.password
+        );
+        console.log("User signed in:", response.user);
+      }
+    } catch (error) {
+      console.error("Authentication error:", error);
+    }
   });
-
-  const handleClickSignUp = () => {
-    createUserWithEmailAndPassword(auth, "new@test.com", "test12*//lksjdkfj")
-      .then((response) => {
-        const user = response.user;
-        console.log(user);
-        setUser(user.email);
-      })
-      .catch((error) => {
-        console.error("Error creating user: ", error);
-      });
-  };
-
-  const handleClickSignIn = () => {
-    signInWithEmailAndPassword(auth, "jota@test.com", "test123**//lksjdkfj")
-      .then((response) => {
-        const user = response.user;
-        console.log(user);
-        setUser(user.email);
-      })
-      .catch((error) => {
-        console.error("Error signing in: ", error);
-      });
-  };
 
   // const handleClickSignOut = () => {
   //   signOut(auth)
@@ -89,6 +82,7 @@ export const ModalRegister = ({
       >
         {isModalSignUp && (
           <button
+            type="button"
             onClick={() => {
               onModalShowSignUp();
             }}
@@ -99,6 +93,7 @@ export const ModalRegister = ({
         )}
         {isModalSignIn && (
           <button
+            type="button"
             onClick={() => {
               onModalShowSignIn();
             }}
@@ -107,6 +102,7 @@ export const ModalRegister = ({
             X
           </button>
         )}
+
         <div className={styles["form__input-wrapper"]}>
           <label htmlFor="email" className={styles["form__label"]}>
             Email:
@@ -133,6 +129,7 @@ export const ModalRegister = ({
             {errors.email?.message ? errors.email.message : "I"}
           </span>
         </div>
+
         <div className={styles["form__input-wrapper"]}>
           <label htmlFor="password" className={styles["form__label"]}>
             Password:
@@ -202,23 +199,17 @@ export const ModalRegister = ({
           </span>
         </div>
         {isModalSignUp && (
-          <button
-            className={styles["form__button"]}
-            onClick={handleClickSignUp}
-          >
+          <button type="submit" className={styles["form__button"]}>
             Sign Up
           </button>
         )}
         {isModalSignIn && (
-          <button
-            className={styles["form__button"]}
-            onClick={handleClickSignIn}
-          >
+          <button type="submit" className={styles["form__button"]}>
             Sign In
           </button>
         )}
 
-        {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
+        <pre>{JSON.stringify(watch(), null, 2)}</pre>
       </form>
     </>
   );
