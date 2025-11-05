@@ -4,7 +4,6 @@ import { WorkBench } from "./components/WorkBench/WorkBench";
 import "./App.module.css";
 
 import styles from "./App.module.css";
-// import { Profile } from "./components/Profile";
 
 function App() {
   const { theme } = useContext(ThemeContext);

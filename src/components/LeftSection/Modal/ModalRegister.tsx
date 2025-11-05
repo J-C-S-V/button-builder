@@ -1,12 +1,4 @@
-import { auth } from "../../../lib/firebase";
-import { onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
-
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
+import { useAuth } from "../../../context/AuthContext";
 import { useForm } from "react-hook-form";
 import type { FormData } from "../../../types/form";
 import styles from "./ModalRegister.module.css";
@@ -22,26 +14,7 @@ export const ModalRegister = ({
   onModalShowSignUp: () => void;
   onModalShowSignIn: () => void;
 }) => {
-  const [user, setUser] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        // User is signed in
-        setUser(currentUser.email);
-        console.log("User is signed in:", currentUser.email);
-      } else {
-        // User is signed out
-        setUser(null);
-        console.log("User is signed out");
-      }
-      setLoading(false);
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
+  const { user, loading, signUp, signIn } = useAuth();
 
   const {
     register,
@@ -53,41 +26,22 @@ export const ModalRegister = ({
   const onSubmit = handleSubmit(async (data) => {
     try {
       if (isModalSignUp) {
-        const response = await createUserWithEmailAndPassword(
-          auth,
-          data.email,
-          data.password
-        );
-        console.log("User created:", response.user);
+        await signUp(data.email, data.password);
       } else if (isModalSignIn) {
-        const response = await signInWithEmailAndPassword(
-          auth,
-          data.email,
-          data.password
-        );
-        console.log("User signed in:", response.user);
+        await signIn(data.email, data.password);
       }
     } catch (error) {
+      // Handle error in UI (show error message to user)
       console.error("Authentication error:", error);
     }
   });
-
-  // const handleClickSignOut = () => {
-  //   signOut(auth)
-  //     .then(() => {
-  //       setUser(null);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error signing out: ", error);
-  //     });
-  // };
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
   if (user) {
-    return <div>Welcome, {user}!</div>;
+    return <div>Welcome, {user.email}!</div>;
   }
 
   return (
