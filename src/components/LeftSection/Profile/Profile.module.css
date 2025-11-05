@@ -18,3 +18,14 @@
     color: var(--color-text-white);
   }
 }
+
+.profile__logout-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.profile__user {
+  color: var(--color-text-white);
+}

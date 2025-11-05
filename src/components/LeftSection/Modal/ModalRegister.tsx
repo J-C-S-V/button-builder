@@ -36,13 +36,13 @@ export const ModalRegister = ({
     }
   });
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (user) {
-    return <div>Welcome, {user.email}!</div>;
-  }
+  // if (user) {
+  //   return <div>Welcome, {user.email}!</div>;
+  // }
 
   return (
     // <div className="profile-pending">
