@@ -13,14 +13,7 @@ import {
   signOut,
   type User,
 } from "firebase/auth";
-
-interface AuthContextType {
-  user: User | null;
-  loading: boolean;
-  signUp: (email: string, password: string) => Promise<void>;
-  signIn: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
-}
+import type { AuthContextType } from "../types/types.d.ts";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 

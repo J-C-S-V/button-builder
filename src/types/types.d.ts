@@ -11,3 +11,11 @@ export type FormData = {
   password: string;
   confirmPassword?: string;
 };
+
+export interface AuthContextType {
+  user: User | null;
+  loading: boolean;
+  signUp: (email: string, password: string) => Promise<void>;
+  signIn: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+}
