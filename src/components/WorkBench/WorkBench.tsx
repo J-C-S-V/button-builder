@@ -9,10 +9,9 @@ import { Title } from "../LeftSection/Header/Title";
 import { DarkMode } from "../LeftSection/Header/DarkMode";
 import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
 import { Profile } from "../LeftSection/Profile/Profile";
-import styles from "./WorkBench.module.css";
-import { ModalRegister } from "../LeftSection/Modal/ModalRegister";
+import { Form } from "../LeftSection/Modal/Form";
 import { useAuth } from "../../context/AuthContext";
-import { spawn } from "child_process";
+import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
   const { user } = useAuth();
@@ -138,6 +137,7 @@ export const WorkBench = () => {
     setHoverBackgroundColor(e.target.value);
   };
 
+  // Handler for left buttons state
   const handleClickButton = (style: any) => {
     setbackgroundColor(style.backgroundColor);
     setFontColor(style.color);
@@ -194,7 +194,7 @@ export const WorkBench = () => {
 
   return (
     <section className={styles["workbench"]}>
-      <ModalRegister
+      <Form
         onModalShowSignUp={handleShowModalSignUp}
         onModalShowSignIn={handleShowModalSignIn}
         isModalSignUp={isModalSignUp}

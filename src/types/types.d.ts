@@ -5,3 +5,9 @@ export type ButtonStyleItem = {
   name: string;
   style: CSSProperties;
 };
+
+export interface FormData {
+  email: string;
+  password: string;
+  confirmPassword?: string;
+}

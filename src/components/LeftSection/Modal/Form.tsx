@@ -1,9 +1,9 @@
 import { useAuth } from "../../../context/AuthContext";
 import { useForm } from "react-hook-form";
-import type { FormData } from "../../../types/form";
-import styles from "./ModalRegister.module.css";
+import type { FormData } from "../../../types/types.d.ts";
+import styles from "./Form.module.css";
 
-export const ModalRegister = ({
+export const Form = ({
   isModalSignUp,
   isModalSignIn,
   onModalShowSignUp,
@@ -54,6 +54,7 @@ export const ModalRegister = ({
     //   )}
     //   {!user && (
     //     <>
+
     //       <button onClick={handleClickSignIn}>Sign In</button>
     //     </>
     //   )}
