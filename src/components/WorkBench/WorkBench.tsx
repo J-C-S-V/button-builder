@@ -11,8 +11,12 @@ import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
 import { Profile } from "../LeftSection/Profile/Profile";
 import styles from "./WorkBench.module.css";
 import { ModalRegister } from "../LeftSection/Modal/ModalRegister";
+import { useAuth } from "../../context/AuthContext";
+import { spawn } from "child_process";
 
 export const WorkBench = () => {
+  const { user } = useAuth();
+
   const [innerText, setInnerText] = useState("Click me!");
   const [backgroundColor, setbackgroundColor] = useState("#ff0000");
   const [borderRadius, setBorderRadius] = useState(12);
@@ -305,6 +309,7 @@ export const WorkBench = () => {
           hoverScale={hoverScale}
           onHoverScaleChange={handleHoverScaleChange}
         />
+        <div>{user && <span>Pro view!</span>}</div>
       </div>
     </section>
   );
