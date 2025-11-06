@@ -12,10 +12,17 @@ export type FormData = {
   confirmPassword?: string;
 };
 
-export interface AuthContextType {
+export type AuthContextType = {
   user: User | null;
   loading: boolean;
   signUp: (email: string, password: string) => Promise<void>;
   signIn: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
-}
+};
+
+export type GlobalContextType = {
+  isModalSignUp: boolean;
+  isModalSignIn: boolean;
+  handleShowModalSignUp: () => void;
+  handleShowModalSignIn: () => void;
+};

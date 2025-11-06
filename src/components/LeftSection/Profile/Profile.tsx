@@ -1,23 +1,25 @@
 import { useAuth } from "../../../context/AuthContext";
+import { useGlobal } from "../../../context/GlobalContext";
 import styles from "./Profile.module.css";
 
-export const Profile = ({
-  onSignInClick,
-  onSignUpClick,
-}: {
-  onSignInClick: () => void;
-  onSignUpClick: () => void;
-}) => {
+export const Profile = () => {
   const { user, logout } = useAuth();
   console.log("user", user);
+  const { handleShowModalSignUp, handleShowModalSignIn } = useGlobal();
   return (
     <div className={styles["profile"]}>
       {!user && (
         <>
-          <button onClick={onSignUpClick} className={styles["profile__button"]}>
+          <button
+            onClick={handleShowModalSignUp}
+            className={styles["profile__button"]}
+          >
             Sign Up
           </button>
-          <button onClick={onSignInClick} className={styles["profile__button"]}>
+          <button
+            onClick={handleShowModalSignIn}
+            className={styles["profile__button"]}
+          >
             Sign In
           </button>
         </>

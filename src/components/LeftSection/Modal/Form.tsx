@@ -2,19 +2,16 @@ import { useAuth } from "../../../context/AuthContext";
 import { useForm } from "react-hook-form";
 import type { FormData } from "../../../types/types.d.ts";
 import styles from "./Form.module.css";
+import { useGlobal } from "../../../context/GlobalContext.tsx";
 
-export const Form = ({
-  isModalSignUp,
-  isModalSignIn,
-  onModalShowSignUp,
-  onModalShowSignIn,
-}: {
-  isModalSignUp: boolean;
-  isModalSignIn: boolean;
-  onModalShowSignUp: () => void;
-  onModalShowSignIn: () => void;
-}) => {
+export const Form = () => {
   const { user, loading, signUp, signIn } = useAuth();
+  const {
+    isModalSignUp,
+    isModalSignIn,
+    handleShowModalSignUp,
+    handleShowModalSignIn,
+  } = useGlobal();
 
   const {
     register,
@@ -27,8 +24,10 @@ export const Form = ({
     try {
       if (isModalSignUp) {
         await signUp(data.email, data.password);
+        handleShowModalSignUp();
       } else if (isModalSignIn) {
         await signIn(data.email, data.password);
+        handleShowModalSignIn();
       }
     } catch (error) {
       // Handle error in UI (show error message to user)
@@ -69,7 +68,7 @@ export const Form = ({
         <button
           type="button"
           onClick={() => {
-            onModalShowSignUp();
+            handleShowModalSignUp();
           }}
           className={styles["form__close"]}
         >
@@ -80,7 +79,7 @@ export const Form = ({
         <button
           type="button"
           onClick={() => {
-            onModalShowSignIn();
+            handleShowModalSignIn();
           }}
           className={styles["form__close"]}
         >
