@@ -5,6 +5,7 @@ import { Box } from "../RightSection/Box/Box";
 import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
 import { Font } from "../RightSection/Font/Font";
+import { Cursor } from "../RightSection/Cursor/Cursor";
 import { Title } from "../LeftSection/Header/Title";
 import { DarkMode } from "../LeftSection/Header/DarkMode";
 import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
@@ -296,7 +297,7 @@ export const WorkBench = () => {
           hoverScale={hoverScale}
           onHoverScaleChange={handleHoverScaleChange}
         />
-        <div>{user && <span>Pro view!</span>}</div>
+        <div>{user && <Cursor />}</div>
       </div>
     </section>
   );
