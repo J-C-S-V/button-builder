@@ -21,7 +21,9 @@ export const Cursor = () => {
         className={`${styles["cursor__content"]} ${
           showFont ? styles["show"] : ""
         }`}
-      ></div>
+      >
+        <div>Component here</div>
+      </div>
       <hr />
     </div>
   );
