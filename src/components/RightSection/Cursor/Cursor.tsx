@@ -22,7 +22,7 @@ export const Cursor = () => {
           showFont ? styles["show"] : ""
         }`}
       >
-        <div>Component here</div>
+        {/* <div>Component here</div> */}
       </div>
       <hr />
     </div>
