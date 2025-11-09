@@ -297,7 +297,7 @@ export const WorkBench = () => {
           hoverScale={hoverScale}
           onHoverScaleChange={handleHoverScaleChange}
         />
-        <div>{user && <Cursor />}</div>
+        {/* <div>{user && <Cursor />}</div> */}
       </div>
     </section>
   );
