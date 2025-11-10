@@ -185,12 +185,7 @@ export const WorkBench = () => {
 
   return (
     <section className={styles["workbench"]}>
-      <Form
-      // onModalShowSignUp={handleShowModalSignUp}
-      // onModalShowSignIn={handleShowModalSignIn}
-      // isModalSignUp={isModalSignUp}
-      // isModalSignIn={isModalSignIn}
-      />
+      <Form />
       <div className={styles["workbench__left"]}>
         <div className={styles["left-section__header"]}>
           <div className={styles["left-section__title-darkmode"]}>
