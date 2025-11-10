@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
 import { WorkBench } from "./components/WorkBench/WorkBench";
-import "./App.module.css";
-
 import styles from "./App.module.css";
 
 function App() {
