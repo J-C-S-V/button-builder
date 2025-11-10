@@ -1,8 +1,8 @@
 import { FontSize } from "./Components/FontSize";
 import { FontWeight } from "./Components/FontWeight";
 import { InnerText } from "./Components/InnerText";
-import styles from "./Font.module.css";
 import { useState } from "react";
+import styles from "./Font.module.css";
 
 export const Font = ({
   onFontSizeChange,
@@ -23,13 +23,27 @@ export const Font = ({
 
   return (
     <div className={`${styles["font"]}`}>
-      <h2 onClick={() => setShowFont(!showFont)} className={styles["font__title"]}>
+      <h2
+        onClick={() => setShowFont(!showFont)}
+        className={styles["font__title"]}
+      >
         <span className={styles["font__title-text"]}>Font</span>
-        {showFont ? <span className={styles["font__title-text"]}>–</span> : <span className={styles["font__title-text"]}>+</span>}
+        {showFont ? (
+          <span className={styles["font__title-text"]}>–</span>
+        ) : (
+          <span className={styles["font__title-text"]}>+</span>
+        )}
       </h2>
-      <div className={`${styles["font__content"]} ${showFont ? styles["show"] : ""}`}>
+      <div
+        className={`${styles["font__content"]} ${
+          showFont ? styles["show"] : ""
+        }`}
+      >
         <FontSize fontSize={fontSize} onFontSizeChange={onFontSizeChange} />
-        <FontWeight fontWeight={fontWeight} onFontWeightChange={onFontWeightChange} />
+        <FontWeight
+          fontWeight={fontWeight}
+          onFontWeightChange={onFontWeightChange}
+        />
         <InnerText innerText={innerText} onTextChange={onInnerTextChange} />
       </div>
       <hr />

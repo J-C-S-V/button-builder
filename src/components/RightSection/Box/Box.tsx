@@ -1,9 +1,9 @@
 import { useState } from "react";
-import styles from "./Box.module.css";
 import { Border } from "./Components/Border";
 import { Padding } from "./Components/Padding";
 import { BorderRadius } from "./Components/BorderRadius";
 import { BoxShadow } from "./Components/BoxShadow";
+import styles from "./Box.module.css";
 
 export const Box = ({
   onChangeBorderWidth,
@@ -50,17 +50,29 @@ export const Box = ({
     <div className={`${styles["box"]}`}>
       <h2 onClick={() => setShowBox(!showBox)} className={styles["box__title"]}>
         <span className={styles["box__title-text"]}>Box</span>
-        {showBox ? <span className={styles["box__title-text"]}>–</span> : <span className={styles["box__title-text"]}>+</span>}
+        {showBox ? (
+          <span className={styles["box__title-text"]}>–</span>
+        ) : (
+          <span className={styles["box__title-text"]}>+</span>
+        )}
       </h2>
-      <div className={`${styles["box__content"]} ${showBox ? styles["show"] : ""}`}>
+      <div
+        className={`${styles["box__content"]} ${showBox ? styles["show"] : ""}`}
+      >
         <Padding
           paddingY={paddingY}
           paddingX={paddingX}
           onPaddingYChange={onPaddingYChange}
           onPaddingXChange={onPaddingXChange}
         />
-        <Border borderWidth={borderWidth} onBorderWidthChange={onChangeBorderWidth} />
-        <BorderRadius borderRadius={borderRadius} onBorderRadiusChange={onBorderRadiusChange} />
+        <Border
+          borderWidth={borderWidth}
+          onBorderWidthChange={onChangeBorderWidth}
+        />
+        <BorderRadius
+          borderRadius={borderRadius}
+          onBorderRadiusChange={onBorderRadiusChange}
+        />
         <BoxShadow
           boxShadowY={boxShadowY}
           boxShadowX={boxShadowX}
