@@ -5,7 +5,6 @@ import { AuthProvider } from "./context/AuthContext";
 import "./globals.css";
 import App from "./App.tsx";
 import GlobalProvider from "./context/GlobalContext.tsx";
-// import { Test } from "./components/Test.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
