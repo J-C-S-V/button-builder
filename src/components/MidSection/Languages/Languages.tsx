@@ -95,7 +95,9 @@ export const Languages = ({
     <div className={styles["languages"]}>
       <div
         className={`${
-          copied ? styles["opacity-100"] : styles["languages__copied"]
+          copied
+            ? styles["languages__copied--visible"]
+            : styles["languages__copied"]
         }`}
       >
         Copied!
