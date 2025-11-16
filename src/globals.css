@@ -12,6 +12,7 @@
   --color-background-gray: #c2c2c2;
   --color-background-gray-light: #e8e8e8;
   --color-background-black: #000000;
+  --color-background-scroll: #000000;
   --color-background-dark: #101010;
   --color-background-blue: #0160e0;
   --color-background-css: #663399;
@@ -32,6 +33,7 @@
   --color-background-gray-light: #e8e8e8;
   --color-background-dark: #ffffff;
   --color-background-black: #f9f9f9;
+  --color-background-scroll: #888888;
   --color-background-transparent-black: #ffffff;
 
   --font-monserrat: "Montserrat", sans-serif;
