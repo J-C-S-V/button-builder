@@ -147,41 +147,43 @@ export const Form = () => {
           {errors.password?.message ? errors.password.message : "I"}
         </span>
       </div>
-      <div className={styles["form__input-wrapper"]}>
-        <label htmlFor="confirmPassword" className={styles["form__label"]}>
-          Confirm password:{" "}
-        </label>
-        <input
-          className={styles["form__input"]}
-          type="password"
-          {...register("confirmPassword", {
-            required: {
-              value: true,
-              message: "Password is required",
-            },
-            minLength: {
-              value: 10,
-              message: "Minimum length is 10 characters",
-            },
-            validate: (value) => {
-              if (value === watch("password")) {
-                return true;
-              } else {
-                return "Passwords do not match";
-              }
-            },
-          })}
-        />
-        <span
-          className={`${styles["form__error"]} ${
-            errors.confirmPassword ? styles["show"] : ""
-          }`}
-        >
-          {errors.confirmPassword?.message
-            ? errors.confirmPassword.message
-            : "I"}
-        </span>
-      </div>
+      {isModalSignUp && (
+        <div className={styles["form__input-wrapper"]}>
+          <label htmlFor="confirmPassword" className={styles["form__label"]}>
+            Confirm password:{" "}
+          </label>
+          <input
+            className={styles["form__input"]}
+            type="password"
+            {...register("confirmPassword", {
+              required: {
+                value: true,
+                message: "Password is required",
+              },
+              minLength: {
+                value: 10,
+                message: "Minimum length is 10 characters",
+              },
+              validate: (value) => {
+                if (value === watch("password")) {
+                  return true;
+                } else {
+                  return "Passwords do not match";
+                }
+              },
+            })}
+          />
+          <span
+            className={`${styles["form__error"]} ${
+              errors.confirmPassword ? styles["show"] : ""
+            }`}
+          >
+            {errors.confirmPassword?.message
+              ? errors.confirmPassword.message
+              : "I"}
+          </span>
+        </div>
+      )}
       {isModalSignUp && (
         <button type="submit" className={styles["form__button"]}>
           Sign Up
@@ -193,7 +195,7 @@ export const Form = () => {
         </button>
       )}
 
-      <pre>{JSON.stringify(watch(), null, 2)}</pre>
+      {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
     </form>
   );
 };
