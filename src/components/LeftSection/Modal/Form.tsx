@@ -5,7 +5,7 @@ import styles from "./Form.module.css";
 import { useGlobal } from "../../../context/GlobalContext.tsx";
 
 export const Form = () => {
-  const { user, loading, signUp, signIn } = useAuth();
+  const { signUp, signIn } = useAuth();
   const {
     isModalSignUp,
     isModalSignIn,
