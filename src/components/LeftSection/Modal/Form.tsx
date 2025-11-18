@@ -5,7 +5,7 @@ import styles from "./Form.module.css";
 import { useGlobal } from "../../../context/GlobalContext.tsx";
 
 export const Form = () => {
-  const { user, loading, signUp, signIn } = useAuth();
+  const { user, loading, signUp, signIn, logout } = useAuth();
   const {
     isModalSignUp,
     isModalSignIn,
@@ -18,6 +18,8 @@ export const Form = () => {
     handleSubmit,
     formState: { errors },
     watch,
+    setValue,
+    // reset,
   } = useForm<FormData>();
 
   const onSubmit = handleSubmit(async (data) => {
@@ -25,12 +27,17 @@ export const Form = () => {
       if (isModalSignUp) {
         await signUp(data.email, data.password);
         handleShowModalSignUp();
+        console.log("Signed up successfully");
+        setValue("email", "");
+        setValue("password", "");
+        setValue("confirmPassword", "");
       } else if (isModalSignIn) {
         await signIn(data.email, data.password);
         handleShowModalSignIn();
+        setValue("email", "");
+        setValue("password", "");
       }
     } catch (error) {
-      // Handle error in UI (show error message to user)
       console.error("Authentication error:", error);
     }
   });
@@ -44,20 +51,6 @@ export const Form = () => {
   // }
 
   return (
-    // <div className="profile-pending">
-    //   {user && (
-    //     <>
-    //       <p>Hello {user}</p>
-    //       <button onClick={handleClickSignOut}>Sign Out</button>
-    //     </>
-    //   )}
-    //   {!user && (
-    //     <>
-
-    //       <button onClick={handleClickSignIn}>Sign In</button>
-    //     </>
-    //   )}
-    // </div>
     <form
       onSubmit={onSubmit}
       className={`${styles["form"]} ${
@@ -134,8 +127,12 @@ export const Form = () => {
               hasNumber: (value) =>
                 /[0-9]/.test(value) ||
                 "Password must contain at least one number",
-              // hasSpecialChar: (value) => /[!@#$%^&*(),.?":{}|<>]/.test(value) || 'Password must contain at least one special character',
-              // hasUpperCase: (value) => /[A-Z]/.test(value) || 'Password must contain at least one uppercase letter'
+              hasSpecialChar: (value) =>
+                /[!@#$%^&*(),.?":{}|<>]/.test(value) ||
+                "Password must contain at least one special character",
+              hasUpperCase: (value) =>
+                /[A-Z]/.test(value) ||
+                "Password must contain at least one uppercase letter",
             },
           })}
         />

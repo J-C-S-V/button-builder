@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       console.log("User created:", response.user);
     } catch (error) {
       console.error("Sign up error:", error);
-      throw error; // Re-throw so component can handle it
+      throw error;
     }
   };
 

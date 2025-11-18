@@ -4,7 +4,6 @@ import styles from "./Profile.module.css";
 
 export const Profile = () => {
   const { user, logout } = useAuth();
-  console.log("user", user);
   const { handleShowModalSignUp, handleShowModalSignIn } = useGlobal();
   return (
     <div className={styles["profile"]}>
