@@ -11,12 +11,9 @@ import { DarkMode } from "../LeftSection/Header/DarkMode";
 import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
 import { Profile } from "../LeftSection/Profile/Profile";
 import { Form } from "../LeftSection/Modal/Form";
-import { useAuth } from "../../context/AuthContext";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
-  const { user } = useAuth();
-
   const [innerText, setInnerText] = useState("Click me!");
   const [backgroundColor, setbackgroundColor] = useState("#ff0000");
   const [borderRadius, setBorderRadius] = useState(12);
@@ -292,7 +289,7 @@ export const WorkBench = () => {
           hoverScale={hoverScale}
           onHoverScaleChange={handleHoverScaleChange}
         />
-        {/* <div>{user && <Cursor />}</div> */}
+        <Cursor />
       </div>
     </section>
   );

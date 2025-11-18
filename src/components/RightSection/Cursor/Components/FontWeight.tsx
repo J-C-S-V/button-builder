@@ -1,12 +1,6 @@
 import styles from "./FontWeight.module.css";
 
-export const FontWeight = ({
-  fontWeight,
-  onFontWeightChange,
-}: {
-  fontWeight: number;
-  onFontWeightChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}) => {
+export const FontWeight = () => {
   return (
     <div className={styles["font-weight"]}>
       <label htmlFor="fontWeight" className={styles["font-weight__label"]}>
@@ -20,12 +14,7 @@ export const FontWeight = ({
           min={100}
           max={900}
           step={100}
-          value={fontWeight}
-          onChange={onFontWeightChange}
         />
-        <div className={styles["font-weight__span-container"]}>
-          <span className={styles["font-weight__span"]}>{fontWeight}</span>
-        </div>
       </div>
     </div>
   );
