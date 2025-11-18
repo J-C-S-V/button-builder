@@ -1,4 +1,4 @@
-import type { ButtonStyleItem } from "../types/buttonStyle";
+import type { ButtonStyleItem } from "../types/types.d.ts";
 
 export const buttonsStyle: ButtonStyleItem[] = [
   {

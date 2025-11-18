@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { LeftSection } from "../LeftSection/LeftSection";
 import { Button } from "../MidSection/Button/Button";
 import { Languages } from "../MidSection/Languages/Languages";
 import { Box } from "../RightSection/Box/Box";
 import { Color } from "../RightSection/Color/Color";
 import { State } from "../RightSection/State/State";
 import { Font } from "../RightSection/Font/Font";
+import { Cursor } from "../RightSection/Cursor/Cursor";
+import { Title } from "../LeftSection/Header/Title";
+import { DarkMode } from "../LeftSection/Header/DarkMode";
+import { ButtonGroup } from "../LeftSection/ButtonGroup/ButtonGroup";
+import { Profile } from "../LeftSection/Profile/Profile";
+import { Form } from "../LeftSection/Modal/Form";
 import styles from "./WorkBench.module.css";
 
 export const WorkBench = () => {
@@ -38,7 +43,9 @@ export const WorkBench = () => {
     setInnerText(e.target.value);
   };
 
-  const handleBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBackgroundColorChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setbackgroundColor(e.target.value);
   };
 
@@ -82,15 +89,21 @@ export const WorkBench = () => {
     setBoxShadowX(Number(e.target.value));
   };
 
-  const handleBoxShadowBlurChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBoxShadowBlurChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setBoxShadowBlur(Number(e.target.value));
   };
 
-  const handleBoxShadowColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBoxShadowColorChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setBoxShadowColor(e.target.value);
   };
 
-  const handleBoxShadowSpreadChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBoxShadowSpreadChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setBoxShadowSpread(Number(e.target.value));
   };
 
@@ -106,10 +119,13 @@ export const WorkBench = () => {
     setHoverColor(e.target.value);
   };
 
-  const handleHoverBackgroundColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleHoverBackgroundColorChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setHoverBackgroundColor(e.target.value);
   };
 
+  // Handler for left buttons state
   const handleClickButton = (style: any) => {
     setbackgroundColor(style.backgroundColor);
     setFontColor(style.color);
@@ -166,8 +182,16 @@ export const WorkBench = () => {
 
   return (
     <section className={styles["workbench"]}>
+      <Form />
       <div className={styles["workbench__left"]}>
-        <LeftSection onClickButton={handleClickButton} />
+        <div className={styles["left-section__header"]}>
+          <div className={styles["left-section__title-darkmode"]}>
+            <Title />
+            <DarkMode />
+          </div>
+          <Profile />
+        </div>
+        <ButtonGroup onClickButton={handleClickButton} />
       </div>
       <div className={styles["workbench__middle"]}>
         <Button
@@ -192,7 +216,7 @@ export const WorkBench = () => {
           hoverBackgroundColor={hoverBackgroundColor}
           transition={transition}
         />
-        <hr />
+        {/* <hr /> */}
         <Languages
           borderWidth={borderWidth}
           borderColor={borderColor}
@@ -265,6 +289,7 @@ export const WorkBench = () => {
           hoverScale={hoverScale}
           onHoverScaleChange={handleHoverScaleChange}
         />
+        <Cursor />
       </div>
     </section>
   );

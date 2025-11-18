@@ -1,0 +1,91 @@
+.form {
+  position: absolute;
+  background: var(--color-background-black);
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 20rem 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form__label {
+  color: var(--color-text-white);
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form__input {
+  border-radius: 0.3rem;
+  border: none;
+  padding: 1rem 2rem;
+  min-width: 32rem;
+}
+
+.form__error {
+  color: var(--color-text-error);
+  font-size: 10px;
+  text-align: left;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  margin-top: 0.6rem;
+}
+
+.form__error.show {
+  opacity: 1;
+}
+
+.form__show-modal {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 2;
+}
+
+.form__close {
+  position: absolute;
+  right: 16rem;
+  top: 8rem;
+  background-color: var(--color-background-white);
+  opacity: 1;
+  border-radius: 50%;
+  border-color: transparent;
+  font-size: 2rem;
+  width: 5rem;
+  height: 5rem;
+  color: var(--color-text-black);
+  border-radius: 0.4rem;
+  transition: opacity 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}
+
+.form__button {
+  border: 1px solid transparent;
+  background-color: var(--color-background-white);
+  color: var(--color-background-black);
+  border-radius: 0.4rem;
+  padding: 0.6rem 2rem;
+  min-width: 32rem;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--color-background-white);
+    background-color: var(--color-background-black);
+    color: var(--color-text-white);
+  }
+}

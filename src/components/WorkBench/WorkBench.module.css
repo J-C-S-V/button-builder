@@ -10,6 +10,7 @@
   flex-direction: column;
   background-color: var(--color-background-black);
   padding: 4rem 2rem 2rem 2rem;
+  justify-content: space-between;
 }
 
 .workbench__right {
@@ -18,7 +19,28 @@
   padding: 4rem 2rem 2rem 2rem;
   overflow: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-background-transparent-black) transparent;
+  scrollbar-color: var(--color-background-scroll) transparent;
   overflow-y: scroll;
   min-width: 28rem;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-section__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-section__title-darkmode {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
 }

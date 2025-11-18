@@ -1,0 +1,10 @@
+ignoredBuiltDependencies:
+  - "@firebase/util"
+  - "@swc/core"
+  - esbuild
+  - protobufjs
+
+minimumReleaseAge: 10800
+# minimumReleaseAgeExclude:
+# - react
+# - react-dom

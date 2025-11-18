@@ -35,4 +35,5 @@
   padding-left: 3rem;
   color: var(--color-text-black-light);
   font-size: 1.4rem;
+  border: 1px solid var(--color-text-black-light);
 }

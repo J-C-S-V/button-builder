@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-text-black: #242424;
+  --color-text-black-light: #767676;
+  --color-text-white: #ffffff;
+  --color-text-red: #ff0000;
+  --color-text-error: #ff7171;
+
+  --color-background-red: #ff0000;
+  --color-background-white: #ffffff;
+  --color-background-gray: #c2c2c2;
+  --color-background-gray-light: #e8e8e8;
+  --color-background-black: #000000;
+  --color-background-scroll: #000000;
+  --color-background-dark: #101010;
+  --color-background-blue: #0160e0;
+  --color-background-css: #663399;
+  --color-background-html: #e34c26;
+  --color-background-success: #1de44b;
+  --color-background-transparent-black: #5a5a5a4e;
+
+  --font-monserrat: "Montserrat", sans-serif;
+}
+
+[data-theme="light"] {
+  --color-text-black: #ffffff;
+  --color-text-white: #181717;
+
+  --color-background-red: #ff0000;
+  --color-background-white: #000000;
+  --color-background-gray: #c2c2c2;
+  --color-background-gray-light: #e8e8e8;
+  --color-background-dark: #ffffff;
+  --color-background-black: #f9f9f9;
+  --color-background-scroll: #888888;
+  --color-background-transparent-black: #ffffff;
+
+  --font-monserrat: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-monserrat);
+}
+
+li {
+  list-style: none;
+}
+
+input[type="range"] {
+  accent-color: var(--color-background-blue);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-background-gray);
+}
