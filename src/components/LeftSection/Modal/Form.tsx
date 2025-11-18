@@ -5,7 +5,7 @@ import styles from "./Form.module.css";
 import { useGlobal } from "../../../context/GlobalContext.tsx";
 
 export const Form = () => {
-  const { user, loading, signUp, signIn, logout } = useAuth();
+  const { user, loading, signUp, signIn } = useAuth();
   const {
     isModalSignUp,
     isModalSignIn,
@@ -18,8 +18,8 @@ export const Form = () => {
     handleSubmit,
     formState: { errors },
     watch,
-    setValue,
-    // reset,
+    reset,
+    setError,
   } = useForm<FormData>();
 
   const onSubmit = handleSubmit(async (data) => {
@@ -28,17 +28,19 @@ export const Form = () => {
         await signUp(data.email, data.password);
         handleShowModalSignUp();
         console.log("Signed up successfully");
-        setValue("email", "");
-        setValue("password", "");
-        setValue("confirmPassword", "");
+        reset();
       } else if (isModalSignIn) {
         await signIn(data.email, data.password);
         handleShowModalSignIn();
-        setValue("email", "");
-        setValue("password", "");
+        console.log("Signed up successfully");
+        reset();
       }
     } catch (error) {
       console.error("Authentication error:", error);
+      setError("root", {
+        type: "manual",
+        message: "Authentication failed. Please check your credentials.",
+      });
     }
   });
 
@@ -191,6 +193,7 @@ export const Form = () => {
           Sign In
         </button>
       )}
+      {errors.root ? errors.root.message : "I"}
 
       {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
     </form>
